@@ -159,7 +159,7 @@
                     color: var(--text);
                     @include Shadow;
                     border-radius: 8px;
-                    min-height: 200px;
+                    min-height: 240px;
                     width: 250px;
                     @include Flex;
                     flex-direction: column;
@@ -176,6 +176,9 @@
                         background-color: var(--primary);
                         color: var(--white);
                         cursor: pointer;
+                        p{
+                            color: var(--white);
+                        }
                         svg{
                             color: var(--white);
                            
@@ -193,6 +196,7 @@
                             border-radius: 50%;
     
                             }
+                           
                         }
                     }
 
@@ -251,6 +255,13 @@
                         text-align: center;
                         font-size: 12px;
                         padding-inline: 10%;
+                        color: var(--subtext);
+                        text-align: center;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        
+                        margin-bottom: 10px;
                     }
 
                     svg {
