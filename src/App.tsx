@@ -5,6 +5,7 @@ import Auth from './Pages/Auth/Page';
 import Page from './Pages/Home/Page';
 import Layout from './Layout/Ui/Layout';
 import Doctors from './Pages/Doctors/Page';
+import Services from './Pages/Services/Page';
 const Page404 = lazy(() => import("./Layout/Ui/NotFoundPage"))
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Route path="/auth" element={<Suspense fallback={<Loading />}> <Auth /></Suspense>} />
       <Route path="/" element={<Suspense fallback={<Loading />}><Layout className='Home_Page'>  <Page /> </Layout> </Suspense>} />
       <Route path="/doctors" element={<Suspense fallback={<Loading />}><Layout className='Doctors_Page'>  <Doctors /> </Layout> </Suspense>} />
+      <Route path="/services" element={<Suspense fallback={<Loading />}><Layout className='Services_Page'>  <Services /> </Layout> </Suspense>} />
 
     </Routes>
 

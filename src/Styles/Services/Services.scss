@@ -1,0 +1,170 @@
+.Services_Page{
+    font-family: "Inter", Sans-serif;
+    .Services{
+        min-height: 500px;
+        width: 100%;
+        .Hero_Services{
+            background-image: url('../../../public/Doctors/Doctors_Hero.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height:30vw;
+            // margin-top: 115px;
+            position: relative;
+            padding-top: 100px;
+            >div{
+                position: absolute;
+                top: 25%;
+                left: 10%;
+                h1{
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+                >div{
+                    display: flex; justify-content: start; align-items: center;
+                    h5{
+                        color: var(--primary);
+                        font-size: 1.5vw;
+                    }
+                    h6{
+                        font-size: 1.5vw;
+
+                    }
+                }
+            }
+        }
+        .Services_Main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            margin-block: 50px;
+            .ReviewCards{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url('../../../public/Services/Reviews.png');
+                    background-size: cover;
+                                        width: 80%;
+            }
+            .ReviewCard{
+                margin-inline: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+                width: 300px;
+                height: auto;
+                text-align: center;
+                padding: 10px;
+                img{
+                    width: 150px;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                    @include Shadow;
+                }
+                h1{
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-wrap: nowrap;
+                }
+                h6{
+    
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+       
+       
+    }
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .Services{
+        padding-top: 70px;
+        .Hero_Services{
+            background-image: url('../../../public/Doctors/Doctors_Hero.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height:20vw;
+            // margin-top: 115px;
+            position: relative;
+            // margin-top:50px;
+            >div{
+                position: absolute;
+                top: 25%;
+                left: 10%;
+                h1{
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+                >div{
+                    display: flex; justify-content: start; align-items: center;
+                    h5{
+                        color: var(--primary);
+                        font-size: 1.5vw;
+                    }
+                    h6{
+                        font-size: 1.5vw;
+
+                    }
+                }
+            }
+        }
+        .Services_Main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center;
+            margin-block: 50px;
+            text-align: center;
+            .ReviewCards{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url('../../../public/Services/Reviews.png');
+                                    width: 100%;
+            }
+            .ReviewCard{
+                margin-inline: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+                width: 300px;
+                height: auto;
+                text-align: center;
+                padding: 10px;
+                img{
+                    width: 150px;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                    @include Shadow;
+                }
+                h1{
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-wrap: nowrap;
+                }
+                h6{
+    
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+      
+       
+    }
+}
