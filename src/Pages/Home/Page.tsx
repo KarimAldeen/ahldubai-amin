@@ -15,7 +15,6 @@ const Page = () => {
     <Reviews/>
     <Update/>
     <OurPartners/>
-    <Footer/>
     {/* <GetQuote/>
     <Clients/>
     <Services/>

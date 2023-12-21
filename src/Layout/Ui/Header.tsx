@@ -11,7 +11,7 @@ export const LinksComp = ({ status }: any) => {
   return (
     <ul className={status ? 'DrawerLinks' : 'Links'}>
       <li> <NavLink to='/'>{t("Home")}</NavLink>   </li>
-      <li> <NavLink to='/features'>{t("Features")}</NavLink>   </li>
+      <li> <NavLink to='/doctors'>{t("Doctors")}</NavLink>   </li>
       <li> <NavLink to='/aboutus'>{t("aboutus")}</NavLink> </li>
       <li> <NavLink to='/questions'>{t("questions")}</NavLink> </li>
 

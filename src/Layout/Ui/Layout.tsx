@@ -11,7 +11,8 @@ const Layout = ({ children ,className=""}: { children: React.ReactNode ,classNam
     <main className={`${className} Layout_Body`}>
         {children}
     </main>
-    {/* <Footer/> */}
+    <Footer/>
+
  </div>
   )
 }

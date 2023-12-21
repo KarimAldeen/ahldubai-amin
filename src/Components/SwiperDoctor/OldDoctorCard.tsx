@@ -4,7 +4,7 @@ import { FaFacebook } from 'react-icons/fa6'
 
 const DoctorCard = () => {
   return (
-    <div className="Doctor">
+    <div className="Docor_Card">
     <img src={`../Doctor1.jpg`} alt="" />
     <div>
         <h5>Senior Dental Surgeon</h5>

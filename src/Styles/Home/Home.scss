@@ -477,49 +477,7 @@
         
     }
 
-    .Footer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-image: url('../../../public/Home/Footer.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding:40px 10vw;
-            >div{
-                display: flex;
-                gap: 20px;
-                // flex-wrap: wrap;
-                >div{
-                    display: flex;
-                    flex-direction: column;
-                    width: 20%;
-                    &:nth-child(1){
-                        margin-right: 30px;
-                    }
-                    h1{
-                        font-size: 2vw;
-                    }
-                  
-                }
-                .ContactFooter{
-                    >span{
-                        display: flex; gap: 8px;
-
-                    }
-                }
-            }
-            >span{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                span{
-                    margin-inline: 5px;
-                }
-            }
-            .ant-divider-horizontal{
-                background: var(--white);
-            }
-    }
+  
    
     .OurPartners{
         display: flex; 
@@ -1057,59 +1015,7 @@
             }
             
         }
-        .Footer{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            background-image: url('../../../public/Home/Footer.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            padding:40px 20px;
-                >div{
-                    display: flex;
-                    gap: 20px;
-                    // flex-wrap: wrap;
-                    font-size: 15px;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 3vw;
-                    >div{
-                        display: flex;
-                        flex-direction: column;
-                        width: 70%;
-                        text-align: center;
-                        &:nth-child(1){
-                            margin-right: 30px;
-                        }
-                        h1{
-                            font-size: 8vw;
-                            margin-bottom: 20px;
-                        }
-                      
-                    }
-                    .ContactFooter{
-                        >span{
-                            display: flex; gap: 8px;
-                            justify-content: center;
-    
-                        }
-                    }
-                }
-                >span{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    span{
-                        margin-inline: 5px;
-                        
-                    }
-                }
-                .ant-divider-horizontal{
-                    background: var(--white);
-                }
-        }
+       
        
         .OurPartners{
             display: flex; 
