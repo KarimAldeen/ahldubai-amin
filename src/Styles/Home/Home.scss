@@ -319,10 +319,34 @@
                     gap: 5%;
                     >img{
                         width: 40vw;
+                        animation: trans2 2s ease-in-out;
+
+                        @keyframes trans2 {
+                            0% {
+                                transform: translateX(-50vw);
+                            }
+                
+                            100% {
+                                transform: translateX(0);
+                            }
+                        }
                     }
                     .Reviews_Info{
                         display: flex; flex-direction: column;
                         gap: 20px;
+                        
+
+        animation: trans 2s ease-in-out;
+
+        @keyframes trans {
+            from {
+                transform: translateX(50vw);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
                         .Reviews_Info_top{
                             
                             display: flex; justify-content: space-between;
@@ -520,6 +544,7 @@
         }
     }
 }
+
 
 
 
