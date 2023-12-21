@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { MenuFoldOutlined } from '@ant-design/icons'
+import { MenuFoldOutlined, MenuOutlined } from '@ant-design/icons'
 import WithDrawer from '../../HighOrderComponent/WithDrawer'
 import { Button } from 'antd'
 import { useTranslation } from 'react-i18next'
@@ -31,9 +31,9 @@ const Header = () => {
         <LinksComp status={false} />
         <div className='MenuNav'>
           <WithDrawer
-            title="Links"
+            title="Nav Links"
             // width={250}
-            button={<Button icon={<MenuFoldOutlined />} type="primary" />}
+            button={<Button icon={<MenuOutlined />} type="primary" />}
           >
 
             <LinksComp status={true} />

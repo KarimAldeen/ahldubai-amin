@@ -5,6 +5,7 @@ import Reviews from '../../Components/Done/Reviews'
 import Doctors from '../../Components/NewHome/Doctors'
 import Update from '../../Components/Done/Update'
 import Footer from '../../Layout/Ui/Footer'
+import OurPartners from '../../Components/Done/OurPartners'
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
     <Services/>
     <Reviews/>
     <Update/>
+    <OurPartners/>
     <Footer/>
     {/* <GetQuote/>
     <Clients/>

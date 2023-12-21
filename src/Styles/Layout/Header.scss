@@ -51,7 +51,7 @@
                     border-radius: 4px;
                     text-wrap: nowrap;
                     opacity: 1;
-                    margin-inline:40%;
+                    margin-inline:15vw 5vw;
                 }
 
             }
@@ -155,7 +155,11 @@
     display: none;
 }
 
-
+@media screen and (max-width: 900px) {
+   .Header{
+    position: absolute;
+   }
+}
 @media screen and (max-width: 700px) {
     .MenuNav {
         display: block;

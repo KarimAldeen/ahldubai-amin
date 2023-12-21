@@ -1,58 +1,69 @@
+import { FacebookFilled, InstagramFilled, LinkedinFilled, TwitterCircleFilled } from '@ant-design/icons'
+import { Button, Divider } from 'antd'
 import React from 'react'
-import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
-  const [t] = useTranslation()
   return (
     <div className='Footer'>
-     <div className="d-flex flex-column h-100">
-   <footer className="w-100 py-4 flex-shrink-0">
-    <div className="container py-4">
-      <div className="row gy-4 gx-5">
-        <div className="col-lg-4 col-md-6">
-          <h5 className="h1 text-white">FB.</h5>
-          <p className="small text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt.
-          </p>
-          <p className="small text-muted mb-0">
-            © Copyrights. All rights reserved.{" "}
-            <a className="text-primary" href="#">
-              Bootstrapious.com
-            </a>
+      <div>
+        <div>
+          <h1>ahldubai</h1>
+          <p>
+          Lorem Ipsum is simply dummy text printing and typesetting industry. been industry
           </p>
         </div>
-      
-        <div className="col-lg-2 col-md-6">
-          <h5 className="text-white mb-3">Quick links</h5>
-          <ul className="list-unstyled text-muted">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Get started</a>
-            </li>
-            <li>
-              <a href="#">FAQ</a>
-            </li>
-          </ul>
+        <div>
+          <h1>Support</h1>
+          <Link to="/">Home</Link>
+          <Link to="/">Careers</Link>
+          <Link to="/">Blog</Link>
+          <Link to="/">Securety</Link>
+
         </div>
-        <div className="col-lg-4 col-md-6">
-          <h5 className="text-white mb-3">Newsletter</h5>
-          <p className="small text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt.
-          </p>
-         
+        <div>
+          <h1>Support</h1>
+          <Link to="/">Home</Link>
+          <Link to="/">Careers</Link>
+          <Link to="/">Blog</Link>
+          <Link to="/">Securety</Link>
+
+        </div>
+        <div>
+          <h1>Support</h1>
+          <Link to="/">Home</Link>
+          <Link to="/">Careers</Link>
+          <Link to="/">Blog</Link>
+          <Link to="/">Securety</Link>
+
+        </div>
+       
+        <div className='ContactFooter'>
+          <h1>Contact Us</h1>
+          <h6>Phone 09575549234</h6>
+          <h6>karim@gmail.com</h6>
+          <span>
+          <Button type="primary" shape="circle" icon={<FacebookFilled />} />
+      <Button type="primary" shape="circle" icon={<TwitterCircleFilled />} />
+      <Button type="primary" shape="circle" icon={<InstagramFilled />} />
+
+          </span>
         </div>
       </div>
-    </div>
-  </footer>
-</div>
-
+      <Divider />
+      <span>
+      <div>
+      @2023 All Right Reserved By Codeindeed
+      </div>
+      <div>
+        <span>
+        Privacy Policy
+          </span>
+          <span>
+          Cookie Policy
+          </span>
+      </div>
+      </span>
     </div>
   )
 }
