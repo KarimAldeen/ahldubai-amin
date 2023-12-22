@@ -1,9 +1,15 @@
-.Doctors_Page .Header ,.Header.Scrolled {
-    background-color: var(--bg) !important;
+.Doctors_Page .Header ,.Header.Scrolled,.Services_Page .Header{
+    background-color: var(--bg) ;
     @include Shadow;
     color: var(--text);
+    box-shadow:  none !important;
 
     
+  }
+  .Services_Page .HeaderStart{
+    background-color: transparent !important;
+    box-shadow:  none !important;
+
   }
 .Header {
     position: fixed;
@@ -13,7 +19,7 @@
     align-items: center;
     background: transparent;
     color: var(--white);
-    height: 90px;
+    height: 70px;
     padding-inline: 6vw;
     z-index: 1;
     font-family: 'Niramit';

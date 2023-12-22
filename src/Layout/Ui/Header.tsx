@@ -17,7 +17,12 @@ const Header = () => {
         const scrollPosition = window.scrollY;
         const headerHeight = window.innerHeight;
 
-        if (scrollPosition >= headerHeight) {
+        if (scrollPosition <= 50) {
+          header.classList.add('HeaderStart');
+        } else {
+          header.classList.remove('HeaderStart');
+        }
+        if (scrollPosition >= headerHeight) { 
           header.classList.add('Scrolled');
         } else {
           header.classList.remove('Scrolled');

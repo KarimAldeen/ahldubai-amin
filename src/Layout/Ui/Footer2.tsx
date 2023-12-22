@@ -10,7 +10,7 @@ const Footer2 = () => {
     
     <div className='Footer2'>
         <div>
-        @2023 All Right Reserved By KarimAldeen
+        @2023 All Right Reserved By Aurora Health 
         </div>
         <span>
         <ul className='Links'>
