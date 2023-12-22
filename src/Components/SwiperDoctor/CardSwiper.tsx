@@ -35,25 +35,25 @@ const CardSwiper: React.FC= () => {
             spaceBetween: 40,
           },
           1200: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 50,
           },
           1500: {
-            slidesPerView: 5,
+            slidesPerView: 3,
             spaceBetween: 50,
           },
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay ]}
-        autoplay={{ delay: 1000 }}
+        autoplay={{ delay: 4000 }}
       navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // pagination={{ clickable: true }}
+      // scrollbar={{ draggable: true }}
       onSwiper={(swiper:any) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
         className='Docor_Cards'
       >
         {
-          [1,2,3,4,5,6,7,8,1,1,1,1,1,1,1]?.map((item:any,index:number)=>{
+          [1,2,3,4,5,6,7,8,1,1]?.map((item:any,index:number)=>{
             return(
               <SwiperSlide key={index}>
                 <DoctorCard/>

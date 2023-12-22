@@ -33,7 +33,7 @@ const Blog = () => {
                     <h1>Order a consultation</h1>
                     <Input prefix={<UserOutlined />} className='Input' size="middle" placeholder="Inter Your Name" />
                     <Input prefix={<PhoneFilled />} className='Input' size="middle" placeholder="Inter Your Phone Number" />
-                    <Input.TextArea className='Input' placeholder="Comment Or Message" size="middle" />
+                    {/* <Input.TextArea className='Input' placeholder="Comment Or Message" size="middle" /> */}
                     <Button block type='primary'>Submite</Button>
                 </div>
             </div>

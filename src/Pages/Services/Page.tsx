@@ -4,6 +4,7 @@ import First from '../../Components/Services/body_Left/First'
 import Second from '../../Components/Services/body_Left/Second'
 import { Button, Input } from 'antd'
 import { PhoneFilled, UserOutlined } from '@ant-design/icons'
+import OurDocrtrs from '../../Components/Done/OurDocrtrs'
 
 const Services = () => {
     return (
@@ -24,14 +25,22 @@ const Services = () => {
                 <div className='Services_body_Left'>
                     <First />
                     <Second />
+
                 </div>
                 <div className='Services_body_Right'>
                     <h1>Order a consultation</h1>
                     <Input prefix={<UserOutlined />} className='Input' size="middle" placeholder="Inter Your Name" />
                     <Input prefix={<PhoneFilled />} className='Input' size="middle" placeholder="Inter Your Phone Number" />
-                    <Input.TextArea className='Input' placeholder="Comment Or Message" size="middle" />
+                    {/* <Input.TextArea className='Input' placeholder="Comment Or Message" size="middle" /> */}
                     <Button block type='primary'>Submite</Button>
                 </div>
+            </div>
+            <div className='Services_body2'>
+                <div className='Services_body_Left2'>
+                    <OurDocrtrs/>
+
+                </div>
+               
             </div>
 
         </div>

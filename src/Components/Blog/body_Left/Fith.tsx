@@ -19,7 +19,7 @@ const Fith = () => {
             <Divider />
                 <div className='User'>
                     <img src="../Blog/User.png" onError={useImageError} alt="" />
-                    meditest
+                    Aurora
                 </div>
 
             <Divider />

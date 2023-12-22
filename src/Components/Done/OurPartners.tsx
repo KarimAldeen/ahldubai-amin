@@ -2,44 +2,52 @@ import { Image } from 'antd'
 import React from 'react'
 
 const OurPartners = () => {
+    // Kings
+    // neuro
     return (
         <div className='OurPartners' id='OurPartners'>
             <h1>  We cooperate with </h1>
-         <div>
-         <div>
-                <Image
-                   
-                    src="../Home/Kings.jpeg"
-                />
-                <h4>
-                    King's College Hospital London - Dubai
-                </h4>
-
-
-            </div>
             <div>
-                <Image
-                   
-                    src="../Home/neuro.jpg"
-                />
-                <h4>
-               
-                Neuro Spinal Hospital Dubai
-                </h4>
+                <div style={{ backgroundImage: `url(../Home/noroot.png` }}>
 
+                    <h4>
+                        American Hospital Dubai
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quibusdam suscipit, id hic vero?
+                    </p>
+                    <button>
+                        More Details
+                    </button>
+
+                </div>
+                <div style={{ backgroundImage: `url(../Home/Kings.jpeg` }}>
+
+                    <h4>
+                        American Hospital Dubai
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quibusdam suscipit, id hic vero?
+                    </p>
+                    <button>
+                        More Details
+                    </button>
+
+                </div>
+                <div style={{ backgroundImage: `url(../Home/neuro.jpg` }}>
+
+                    <h4>
+                        American Hospital Dubai
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quibusdam suscipit, id hic vero?
+                    </p>
+                    <button>
+                        More Details
+                    </button>
+
+                </div>
             </div>
-            <div>
-                <Image
-                   
-                    src="../Home/noroot.png"
-                />
-                <h4>
-                American Hospital Dubai
-                </h4>
-
-
-            </div>
-         </div>
 
         </div>
     )
