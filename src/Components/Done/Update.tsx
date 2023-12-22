@@ -1,7 +1,9 @@
 import { Button } from 'antd'
 import React from 'react'
 import { FaFacebook } from 'react-icons/fa6'
+import { useNavigate } from 'react-router-dom'
 const Update = () => {
+    const navigate = useNavigate()
     return (
         <div className='Update' id="Update">
 
@@ -30,7 +32,7 @@ const Update = () => {
                                         <p>Happy Patients</p>
                                     </span>
                                 </div>
-                                <span>
+                                <span className='learn_more' onClick={()=> navigate("/blog")}>
                                     learn more &rarr;
 
                                 </span>

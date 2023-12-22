@@ -1,4 +1,7 @@
-.Doctors_Page .Header ,.Header.Scrolled,.Services_Page .Header{
+.Doctors_Page .Header ,.Header.Scrolled,
+.Services_Page .Header
+,.Blog_Page .Header
+{
     background-color: var(--bg) ;
     @include Shadow;
     color: var(--text);
@@ -6,7 +9,7 @@
 
     
   }
-  .Services_Page .HeaderStart{
+ .Blog_Page .HeaderStart, .Services_Page .HeaderStart{
     background-color: transparent !important;
     box-shadow:  none !important;
 

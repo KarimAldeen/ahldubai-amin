@@ -65,7 +65,7 @@ const NewHeroSection = () => {
 
   return (
     <>
-      <div className='NewHeroSection' id='NewHeroSection' style={{ backgroundImage: `url(../Home/${infoData.image}.jpg)` }} key={key}>
+      <div className='NewHeroSection' id='NewHeroSection' style={{ backgroundImage: `url(../Home/${infoData.image}.webp)` }} key={key}>
         <div className='imNewHeroSection' key={key}>
           <div>
             <h1>{infoData?.h1}</h1> <h2> {infoData?.h2} </h2>

@@ -568,6 +568,12 @@
         padding-inline: 5vw;
         display: flex;
         flex-direction: column;
+        .learn_more{
+            cursor: pointer;
+            &:hover{
+                color: var(--secondary);
+            }
+        }
 
 
         .Update_Header {
@@ -632,10 +638,11 @@
                     margin-block: 10px;
                     font-weight: bold;
                     color: var(--text);
-                    @include underLineText(var(--primary), var(--primary));
+                    @include underLineText(var(--secondary), var(--secondary));
 
                     &:hover {
-                        color: var(--primary);
+                        color: var(--secondary);
+                        padding-bottom: 10px;
                     }
                 }
 
