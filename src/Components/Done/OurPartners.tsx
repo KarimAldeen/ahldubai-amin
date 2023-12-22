@@ -2,45 +2,45 @@ import { Image } from 'antd'
 import React from 'react'
 
 const OurPartners = () => {
-    // Kings
-    // neuro
+    // Kings.jpeg
+    // neuro.jpg
     return (
         <div className='OurPartners' id='OurPartners'>
             <h1>  We cooperate with </h1>
             <div>
-                <div style={{ backgroundImage: `url(../Home/noroot.png` }}>
-
+                <div >
+                    <img src="../Home/noroot.png" alt="" />
                     <h4>
                         American Hospital Dubai
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quibusdam suscipit, id hic vero?
+                        Lorem ipsum dolor sit amet consectetur adipisicing 
                     </p>
                     <button>
                         More Details
                     </button>
 
                 </div>
-                <div style={{ backgroundImage: `url(../Home/Kings.jpeg` }}>
-
+                <div >
+                    <img src="../Home/neuro.jpg" alt="" />
                     <h4>
-                        American Hospital Dubai
+                    Neuro Spinal Hospital Dubai
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quibusdam suscipit, id hic vero?
+                        Lorem ipsum dolor sit amet consectetur adipisicing 
                     </p>
                     <button>
                         More Details
                     </button>
 
                 </div>
-                <div style={{ backgroundImage: `url(../Home/neuro.jpg` }}>
-
+                <div >
+                    <img src="../Home/Kings.jpeg" alt="" />
                     <h4>
-                        American Hospital Dubai
+                    King's College Hospital London - Dubai
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis quibusdam suscipit, id hic vero?
+                        Lorem ipsum dolor sit amet consectetur adipisicing 
                     </p>
                     <button>
                         More Details

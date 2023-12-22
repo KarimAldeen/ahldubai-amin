@@ -47,7 +47,7 @@ const Header = () => {
       <nav>
         <ul className='Links'>
           <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
-          <li> <a href='/#OurDocrtrs'>{t('Doctors')}</a> </li>
+          <li> <Link to='/doctors'>{t('Doctors')}</Link> </li>
           <li> <a href='/#Services'>{t('Services')}</a> </li>
           <li> <a href='/#Update'>{t('blog')}</a> </li>
           <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
@@ -60,7 +60,7 @@ const Header = () => {
           >
             <ul className='DrawerLinks'>
             <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
-          <li> <a href='/#OurDocrtrs'>{t('Doctors')}</a> </li>
+          <li> <Link to='/doctors'>{t('Doctors')}</Link> </li>
           <li> <a href='/#Services'>{t('Services')}</a> </li>
           <li> <a href='/#Update'>{t('blog')}</a> </li>
           <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
