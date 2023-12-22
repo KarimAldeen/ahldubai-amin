@@ -17,7 +17,7 @@ const Update = () => {
                         <div className="Update_main">
                             <img src={`../Home/Update${index + 1}.png`} alt="" />
                             <div>
-                                <div> <p> Dec 1, 2023</p> <p> 0 Comment </p></div>
+                                <div> <p> Dec 1, 2023</p> </div>
                                 <h1>Explore the essentials of heart care, from lifestyle</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis enim sit amet placerat vestibulum.</p>
 

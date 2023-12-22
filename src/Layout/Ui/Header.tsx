@@ -46,7 +46,7 @@ const Header = () => {
           <li> <a href='/#Services'>{t('Services')}</a> </li>
           <li> <a href='/#Update'>{t('blog')}</a> </li>
           <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
-          <li> <div  onClick={showModal}>{t('ContactUs')} <FaArrowAltCircleRight /></div> </li>
+          <li> <div  onClick={showModal}>{t('Contact Us')} <FaArrowAltCircleRight /></div> </li>
         </ul>
         <div className='MenuNav'>
           <WithDrawer
@@ -59,7 +59,7 @@ const Header = () => {
           <li> <a href='/#Services'>{t('Services')}</a> </li>
           <li> <a href='/#Update'>{t('blog')}</a> </li>
           <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
-          <li> <div  onClick={showModal}>{t('ContactUs')} <FaArrowAltCircleRight /></div> </li>
+          <li> <div  onClick={showModal}>{t('Contact Us')} <FaArrowAltCircleRight /></div> </li>
             </ul>
           </WithDrawer>
         </div>

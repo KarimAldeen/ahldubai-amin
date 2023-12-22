@@ -7,21 +7,21 @@ import { useNavigate } from 'react-router-dom';
     const NewHeroSection = () => {
         const Data = [
             {
-                image: "1.jpg",
+                image: "1",
                 h1: "medical",
                 h2: "laboratory",
 
                 info: "1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem"
             },
             {
-                image: "2.jpg",
+                image: "2",
                 h1: "Diagnostic",
                 h2: "Center",
 
                 info: "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem"
             },
             {
-                image: "3.jpg",
+                image: "3",
                 h1: "computer ",
                 h2: "diagram",
 
@@ -58,7 +58,7 @@ import { useNavigate } from 'react-router-dom';
 
         return (
             <>
-            <div className='NewHeroSection' id='NewHeroSection'  key={key} >
+            <div className='NewHeroSection' id='NewHeroSection' style={{backgroundImage: `url(../Home/${infoData.image}.jpg)`}}   key={key} >
             <div className='imNewHeroSection'  key={key} >
             <div><h1>{infoData?.h1}</h1> <h2> {infoData?.h2} </h2></div>
                 <p> {infoData?.info} </p>

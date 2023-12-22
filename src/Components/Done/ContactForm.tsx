@@ -18,13 +18,13 @@ const ContactForm = ({isModalOpen,setIsModalOpen}:any) => {
     };
   
   return (
-      <Modal  title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal  title="Leave your contact number and we call you back" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
      <div className="ContactForm">
-     <h1>Sample Quotation</h1>
+     {/* <h6></h6> */}
         <Input prefix={<UserOutlined />}  className='Input' size="large" placeholder="Inter Your Name" />
         <Input prefix={<PhoneFilled />} className='Input'  size="large" placeholder="Inter Your Phone Number" />
         <Input.TextArea  className='Input' placeholder="Comment Or Message"size="large" />
-        <Button block type='primary'>See Your Trip</Button>
+        <Button block type='primary'>Order a consultation</Button>
      </div>
       </Modal>
         
