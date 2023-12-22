@@ -15,7 +15,7 @@ const Page = () => {
     {/* <HeroSection/> */}
     <NewHeroSection/>
     <Services/>
-    <OurPartners/>
+    {/* <OurPartners/> */}
 
     <Reviews/>
     {/* <Reviews/> */}

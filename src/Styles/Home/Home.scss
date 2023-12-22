@@ -864,10 +864,11 @@
     }
     .Review{
         width: 100%;
-        padding-inline: 10%;
         margin-block: 30px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        margin-inline: auto;
         >h1{
             font-weight: bold;
             font-size: 3vw;
@@ -882,6 +883,7 @@
             margin-block: 40px;
             width: 900px;
             padding-top: 50px;
+            margin-inline: auto;
            
             .ReviewCard{
                 position: relative;
@@ -1107,93 +1109,205 @@
             
         }
 
-        .Reviews {
+        // .Reviews {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     width: 100%;
+        //     padding-inline: 6vw;
+        //     margin-bottom: 40px;
+
+        //     >h1 {
+        //         font-size: 8vw;
+        //         font-weight: bold;
+        //     }
+
+        //     >div {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: center;
+        //         align-items: center;
+
+
+        //         gap: 55px;
+
+        //         >img {
+        //             width: 40vw;
+        //         }
+
+        //         .Reviews_Info {
+        //             display: flex;
+        //             flex-direction: column;
+
+        //             gap: 20px;
+
+        //             .Reviews_Info_top {
+
+        //                 display: flex;
+        //                 justify-content: space-between;
+        //                 margin-bottom: 30px;
+
+        //                 .reviewSvg {
+        //                     img {
+        //                         width: 9vw;
+        //                     }
+        //                 }
+
+        //                 .ActiveImage {
+        //                     border: var(--primary) 3px solid;
+        //                     border-radius: 50%;
+        //                 }
+        //             }
+
+        //             img {
+        //                 width: 7vw;
+        //                 margin-right: 20px;
+        //                 cursor: pointer;
+
+        //             }
+
+        //             .Reviews_Info_Mid {
+
+        //                 >div {
+        //                     margin-block: 40px;
+        //                     display: flex;
+        //                     align-items: center;
+
+        //                     img {
+        //                         width: 7vw;
+        //                         height: 7vw;
+        //                         cursor: pointer;
+        //                     }
+
+        //                     >span {
+        //                         display: flex;
+        //                         flex-direction: column;
+        //                         justify-content: center;
+
+        //                         h1 {
+        //                             font-size: 1.4vw;
+        //                             margin-bottom: 0;
+        //                         }
+        //                     }
+        //                 }
+
+        //             }
+        //         }
+        //     }
+
+        // }
+        .Review{
+            width: 100%;
+            margin-block: 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding-inline: 6vw;
-            margin-bottom: 40px;
-
-            >h1 {
-                font-size: 8vw;
+            margin-inline: auto;
+            >h1{
                 font-weight: bold;
+                font-size: 5vw;
             }
-
-            >div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-
-                gap: 55px;
-
-                >img {
-                    width: 40vw;
-                }
-
-                .Reviews_Info {
+            >h6{
+                padding-inline: 10%;
+                font-size: 2.4vw;
+                color: var(--secondary);
+            }
+            text-align: center;
+            .Review_Cards{
+                margin-block: 40px;
+                width: auto;
+                padding-top: 50px;
+                margin-inline: auto;
+               
+                .ReviewCard{
+                    position: relative;
+                    width: 260px;
+                    height: 190px;
+                    border-radius: 15px;
+                    padding: 10px;
                     display: flex;
                     flex-direction: column;
-
-                    gap: 20px;
-
-                    .Reviews_Info_top {
-
-                        display: flex;
-                        justify-content: space-between;
-                        margin-bottom: 30px;
-
-                        .reviewSvg {
-                            img {
-                                width: 9vw;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--bg);
+                 box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.2);
+                 transition: .7s ease-in-out;
+                 cursor: pointer;
+                 background-color: var(--primary);
+                 color: var(--white);
+                 transform: translateY(-50px);
+                 transition: .5s ease-in-out;
+    
+                 margin-inline: auto;
+                 margin-bottom: 30px;
+                 >p{
+                    font-size: 13px;
+                    text-align: start;
+                    padding-inline: 20px;
+                    padding-top: 10px;
+    
+                }
+                   >div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding-inline: 20px ;
+    
+                    
+                >img{
+                    width: 40px;
+                    transform: translate(10px ,-10px);
+    
+                    
+                }
+                >div{
+                        display: flex;  
+                        align-items: start;
+                        gap: 10px;
+                        img{
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 5px;
+                        }
+                        >span{
+                        
+                            h5{
+                                font-size: 14px;
+                                text-wrap: nowrap;
+                                font-weight: bold;
+                                margin-bottom: 0;
+                            }
+                            h6{
+                                font-size: 13px;
+                                text-wrap: nowrap;
                             }
                         }
-
-                        .ActiveImage {
-                            border: var(--primary) 3px solid;
-                            border-radius: 50%;
-                        }
-                    }
-
-                    img {
-                        width: 7vw;
-                        margin-right: 20px;
-                        cursor: pointer;
-
-                    }
-
-                    .Reviews_Info_Mid {
-
-                        >div {
-                            margin-block: 40px;
-                            display: flex;
-                            align-items: center;
-
-                            img {
-                                width: 7vw;
-                                height: 7vw;
-                                cursor: pointer;
-                            }
-
-                            >span {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-
-                                h1 {
-                                    font-size: 1.4vw;
-                                    margin-bottom: 0;
+                }
+    
+                   }
+                        &:hover{
+                            background: var(--primary);
+                            transition: .7s ease-in-out;
+                            color: var(--white);
+                            scale: 1.02;
+                            a{
+                                color: var(--white);
+                                    border-bottom: 1px solid var(--white);
+                                    padding-bottom: 2px;
                                 }
-                            }
                         }
-
-                    }
+                      
+                }
+                .ActiveReviewCard{
+                    background-color: var(--primary);
+                    color: var(--white);
+                    transform: translateY(-50px);
+                    transition: .5s ease-in-out;
                 }
             }
-
+    
         }
 
         .Update {

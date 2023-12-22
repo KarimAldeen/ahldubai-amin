@@ -26,8 +26,8 @@ const CardSwiper: React.FC = () => {
         breakpoints={{
           300: { slidesPerView: 1, spaceBetween: 20 },
           500: { slidesPerView: 1, spaceBetween: 20 },
-          650: { slidesPerView: 3, spaceBetween: 20 },
-          900: { slidesPerView: 3, spaceBetween: 10 },
+          650: { slidesPerView: 1, spaceBetween: 20 },
+          900: { slidesPerView: 1, spaceBetween: 10 },
           1200: { slidesPerView: 3, spaceBetween: 10 },
           1500: { slidesPerView: 3, spaceBetween: 10 },
         }}
