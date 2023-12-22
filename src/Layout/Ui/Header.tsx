@@ -1,50 +1,73 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import { MenuFoldOutlined, MenuOutlined } from '@ant-design/icons'
-import WithDrawer from '../../HighOrderComponent/WithDrawer'
-import { Button } from 'antd'
-import { useTranslation } from 'react-i18next'
+import React, { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { MenuFoldOutlined, MenuOutlined } from '@ant-design/icons';
+import WithDrawer from '../../HighOrderComponent/WithDrawer';
+import { Button } from 'antd';
+import { useTranslation } from 'react-i18next';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
+import ContactForm from '../../Components/Done/ContactForm';
 
-export const LinksComp = ({ status }: any) => {
-  const [t] = useTranslation()
-
-  return (
-    <ul className={status ? 'DrawerLinks' : 'Links'}>
-      <li> <NavLink to='/'>{t("Home")}</NavLink>   </li>
-      <li> <NavLink to='/doctors'>{t("Doctors")}</NavLink>   </li>
-      <li> <NavLink to='/services'>{t("Services")}</NavLink> </li>
-      <li> <NavLink to='/questions'>{t("questions")}</NavLink> </li>
-
-      <li> <NavLink to='/contact'>{t("Contact Us")}</NavLink>   </li>
-
-    </ul>
-  )
-}
 const Header = () => {
+  const [t] = useTranslation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector('.Header');
+      if (header) {
+        const scrollPosition = window.scrollY;
+        const headerHeight = window.innerHeight;
+
+        if (scrollPosition >= headerHeight) {
+          header.classList.add('Scrolled');
+        } else {
+          header.classList.remove('Scrolled');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+      setIsModalOpen(true);
+    };
 
   return (
-
     <header className='Header'>
-      <Link to={'/'} > <img src="https://static.tildacdn.com/tild3138-3936-4835-a133-663836326332/imgonline-com-ua-Sha.png" alt="" /></Link>
+      <Link to={'/'} > <img src="../Logo.png" alt="" /></Link>
       <nav>
-        <LinksComp status={false} />
+        <ul className='Links'>
+          <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
+          <li> <a href='/#OurDocrtrs'>{t('Doctors')}</a> </li>
+          <li> <a href='/#Services'>{t('Services')}</a> </li>
+          <li> <a href='/#Update'>{t('blog')}</a> </li>
+          <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
+          <li> <div  onClick={showModal}>{t('ContactUs')} <FaArrowAltCircleRight /></div> </li>
+        </ul>
         <div className='MenuNav'>
           <WithDrawer
-            title="Nav Links"
-            // width={250}
-            button={<Button icon={<MenuOutlined />} type="primary" />}
+            title='Nav Links'
+            button={<Button icon={<MenuOutlined />} type='primary' />}
           >
-
-            <LinksComp status={true} />
+            <ul className='DrawerLinks'>
+            <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
+          <li> <a href='/#OurDocrtrs'>{t('Doctors')}</a> </li>
+          <li> <a href='/#Services'>{t('Services')}</a> </li>
+          <li> <a href='/#Update'>{t('blog')}</a> </li>
+          <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
+          <li> <div  onClick={showModal}>{t('ContactUs')} <FaArrowAltCircleRight /></div> </li>
+            </ul>
           </WithDrawer>
-
-
-
         </div>
       </nav>
-    </header>
-  )
-}
+      <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
-export default Header
+    </header>
+  );
+};
+
+export default Header;

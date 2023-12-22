@@ -7,6 +7,7 @@ import { FaEye,FaTruckMedical } from 'react-icons/fa6';
 import { FaExternalLinkSquareAlt, FaHeartbeat } from "react-icons/fa";
 import { LiaToothSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
+import { ImArrowUpRight2 } from "react-icons/im";
 
 
 const Services = () => {
@@ -25,7 +26,7 @@ const Services = () => {
     ]
   
     return (
-        <div className="Services" id='features'>
+        <div className="Services" id='Services'>
             <div className="in">
                 <p>- Our Service Us</p>
                 <h1>High Quality Services for You.</h1>
@@ -34,17 +35,23 @@ const Services = () => {
                         return (
                             <div className="Feature" key={index}>
 
-                                {item?.icon}
+                               <div>
+                              <span>
+                              {item?.icon}
+                              </span>
                                 <h1>
 
                                 {item?.h1}
                                 </h1>
+                               </div>
 
                                 <p>
                                 {item?.title}
                                 </p>
                                 <Link className="Link" to="/">
-                                <FaExternalLinkSquareAlt />
+                                <ImArrowUpRight2 />
+
+
                                 </Link>
 
 

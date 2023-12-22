@@ -1,14 +1,26 @@
+.Doctors_Page .Header ,.Header.Scrolled {
+    background-color: var(--bg) !important;
+    @include Shadow;
+    color: var(--text);
+
+    
+  }
 .Header {
-    // position: absolute;
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    color: var(--text);
+    color: var(--white);
     height: 90px;
-    padding-inline: 8vw;
-    z-index: 5;
+    padding-inline: 6vw;
+    z-index: 1;
+    font-family: 'Niramit';
+    font-weight: bold;
+    z-index: 999999;
+    // background: var(--bg);
+
 
     img {
         
@@ -22,7 +34,7 @@
         .Links {
             margin-bottom: 0;
             @include Flex;
-            gap: 2.5vw;
+            gap: 3vw;
 
             svg {
                 height: 45px;
@@ -36,22 +48,25 @@
                 // cursor: pointer;
                 padding-bottom: 1px;
 
-                &:has(.active) {
-                    color: var(--primary);
-                    opacity: 1 !important;
-                    font-weight: bold;
+                // &:has(.active) {
+                //     color: var(--primary);
+                //     opacity: 1 !important;
+                //     font-weight: bold;
 
 
-                }
+                // }
 
                 &:last-child {
-                    background: var(--primary);
+                    display: flex;justify-content: center; align-items: center;
+                    background: var(--secondary);
+                    border-radius: 30px;
                     color: var(--white);
                     padding: 6px 30px;
-                    border-radius: 4px;
                     text-wrap: nowrap;
                     opacity: 1;
-                    margin-inline:15vw 5vw;
+                    height: 30px;
+                    margin: auto;
+                    text-align: center;
                 }
 
             }
@@ -156,11 +171,16 @@
 }
 
 @media screen and (max-width: 900px) {
-   .Header{
-    position: absolute;
-   }
+  
 }
 @media screen and (max-width: 700px) {
+    .Doctors_Page .Header ,.Header.Scrolled {
+        background-color:transparent !important;
+        @include Shadow;
+        color: var(--text);
+    
+        
+      }
     .MenuNav {
         display: block;
     }

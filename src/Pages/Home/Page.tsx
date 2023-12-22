@@ -6,15 +6,20 @@ import Doctors from '../../Components/NewHome/Doctors'
 import Update from '../../Components/Done/Update'
 import Footer from '../../Layout/Ui/Footer'
 import OurPartners from '../../Components/Done/OurPartners'
+import NewHeroSection from '../../Components/Done/NewHeroSection'
+import OurDocrtrs from '../../Components/Done/OurDocrtrs'
 
 const Page = () => {
   return (
     <>
-    <HeroSection/>
+    {/* <HeroSection/> */}
+    <NewHeroSection/>
     <Services/>
-    <Reviews/>
-    <Update/>
     <OurPartners/>
+    <Reviews/>
+    <OurDocrtrs/>
+    <Update/>
+    
     {/* <GetQuote/>
     <Clients/>
     <Services/>

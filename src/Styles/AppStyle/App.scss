@@ -1,12 +1,12 @@
-body {
+body ,html{
     background: var(--bg);
         color: var(--text);
         max-width: 100vw;
         overflow-x: hidden;
-        
+
 
 scroll-behavior: smooth;
-scroll-padding:5rem ;
+scroll-padding:10rem ;
 &::-webkit-scrollbar {
     width: 8px; /* Adjust the width as needed */
   }
@@ -103,4 +103,7 @@ body {
 
 .ant-btn-primary{
     background: var(--primary) !important;
+}
+.ant-modal-footer{
+    display: none;
 }

@@ -3,7 +3,7 @@ import React from 'react'
 
 const OurPartners = () => {
     return (
-        <div className='OurPartners'>
+        <div className='OurPartners' id='OurPartners'>
             <h1>  We cooperate with </h1>
          <div>
          <div>

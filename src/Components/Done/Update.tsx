@@ -3,7 +3,7 @@ import React from 'react'
 import { FaFacebook } from 'react-icons/fa6'
 const Update = () => {
     return (
-        <div className='Update'>
+        <div className='Update' id="Update">
 
             <div className='Update_Header'>
                 <div>

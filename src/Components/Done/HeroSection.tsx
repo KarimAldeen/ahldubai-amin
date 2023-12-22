@@ -5,7 +5,7 @@ import { PhoneFilled, UserOutlined } from '@ant-design/icons';
 
 
 
-const HeroSection = () => {
+const HeroSection = () => {  
   
 
 

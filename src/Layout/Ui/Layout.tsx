@@ -1,17 +1,19 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import Footer2 from './Footer2'
 
 
 const Layout = ({ children ,className=""}: { children: React.ReactNode ,className?: string }) => {
 
   return (
- <div className='Layout'>
+ <div className={`${className} Layout`}>
      <Header/>
-    <main className={`${className} Layout_Body`}>
+    <main className={`Layout_Body`}>
         {children}
     </main>
-    <Footer/>
+    {/* <Footer/> */}
+    <Footer2/>
 
  </div>
   )

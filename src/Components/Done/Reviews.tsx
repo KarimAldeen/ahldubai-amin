@@ -5,7 +5,7 @@ import Visibale from '../../HighOrderComponent/withVisibale'
 const Reviews = () => {
     const [main, setmain] = useState(1)
   return (
-    <Visibale className='Reviews'>
+    <Visibale className='Reviews' id="Reviews">
         <h6>Our Service & Testimonial</h6>
         <h1>Service & Reviews</h1>
         <div>
