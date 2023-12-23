@@ -207,8 +207,9 @@
             width: 100%;
             margin-block: 20px;
             height: 100%;
+            gap: 5px;
             position: relative;
-            overflow-y: hidden;
+            // overflow-y: hidden;
 
 
             .Services_body_Left {
@@ -313,11 +314,12 @@
 
                 background-color: var(--bg);
                 @include Shadow;
-                width: 30%;
+                width: 28%;
                 padding: 30px 30px;
                 height: fit-content;
-                position: fixed;
+                position: sticky;
                 right: 10px;
+                top: 90px;
 
 
                 >h1 {

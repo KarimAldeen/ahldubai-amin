@@ -55,6 +55,7 @@
             width: 100%;
             margin-block: 50px;
             height: 100%;
+                gap: 10px;
             position: relative;
 
             .Blog_body_Left {
@@ -237,11 +238,12 @@
 
                 background-color: var(--bg);
                 @include Shadow;
-                width: 30%;
+                width: 28%;
                 padding: 30px 30px;
                 height: fit-content;
-                position: fixed;
+                position: sticky;
                 right: 10px;
+                top: 90px;
 
                 >h1 {
                     font-size: 1.4vw;
