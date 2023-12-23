@@ -1,7 +1,7 @@
 import { Button } from 'antd'
 import React from 'react'
-import ClientCard from '../SwiperClients/ClientCard'
-import CardSwiper from '../SwiperClients/CardSwiper'
+import ClientCard from '../../../Components/SwiperClients/ClientCard'
+import CardSwiper from '../../../Components/SwiperClients/CardSwiper'
 
 const Clients = () => {
     return (

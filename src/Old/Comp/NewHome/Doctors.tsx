@@ -1,5 +1,5 @@
 import React from 'react'
-import CardSwiper from '../SwiperDoctor/CardSwiper'
+import CardSwiper from '../../../Components/SwiperDoctor/CardSwiper'
 import { Select } from 'antd';
 
 

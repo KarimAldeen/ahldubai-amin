@@ -1,0 +1,168 @@
+.HeroSection {
+    background: var(--bg);
+margin-inline: auto;
+text-align: center;
+width: 100%;
+height: 100vh;
+min-height: 500px;
+// border-radius: 50px;
+position: relative;
+color: var(--white);
+background: url('../../../public/Home/main.webp');
+display: flex;
+align-items: center;
+gap: 10%;
+padding-inline: 10%;
+background-repeat: no-repeat;
+background-size: cover;
+
+.HeroSection_Left {
+    h1 {
+        font-size: 6vw;
+        font-weight: bold;
+        text-align: start;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.5vw;
+        width: 60%;
+        text-align: start;
+
+    }
+}
+
+.HeroSection_Right {
+    width: 560px;
+    height: 460px;
+    border-radius: 50px;
+    padding: 60px 30px;
+    background: var(--white);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
+
+    svg {
+        color: var(--subtext);
+        margin-inline: 5px;
+    }
+
+    h1 {
+        font-size: 3vw;
+        font-weight: bold;
+        text-wrap: nowrap;
+    }
+
+    button {
+        background: var(--primary);
+        border-radius: 10px;
+        height: 40px;
+        font-weight: bold;
+    }
+}
+
+}
+.Reviews {
+display: flex;
+flex-direction: column;
+width: 100%;
+padding-inline: 6vw;
+margin-bottom: 40px;
+
+>h1 {
+    font-weight: bold;
+}
+
+>div {
+    display: flex;
+    gap: 5%;
+
+    >img {
+        width: 40vw;
+        animation: trans2 2s ease-in-out;
+
+        @keyframes trans2 {
+            0% {
+                transform: translateX(-50vw);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .Reviews_Info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+        animation: trans 2s ease-in-out;
+
+        @keyframes trans {
+            from {
+                transform: translateX(50vw);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .Reviews_Info_top {
+              
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .reviewSvg {
+                img {
+                    width: 70px;
+                }
+            }
+
+            .ActiveImage {
+                border: var(--primary) 3px solid;
+                border-radius: 50%;
+            }
+        }
+
+        img {
+            width: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+
+        }
+
+        .Reviews_Info_Mid {
+
+            >div {
+                margin-block: 40px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                }
+
+                >span {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h1 {
+                        font-size: 1.4vw;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+}

@@ -75,7 +75,16 @@
                     opacity: 1;
                     height: 30px;
                     margin: auto;
+                    transition: .3s ease-in-out;
+
                     text-align: center;
+                    &:hover{
+                        scale: 1.1;
+                        background: var(--primary);
+                        color: var(--white);
+                        transition: .3s ease-in-out;
+                        cursor: pointer;
+                    }
                 }
 
             }
