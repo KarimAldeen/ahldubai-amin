@@ -46,11 +46,11 @@ const Header = () => {
       <Link to={'/'} > <img src="../Logo.png" alt="" /></Link>
       <nav>
         <ul className='Links'>
-          <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
+          <li> <a href='#NewHeroSection'>{t('Home')}</a> </li>
           <li> <Link to='/doctors'>{t('Doctors')}</Link> </li>
-          <li> <a href='/#Services'>{t('Services')}</a> </li>
-          <li> <a href='/#Update'>{t('blog')}</a> </li>
-          <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
+          <li> <a href='#Services'>{t('Services')}</a> </li>
+          <li> <a href='#Update'>{t('blog')}</a> </li>
+          <li> <a href='#Reviews'>{t('Reviews')}</a> </li>
           <li> <div  onClick={showModal}>{t('Contact Us')} <FaArrowAltCircleRight /></div> </li>
         </ul>
         <div className='MenuNav'>
