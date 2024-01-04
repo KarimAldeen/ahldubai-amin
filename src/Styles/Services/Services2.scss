@@ -198,13 +198,29 @@
     .Process{
         padding-inline: 10vw;
         margin-block: 80px;
+
         >div{
             display: none;
         }
        >span{
+        >div{
+            height: 100px;
+
+        }
         .ant-steps-item-title{
             // text-wrap: nowrap;
-            font-size: 1.2vw !important;
+            // font-size: 1.2vw !important;
+        }
+        :where(.css-dev-only-do-not-override-p7e5j5).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after{
+            background-color : var(--primary) !important;
+        }
+        :where(.css-dev-only-do-not-override-p7e5j5).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description{
+            transform: translate(0px,20px);
+            // text-wrap: nowrap;
+        }
+        svg{
+
+            color: var(--secondary) !important;
         }
        }
     }
@@ -514,6 +530,10 @@
        
             >div{
                 display: block;
+                >div{
+                    height: 300px;
+        
+                }
             }
            >span{
             display: none;

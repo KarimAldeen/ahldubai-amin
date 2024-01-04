@@ -5,7 +5,7 @@ import OurDocrtrs from '../../Components/Done/OurDocrtrs'
 
 const Page2 = () => {
   return (
-    <div className="Services2">
+    <div className="Services2" >
         <Pricing/>
         <Process/>
         <div className='Services2_body'>

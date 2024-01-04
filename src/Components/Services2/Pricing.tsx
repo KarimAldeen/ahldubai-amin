@@ -28,7 +28,7 @@ const Pricing = () => {
     return (
 
 
-        <div className='Pricing'>
+        <div className='Pricing' id='Services'>
             <h6>Pricing Plan</h6>
             <h1> Get Started Now Pick A plan Later </h1>
             <div className='Pricing_Cards'>

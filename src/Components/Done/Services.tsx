@@ -48,7 +48,7 @@ const Services = () => {
                                 <p>
                                 {item?.title}
                                 </p>
-                                <Link className="Link" to="/services">
+                                <Link className="Link" to="/services/#Services">
                                 <ImArrowUpRight2 />
 
 

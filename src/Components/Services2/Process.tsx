@@ -1,52 +1,77 @@
 import React from 'react';
 import { Divider, Steps } from 'antd';
+import { LoadingOutlined, SmileOutlined, SolutionOutlined, UserOutlined } from '@ant-design/icons';
+import { MdDirectionsRun, MdOnlinePrediction, MdOutlineDataSaverOn } from 'react-icons/md';
 
 const App: React.FC = () => (
   <div className='Process'>
    <span>
    <Steps
-      progressDot
       current={4}
       items={[
         {
-          title:"Free Online consultation"
-        },
-        {
-
-          title: 'Visit Scheduling and Travel Assistance',
+          description:"Free Online consultation",
+          icon: <MdOnlinePrediction />,
+          status: 'finish',
 
         },
         {
 
-          title: 'Proceeder ',
+          icon: <SolutionOutlined />,
+          status: 'finish',
+          description:'Visit Scheduling and Travel Assistance',
+
+
         },
         {
-          title: 'Follow up',
+
+          description: 'Proceeder ',
+          icon: <MdOutlineDataSaverOn />
+          ,
+          status: 'finish',
+        },
+        {
+          description: 'Follow up',
+          icon: <MdDirectionsRun />
+          ,
+          status: 'finish',
         },
       ]}
     />
+
    </span>
     <Divider />
    <div>
      <Steps
-      progressDot
       current={1}
       direction="vertical"
       items={[
         {
-          title:"Free Online consultation"
-        },
-        {
-
-          title: 'Visit Scheduling and Travel Assistance',
+          description:"Free Online consultation",
+          icon: <MdOnlinePrediction />,
+          status: 'finish',
 
         },
         {
 
-          title: 'Proceeder ',
+          icon: <SolutionOutlined />,
+          status: 'finish',
+          description:'Visit Scheduling and Travel Assistance',
+
+
         },
         {
-          title: 'Follow up',
+
+          description: 'Proceeder ',
+          icon: <MdOutlineDataSaverOn />
+          ,
+          status: 'finish',
+        },
+        {
+          description: 'Follow up',
+          icon: <MdDirectionsRun />
+          ,
+          status: 'finish',
         },
       ]}
     />
