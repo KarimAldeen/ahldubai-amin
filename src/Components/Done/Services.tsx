@@ -24,6 +24,10 @@ const Services = () => {
 
 
     ]
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+    
   
     return (
         <div className="Services" id='Services'>
@@ -48,7 +52,7 @@ const Services = () => {
                                 <p>
                                 {item?.title}
                                 </p>
-                                <Link className="Link" to="/services/#Services">
+                                <Link onClick={scrollToTop} className="Link" to="/services/">
                                 <ImArrowUpRight2 />
 
 
