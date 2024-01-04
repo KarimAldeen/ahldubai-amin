@@ -9,7 +9,7 @@ import OurDocrtrs from '../../Components/Done/OurDocrtrs'
 const Services = () => {
     return (
         <div className='Services'>
-            <div className='Hero_Services'>
+            {/* <div className='Hero_Services'>
                 <div>
                     <h1>Services</h1>
                     <div>
@@ -31,10 +31,9 @@ const Services = () => {
                     <h1>Order a consultation</h1>
                     <Input prefix={<UserOutlined />} className='Input' size="middle" placeholder="Inter Your Name" />
                     <Input prefix={<PhoneFilled />} className='Input' size="middle" placeholder="Inter Your Phone Number" />
-                    {/* <Input.TextArea className='Input' placeholder="Comment Or Message" size="middle" /> */}
                     <Button block type='primary'>Submite</Button>
                 </div>
-            </div>
+            </div> */}
             <div className='Services_body2'>
                 <div className='Services_body_Left2'>
                     <OurDocrtrs/>

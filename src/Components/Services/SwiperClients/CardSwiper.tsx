@@ -18,8 +18,8 @@ const CardSwiper: React.FC= () => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper:any) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper:any) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
 
         className="mySwiper"
       >

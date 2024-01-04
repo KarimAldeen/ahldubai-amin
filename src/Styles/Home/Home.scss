@@ -33,8 +33,22 @@
             top: 0;
             left: 0;
             width: 100%;
+            opacity: 0.8;
+            height: 30%;
+            background-image: linear-gradient(180deg, #131623, transparent);
+            z-index: 1;
+        }
+        
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
+            background:#131623;
+            opacity: .4;
             z-index: 1;
         }
 
@@ -1390,6 +1404,9 @@
     
         }
 
+        .Image_Controller ,.Social_Controller{
+            display: none;
+        }
     }
 
 }
@@ -1485,3 +1502,136 @@
     }
 
 } 
+
+
+
+
+.Image_Controller{
+    height: 170px;
+    width: 50px;
+    position: absolute;
+    top: 200px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+ justify-content: space-between;
+
+
+    
+ >div {
+    width: 20px; /* Set the desired width for each circular div */
+    height: 20px; /* Set the desired height for each circular div */
+    border: 1px solid white; /* Set the border style and color */
+    border-radius: 50%; /* Make the divs circular by setting border-radius to 50% */
+    position: relative; /* Position relative for absolute positioning of line */
+    
+  }
+//   >div::before {
+//     content: "";
+//     position: absolute;
+//     width: 10px;
+//     height: 10px; /* Set the height of the line */
+//     border-radius: 50%;
+//     background-color: var(--secondary); /* Set the color of the line */
+//     left: 50%;
+//     top: 50%;
+//     cursor: pointer;
+//     transform: translate(-50%,-50%);
+//   }
+  .active_Image::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px; /* Set the height of the line */
+    border-radius: 50%;
+    background-color: var(--secondary); /* Set the color of the line */
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+  }
+   >div::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 50px; /* Set the height of the line */
+    background-color: white; /* Set the color of the line */
+    bottom: -300%; /* Position the line underneath the circular div */
+    left: 50%;
+   
+  }
+  >div:last-child{
+   &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 50px; /* Set the height of the line */
+        background-color: white; /* Set the color of the line */
+        bottom: -300%; /* Position the line underneath the circular div */
+        left: 50%;
+        background-color: transparent !important; /* Set the color of the line */
+
+       
+      }
+
+}
+}
+
+.Social_Controller{
+    height: 170px;
+    width: 50px;
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    z-index: 9999;
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+ justify-content: space-between;
+ svg {
+    width: 20px;
+    height: 20px; /* Set the height of the line */
+    color: white; /* Set the color of the line */   
+    position: relative;
+    opacity: .8;
+    transition: .2s ease-in-out;
+    
+    &:hover{
+        color: var(--primary);
+        scale: 1.4;
+        cursor: pointer;
+    }
+  }
+  div{
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 36px; /* Set the height of the line */
+        background-color: white; /* Set the color of the line */
+        bottom: -180%; /* Position the line underneath the circular div */
+        left: 50%;
+       
+      }
+      &:last-child{
+        &::after {
+             content: "";
+             position: absolute;
+             width: 1px;
+             height: 50px; /* Set the height of the line */
+             background-color: white; /* Set the color of the line */
+             bottom: -300%; /* Position the line underneath the circular div */
+             left: 50%;
+             background-color: transparent !important; /* Set the color of the line */
+     
+            
+           }
+     
+     }
+  }
+  
+ 
+}

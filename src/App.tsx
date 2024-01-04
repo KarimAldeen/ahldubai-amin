@@ -5,7 +5,7 @@ import Auth from './Pages/Auth/Page';
 import Page from './Pages/Home/Page';
 import Layout from './Layout/Ui/Layout';
 import Doctors from './Pages/Doctors/Page';
-import Services from './Pages/Services/Page';
+import Services from './Pages/Services/Page2';
 import Blog from './Pages/Blog/Page';
 import Info from './Pages/info/Page';
 const Page404 = lazy(() => import("./Layout/Ui/NotFoundPage"))

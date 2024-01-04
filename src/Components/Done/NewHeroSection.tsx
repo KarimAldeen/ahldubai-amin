@@ -1,74 +1,67 @@
 import React, { useEffect, useState } from 'react';
-import { FaArrowAltCircleRight } from 'react-icons/fa';
-import { FaUser } from 'react-icons/fa6';
+import { FaArrowAltCircleRight, FaUser } from 'react-icons/fa';
 import ContactForm from './ContactForm';
 import { useNavigate } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa6';
+
+const data = [
+  {
+    image: '1',
+    h1: 'Medical',
+    h2: 'Laboratory',
+    info: '1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem',
+  },
+  {
+    image: '2',
+    h1: 'Diagnostic',
+    h2: 'Center',
+    info: '2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem',
+  },
+  {
+    image: '3',
+    h1: 'Computer',
+    h2: 'Diagram',
+    info: '3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem',
+  },
+];
 
 const NewHeroSection = () => {
-    const Data = [
-        {
-            image: "1",
-            h1: "medical",
-            h2: "laboratory",
-
-            info: "1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem"
-        },
-        {
-            image: "2",
-            h1: "Diagnostic",
-            h2: "Center",
-
-            info: "2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem"
-        },
-        {
-            image: "3",
-            h1: "computer ",
-            h2: "diagram",
-
-            info: "3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem"
-        }
-    ]
-
-  const [infoData, setInfoData] = useState(Data[0]);
+  const [infoData, setInfoData] = useState(data[0]);
   const [key, setKey] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const maxIterations = 3;
-    let iteration = 0;
+ 
+    const maxIterations = data.length;
+    let iteration = key;
 
     const intervalId = setInterval(() => {
-      preloadImage(Data[iteration].image); // Preload the next image
-      setInfoData(Data[iteration]);
+      setInfoData(data[iteration]);
       setKey(iteration);
 
-      iteration++;
-
-      if (iteration === maxIterations) {
-        iteration = 0;
-      }
+      iteration = (iteration + 1) % maxIterations;
     }, 6000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [key]);
 
-  const preloadImage = (imageUrl:any) => {
-    const img = new Image();
-    img.src = `../Home/${imageUrl}.jpg`;
-  };
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
   };
 
-  const navigate = useNavigate();
+  const handleImageClick = (index:number) => {
+    setInfoData(data[index]);
+    setKey(index);
+  };
+
 
   return (
     <>
       <div className='NewHeroSection' id='NewHeroSection' style={{ backgroundImage: `url(../Home/${infoData.image}.webp)` }} key={key}>
         <div className='imNewHeroSection' key={key}>
           <div>
-            <h1>{infoData?.h1}</h1> <h2> {infoData?.h2} </h2>
+            <h1>{infoData?.h1}</h1> <h2>{infoData?.h2}</h2>
           </div>
           <p> {infoData?.info} </p>
           <div>
@@ -76,13 +69,23 @@ const NewHeroSection = () => {
               Find diagnostics <FaArrowAltCircleRight />
             </button>
             <button className='Button2' onClick={() => navigate("/doctors")}>
-              {" "}
-              <FaUser /> See Our Doctors{" "}
+              <FaUser /> See Our Doctors
             </button>
           </div>
         </div>
       </div>
       <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <div className='Image_Controller'>
+        {data.map((item, index) => (
+          <div key={index} onClick={() => handleImageClick(index)} className={infoData.image === item.image ? 'active_Image' : ''}></div>
+        ))}
+      </div>
+      <div className='Social_Controller'>
+        <div><FaFacebook/></div>
+        <div><FaInstagram/></div>
+        <div><FaTwitter/></div>
+
+      </div>
     </>
   );
 };

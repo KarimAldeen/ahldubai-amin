@@ -49,7 +49,7 @@ const CardSwiper: React.FC= () => {
       // pagination={{ clickable: true }}
       // scrollbar={{ draggable: true }}
       onSwiper={(swiper:any) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      // onSlideChange={() => console.log('slide change')}
         className='Docor_Cards'
       >
         {

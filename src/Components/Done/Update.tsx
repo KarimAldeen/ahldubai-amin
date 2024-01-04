@@ -16,7 +16,7 @@ const Update = () => {
             <div className="Update_Cards">
                 {[1, 2, 3]?.map((item, index) => {
                     return (
-                        <div className="Update_main">
+                        <div key={index} className="Update_main">
                             <img src={`../Home/Update${index + 1}.png`} alt="" />
                             <div>
                                 <div> <p> Dec 1, 2023</p> </div>

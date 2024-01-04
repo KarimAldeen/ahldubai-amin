@@ -36,7 +36,7 @@ const CardSwiper: React.FC = () => {
         // navigation
         pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
-        onSwiper={(swiper: any) => console.log(swiper)}
+        // onSwiper={(swiper: any) => console.log(swiper)}
         onSlideChange={handleSlideChange}
         className='Review_Cards'
       >
