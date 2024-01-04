@@ -1,84 +1,50 @@
-import React from 'react';
-import { Divider, Steps } from 'antd';
-import { LoadingOutlined, SmileOutlined, SolutionOutlined, UserOutlined } from '@ant-design/icons';
-import { MdDirectionsRun, MdOnlinePrediction, MdOutlineDataSaverOn } from 'react-icons/md';
+import React from 'react'
 
-const App: React.FC = () => (
-  <div className='Process'>
-   <span>
-   <Steps
-      current={4}
-      items={[
-        {
-          description:"Free Online consultation",
-          icon: <MdOnlinePrediction />,
-          status: 'finish',
+const Process = () => {
+  return (
+    <div className='Process'>
+      <h1>Your complete trip in one place</h1>
+      <div>
+        <img src="../procces/1.jpg" alt="" />
 
-        },
-        {
+        <div>
+          <h1>Procedure</h1>
+         
+          <ul>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img src="../procces/2.jpg" alt="" />
 
-          icon: <SolutionOutlined />,
-          status: 'finish',
-          description:'Visit Scheduling and Travel Assistance',
+        <div>
+          <h1>Flight</h1>
+         
+          <ul>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img src="../procces/3.jpg" alt="" />
 
+        <div>
+          <h1>Flight</h1>
+         
+          <ul>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+            <li>Our partners are individually selected to meet the highest international standards.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
 
-        },
-        {
-
-          description: 'Proceeder ',
-          icon: <MdOutlineDataSaverOn />
-          ,
-          status: 'finish',
-        },
-        {
-          description: 'Follow up',
-          icon: <MdDirectionsRun />
-          ,
-          status: 'finish',
-        },
-      ]}
-    />
-
-   </span>
-    <Divider />
-   <div>
-     <Steps
-      current={1}
-      direction="vertical"
-      items={[
-        {
-          description:"Free Online consultation",
-          icon: <MdOnlinePrediction />,
-          status: 'finish',
-
-        },
-        {
-
-          icon: <SolutionOutlined />,
-          status: 'finish',
-          description:'Visit Scheduling and Travel Assistance',
-
-
-        },
-        {
-
-          description: 'Proceeder ',
-          icon: <MdOutlineDataSaverOn />
-          ,
-          status: 'finish',
-        },
-        {
-          description: 'Follow up',
-          icon: <MdDirectionsRun />
-          ,
-          status: 'finish',
-        },
-      ]}
-    />
-   </div>
-   <Divider />
-
-  </div>
-);
-
-export default App;
+export default Process

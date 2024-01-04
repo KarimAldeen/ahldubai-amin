@@ -197,33 +197,57 @@
 
     }
     .Process{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding-inline: 10vw;
-        margin-block: 80px;
-
+        width: 100%;
+        >h1{
+            font-size: 3vw;
+            font-weight: bold;
+            margin-block: 30px;
+        }
         >div{
-            display: none;
-        }
-       >span{
-        >div{
-            height: 100px;
 
-        }
-        .ant-steps-item-title{
-            // text-wrap: nowrap;
-            // font-size: 1.2vw !important;
-        }
-        :where(.css-dev-only-do-not-override-p7e5j5).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after{
-            background-color : var(--primary) !important;
-        }
-        :where(.css-dev-only-do-not-override-p7e5j5).ant-steps .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description{
-            transform: translate(0px,20px);
-            // text-wrap: nowrap;
-        }
-        svg{
+            &:nth-child(3){
+                flex-direction: row-reverse;
+            }
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            color: var(--secondary) !important;
+            gap: 60px;
+            margin-inline: auto;
+            margin-block: 30px;
+
+            img{
+                width: 50%;
+                height: auto;
+                border-radius: 32px;
+                // margin-left: 10vw;
+            }
+            div{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                h1{
+                    font-weight: bold;
+                    font-size: 2.4vw;
+                    margin-left: 10px;
+                }
+                li{
+                    font-size: 1.1vw;
+                    margin-bottom: 13px;
+                    width: 70%;
+                    color: var(--subtext);
+                }
+            }
         }
-       }
+
     }
     .Services2_body {
         padding-inline: 5vw;
@@ -324,7 +348,7 @@
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
     .Services_Page {
         font-family: "Inter", Sans-serif;
     
@@ -525,25 +549,57 @@
             }
     
         }
-        .Process{
-            margin-inline: auto;
-            width: 100%;
        
+        .Process{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-inline: 6vw;
+            width: 100%;
+            >h1{
+                font-size: 3vw;
+                font-weight: bold;
+                margin-block: 30px;
+            }
             >div{
-                display: block;
-                >div{
-                    height: 300px;
-        
+                &:nth-child(3){
+                    flex-direction: column;
+                }
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                    flex-direction: column;
+                gap: 60px;
+                margin-inline: auto;
+                margin-block: 20px;
+    
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 32px;
+                    margin-left: 0px;
+                }
+                div{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h1{
+                        font-weight: bold;
+                        font-size: 4vw;
+                    }
+                    li{
+                        font-size: 2vw;
+                        margin-bottom: 20px;
+                        width: 100%;
+                        color: var(--subtext);
+                    }
                 }
             }
-           >span{
-            display: none;
-
-            .ant-steps-item-title{
-                // text-wrap: nowrap;
-                font-size: 1.2vw !important;
-            }
-           }
+    
         }
     }
 

@@ -21,7 +21,7 @@ const Pricing = () => {
          {
             title: "Other Dental Service",
             subTitle: "Complete Dental Excellence: All Services, One Destination",
-            price: "___",
+            price: "500",
             benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
         }
     ]
