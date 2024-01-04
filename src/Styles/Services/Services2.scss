@@ -66,13 +66,14 @@
                     position: relative;
 
                     &:nth-child(2) {
-                        background-color: #5e5eee !important;
+                        background-color: var(--primary) !important;
                         color: var(--white);
                         button {
                          
-                            background: var(--primary) !important;
+                            background: var(--secondary) !important;
                             &:hover {
-                                background: var(--secondary) !important;
+                               color: var(--primary);
+                                background: var(--white) !important;
                             }
 
 
@@ -168,7 +169,7 @@
                     outline: none;
                     border: none;
                     border-radius: 10px;
-                    background: #5e5eee;
+                    background: var(--primary);
                     color: #fff;
                     font-family: Inter;
                     font-size: 16px;
@@ -395,7 +396,7 @@
                         position: relative;
     
                         &:nth-child(2) {
-                            background-color: #5e5eee !important;
+                            background-color: var(--primary) !important;
                             color: var(--white);
                             button {
                              
@@ -497,7 +498,7 @@
                         outline: none;
                         border: none;
                         border-radius: 10px;
-                        background: #5e5eee;
+                        background: var(--primary);
                         color: #fff;
                         font-family: Inter;
                         font-size: 16px;
