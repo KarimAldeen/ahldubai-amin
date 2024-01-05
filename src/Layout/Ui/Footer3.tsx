@@ -1,91 +1,96 @@
-import React from 'react'
-import { FaClock, FaLocationDot, FaPhone } from 'react-icons/fa6'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { FaClock, FaLocationDot, FaPhone } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 import { FaTimes } from 'react-icons/fa';
 import { IoChatbubble } from "react-icons/io5";
+
 const Footer3 = () => {
-    return (
-        <div className='Footer3'>
-           <span>
-           <div>
-                <h1>
-                    About us
-                </h1>
-                <p>
-                    Etiam condimentum aliquam odio, ut consectetur enim. Nullam metus purus, pharetra quis tempus.
+  const aboutUsData = {
+    title: 'About us',
+    description: 'Etiam condimentum aliquam odio, ut consectetur enim. Nullam metus purus, pharetra quis tempus.',
+    contactInfo: [
+      { icon: <FaPhone />, title: 'HotLine: ', content: ' +3 (092) 508-38-01' },
+      { icon: <FaLocationDot />, title: 'Address: ', content: ' 23 , Medical Str. , New York , USA' },
+      { icon: <FaClock />, title: 'Mon-Sat: ', content: ' 8:00AM - 7:00PM' },
+    ],
+  };
 
-                </p>
-                <span>
-                    <div>
-                        <FaPhone /> <h6>HotLine:</h6> <p>+3 (092) 508-38-01</p>
-                    </div>
-                    <div>
-                    <FaLocationDot />
- <h6>Address:</h6> <p>  23, Medical Str., New York, USA</p>
-                    </div>
-                    <div>
-                        <FaClock /> <h6> Mon-Sat:</h6> <p>8:00AM - 7:00PM</p>
-                    </div>
-                   
-                </span>
-            </div>
+  const exploreData = {
+    title: 'Explore',
+    links: [
+      { icon: <IoIosArrowForward />, text: 'Home', href: '#NewHeroSection' },
+      { icon: <IoIosArrowForward />, text: 'Doctors', to: '/doctors' },
+      { icon: <IoIosArrowForward />, text: 'Services', href: '#Services' },
+      { icon: <IoIosArrowForward />, text: 'Blog', href: '#Update' },
+      { icon: <IoIosArrowForward />, text: 'Reviews', href: '#Reviews' },
+    ],
+  };
 
-            <span>
-                <h1>
-                    Explore
-                </h1>
-                <ul className='Links'>
-                    <li>  <IoIosArrowForward />
-                        <a href='#NewHeroSection'>{('Home')}</a> </li>
-                    <li> <IoIosArrowForward />
-                        <Link to='/doctors'>{('Doctors')}</Link> </li>
-                    <li> <IoIosArrowForward />
-                        <a href='#Services'>{('Services')}</a> </li>
-                    <li> <IoIosArrowForward />
-                        <a href='#Update'>{('blog')}</a> </li>
-                    <li> <IoIosArrowForward />
-                        <a href='#Reviews'>{('Reviews')}</a> </li>
-                </ul>
-            </span>
+  const recentNewsData = [
+    {
+      image: '../Layout/Footer.jpg',
+      date: 'November 7, 2018',
+      comments: 6,
+      title: 'The best recreation areas for general immunity',
+    },
+    {
+      image: '../Layout/Footer2.jpg',
+      date: 'November 7, 2018',
+      comments: 1,
+      title: 'How can women protect themselves from breast cancer',
+    },
+  ];
 
+  const footerText = 'Like-themes 2023 © All Rights reserved Aurora Health';
 
-            <article>
-                <h1>Recent news</h1>
-                <div>
-                    <span>
-                        <img src="../Layout/Footer.jpg" alt="" />
-                        <div>
-                            <div>
-                                <span><FaClock />
- November 7, 2018</span><span> <IoChatbubble /> 6 </span>
-                            </div>
-                            <h6>
-                            The best recreation areas for general immunity
-                            </h6>
-                        </div>
-                    </span>
-                    <span>
-                        <img src="../Layout/Footer2.jpg" alt="" />
-                        <div>
-                            <div>
-                                <span><FaClock />
- November 7, 2018</span><span> <IoChatbubble /> 6 </span>
-                            </div>
-                            <h6>
-                            The best recreation areas for general immunity
-                            </h6>
-                        </div>
-                    </span>
-                </div>
-            </article>
-
-           </span>
-            <div>
-            <span>Like-themes </span>2023 © All Rights reserved <span>Aurora Health</span>
-            </div>
+  return (
+    <div className='Footer3'>
+      <span>
+        <div>
+          <h1>{aboutUsData.title}</h1>
+          <p>{aboutUsData.description}</p>
+          <span>
+            {aboutUsData.contactInfo.map((info, index) => (
+              <div key={index}>
+                {info.icon} <h6>{info.title}</h6> <p>{info.content}</p>
+              </div>
+            ))}
+          </span>
         </div>
-    )
+
+        <span>
+          <h1>{exploreData.title}</h1>
+          <ul className='Links'>
+            {exploreData.links.map((link, index) => (
+              <li key={index}> {link.icon} {link.to ? <Link to={link.to}>{link.text}</Link> : <a href={link.href}>{link.text}</a>} </li>
+            ))}
+          </ul>
+        </span>
+
+        <article>
+          <h1>Recent news</h1>
+          <div>
+            {recentNewsData.map((news, index) => (
+              <span key={index}>
+                <img src={news.image} alt="" />
+                <div>
+                  <div>
+                    <span><FaClock /> {news.date}</span><span> <IoChatbubble /> {news.comments} </span>
+                  </div>
+                  <h6>{news.title}</h6>
+                </div>
+              </span>
+            ))}
+          </div>
+        </article>
+      </span>
+
+      <div>
+        <span>{footerText}</span>
+      </div>
+    </div>
+  );
 }
 
-export default Footer3
+export default Footer3;

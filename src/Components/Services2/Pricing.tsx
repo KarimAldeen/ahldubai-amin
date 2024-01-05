@@ -15,14 +15,14 @@ const Pricing = () => {
             title: "veneers",
             subTitle: "Your Gateway to a Hollywood Smile",
             price: "1,285_",
-            benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
+            benefits: ["Pain-Free Procedure", "Stain Resistance", "Longevity and Durability 10-15 Years", "Cover Damaged Teeth", "Natural Look and Feel"]
         }
          ,
          {
             title: "Other Dental Service",
             subTitle: "Complete Dental Excellence: All Services, One Destination",
             price: "500_",
-            benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
+            benefits: ["Oral & Maxillofacial Service ", "Radiological Services", "Aesthetic - Prosthodontic Services", "Endodontic Services ", "Other Dental Services"]
         }
     ]
     return (
