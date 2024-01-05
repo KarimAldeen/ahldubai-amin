@@ -1,10 +1,8 @@
 import { SlChemistry } from "react-icons/sl";
 import { IoMdColorPalette } from "react-icons/io";
-
-import React from 'react'
 import Visibale from '../../HighOrderComponent/withVisibale';
 import { FaEye,FaTruckMedical } from 'react-icons/fa6';
-import { FaExternalLinkSquareAlt, FaHeartbeat } from "react-icons/fa";
+import {  FaHeartbeat } from "react-icons/fa";
 import { LiaToothSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";

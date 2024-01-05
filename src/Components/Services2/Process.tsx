@@ -1,3 +1,4 @@
+import Visibale from "../../HighOrderComponent/withVisibale";
 
 const Process = () => {
   const steps = [
@@ -44,7 +45,8 @@ const Process = () => {
     <div className='Process'>
       <h1>Your complete trip in one place</h1>
       {steps.map((step, index) => (
-        <div key={index}> 
+
+        <Visibale key={index}> 
           <img src={`${step?.image}`} alt="" />
           <div>
             <h1>{step.title}</h1>
@@ -54,7 +56,7 @@ const Process = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </Visibale>
       ))}
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react'
-import CardSwiper from '../SwiperDoctor/CardSwiper'
+import CardSwiper from '../Doctors/SwiperDoctor/CardSwiper'
 
 const OurDocrtrs = () => {
   return (

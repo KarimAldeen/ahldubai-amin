@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaArrowAltCircleRight, FaUser } from 'react-icons/fa';
 import ContactForm from './ContactForm';
 import { useNavigate } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa6';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
 
 const data = [
   {
@@ -58,7 +58,7 @@ const NewHeroSection = () => {
 
   return (
     <>
-      <div className='NewHeroSection' id='NewHeroSection' style={{ backgroundImage: `url(../Home/${infoData.image}.webp)` }} key={key}>
+      <div className='NewHeroSection' id='NewHeroSection' style={{ backgroundImage: `url(../Home/Hero/${infoData.image}.webp)` }} key={key}>
         <div className='imNewHeroSection' key={key}>
           <div>
             <h1>{infoData?.h1}</h1> <h2>{infoData?.h2}</h2>

@@ -2,7 +2,7 @@ import React from 'react'
 import Pricing from '../../Components/Services2/Pricing'
 import Process from '../../Components/Services2/Process'
 import OurDocrtrs from '../../Components/Done/OurDocrtrs'
-import Partners from '../../Components/Partners/Partners'
+import Partners from '../../Components/Done/Partners'
 
 const Page2 = () => {
   return (

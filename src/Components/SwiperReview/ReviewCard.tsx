@@ -1,7 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import useImageError from '../../Hooks/useImageError'
-import { MdArrowOutward } from "react-icons/md";
 
 const ReviewCard = ({activeIndex,index}:any) => {
   return (
@@ -14,7 +10,7 @@ const ReviewCard = ({activeIndex,index}:any) => {
                 <h6>Happy Partner</h6>
               </span>
             </div>
-            <img src="../Home/review.svg" alt="" />
+            <img src="../Reviews/review.svg" alt="" />
            </div>
            <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
