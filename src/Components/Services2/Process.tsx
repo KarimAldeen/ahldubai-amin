@@ -33,7 +33,7 @@ const Process = () => {
       <div>
         <img src="../procces/3.jpg" alt="" />
 
-        <div>
+        <div> 
           <h1>Flight</h1>
          
           <ul>

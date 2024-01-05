@@ -7,21 +7,21 @@ const Pricing = () => {
         {
             title: "Implants",
             subTitle: "Your Gateway to a Lasting Smile",
-            price: "2000",
+            price: "2,000_",
             benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
         }
         ,
         {
             title: "veneers",
             subTitle: "Your Gateway to a Hollywood Smile",
-            price: "1285",
+            price: "1,285_",
             benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
         }
          ,
          {
             title: "Other Dental Service",
             subTitle: "Complete Dental Excellence: All Services, One Destination",
-            price: "500",
+            price: "500_",
             benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
         }
     ]
