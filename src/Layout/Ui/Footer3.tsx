@@ -8,10 +8,10 @@ import { IoChatbubble } from "react-icons/io5";
 const Footer3 = () => {
   const aboutUsData = {
     title: 'About us',
-    description: 'Etiam condimentum aliquam odio, ut consectetur enim. Nullam metus purus, pharetra quis tempus.',
-    contactInfo: [
-      { icon: <FaPhone />, title: 'HotLine: ', content: ' +3 (092) 508-38-01' },
-      { icon: <FaLocationDot />, title: 'Address: ', content: ' 23 , Medical Str. , New York , USA' },
+    description: 'provides services to the organization of international, medical tourism in leading hospitals and medical centers in the UAE Dubai..',
+ contactInfo: [
+      { icon: <FaPhone />, title: 'HotLine: ', content: ' +971 58 518 75 77' },
+      { icon: <FaLocationDot />, title: 'Address: ', content: 'Dubai Science Park - Al Barsha South Bella Rose Tower' },
       { icon: <FaClock />, title: 'Mon-Sat: ', content: ' 8:00AM - 7:00PM' },
     ],
   };
