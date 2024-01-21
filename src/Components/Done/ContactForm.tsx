@@ -20,7 +20,6 @@ const ContactForm = ({isModalOpen,setIsModalOpen}:any) => {
   return (
       <Modal  title="Leave your contact number and we call you back" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
      <div className="ContactForm">
-     {/* <h6></h6> */}
         <Input prefix={<UserOutlined />}  className='Input' size="large" placeholder="Inter Your Name" />
         <Input prefix={<PhoneFilled />} className='Input'  size="large" placeholder="Inter Your Phone Number" />
         <Input.TextArea  className='Input' placeholder="Comment Or Message"size="large" />

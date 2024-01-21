@@ -9,10 +9,10 @@ const Page = () => {
   return (
     <>
     <NewHeroSection/>
-    <Services/>
+    {/* <Services/> */}
     <Services2/>
     <Reviews/>
-    <Update/>
+    {/* <Update/> */}
     <Partners/>
 
     </>

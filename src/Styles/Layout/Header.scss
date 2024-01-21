@@ -1,6 +1,6 @@
 .Doctors_Page .Header ,.Header.Scrolled,
 .Services_Page .Header
-,.Blog_Page .Header
+,.Blog_Page .Header ,.SingleDoctor_Page .Header
 {
     background-color: var(--bg) ;
     @include Shadow;

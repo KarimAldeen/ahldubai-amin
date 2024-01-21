@@ -1,0 +1,455 @@
+.SingleDoctor_Page{
+    .Hero_Doctors {
+        background-image: url('../../../public/Doctors/Doctors_Hero.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 99vw;
+        height: 30vw;
+        // margin-top: 115px;
+        position: relative;
+        padding-top: 100px;
+
+        >div {
+            position: absolute;
+            top: 25%;
+            left: 10%;
+
+            h1 {
+                font-size: 4vw;
+                font-weight: bold;
+            }
+
+            >div {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                h4 {
+                    color: var(--secondary);
+                    font-size: 1.5vw;
+                }
+                h5 {
+                    color: var(--primary);
+                    font-size: 1.5vw;
+                    margin-inline: 4px;
+                }
+
+
+                h6 {
+                    font-size: 1.5vw;
+
+                }
+
+            }
+        }
+    }
+    .SingleDoctor{
+        display: flex;
+        padding-inline: 6vw;
+        gap: 7vw;
+        margin-block: 50px;
+
+        .Left{
+            position: relative;
+            width: 35%;
+
+          
+                .PersonalCard{
+                    position: sticky;
+                    right: 10px;
+                    top: 105px;            
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    background: var(--bg);
+
+                    @include Shadow;
+                    margin-bottom: 30px;
+                    border-radius: 20px;
+                    img{
+                        width: 100%;
+                        display: block;
+                        border-radius: 20px 20px 0px 0px;
+                        height: 282px;
+                        margin-inline: auto;
+                        object-fit: fill;
+                        
+                    }
+                    h1{
+                        font-size: 1.6vw;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-size: 1vw;
+                    }
+                }
+                .InfoCard{
+                      
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    background: var(--bg);
+
+                    @include Shadow;
+                    margin-bottom: 30px;
+                    border-radius: 20px;
+                    padding: 30px 10px;
+                    h1{
+                        font-size: 1.6vw;
+                        font-weight: bold;
+                    }
+                    span{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        div{
+
+                            display: flex;
+                            gap: 30px;
+                            >span{
+                                font-size: 14px;
+                                &:nth-child(2){
+                                        color: var(--subtext);
+                                }
+                            }
+                         
+
+
+                        }
+                    }
+
+                }
+
+        }
+        .Right{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+                width: 60%;
+                >h6{
+                    color: var(--secondary);
+                    font-weight: bold;
+                    font-size: 1.6vw;
+                }
+                h1{
+                    font-size: 2.5vw;
+                    font-weight: bold;
+                }
+                p{
+                    color: var(--subtext);
+                }
+                .OurDoctorSkill{
+                    background: var(--bg);
+                    @include Shadow;
+                    padding: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    border-radius: 10px;
+                        .Skills{
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                        }
+                    .Skill{
+                        display: flex;flex-direction: column;
+                        gap: 5px;
+                        justify-content: center; align-items: center;
+                        margin-inline: auto;
+                    }
+                }
+            .Educationai{
+                background: var(--bg);
+                @include Shadow;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border-radius: 10px;
+                >div{
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    >span{
+                        display: flex;
+                        flex-direction: column;
+                        h1{
+                            font-weight: bold;
+                            font-size: 1.5vw;
+                        }
+                        p{
+                            font-size: 1vw  ;
+                        }
+                    }
+                }
+            }
+            .ContactForm {
+                background: var(--white);
+                color: var(--text);
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 20px;
+                @include Shadow;
+            
+                svg {
+                    color: var(--subtext);
+                    margin-inline: 5px;
+                }
+            
+                h1 {
+                    font-size: 3vw;
+                    font-weight: bold;
+                    text-wrap: nowrap;
+            
+                }
+            
+                button {
+                    background: var(--primary);
+                    border-radius: 10px;
+                    height: 40px;
+                    font-weight: bold;
+                }
+            
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .SingleDoctor_Page{
+        overflow-x: hidden;
+        .Hero_Doctors {
+            background-image: url('../../../public/Doctors/Doctors_Hero.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 99vw;
+            height: 30vw;
+            // margin-top: 115px;
+            position: relative;
+            padding-top: 100px;
+    
+            >div {
+                position: absolute;
+                top: 25%;
+                left: 10%;
+    
+                h1 {
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+    
+                >div {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h4 {
+                        color: var(--secondary);
+                        font-size: 1.5vw;
+                    }
+                    h5 {
+                        color: var(--primary);
+                        font-size: 1.5vw;
+                        margin-inline: 4px;
+                    }
+    
+    
+                    h6 {
+                        font-size: 1.5vw;
+    
+                    }
+    
+                }
+            }
+        }
+        .SingleDoctor{
+            display: flex;
+            flex-wrap: wrap;
+            padding-inline: 6vw;
+            gap: 7vw;
+            margin-block: 50px;
+    
+            .Left{
+                position: relative;
+                width: 100%;
+    
+              
+                    .PersonalCard{
+                        position: sticky;
+                        right: 10px;
+                        top: 105px;            
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 25px;
+                        background: var(--bg);
+    
+                        @include Shadow;
+                        margin-bottom: 30px;
+                        border-radius: 20px;
+                        img{
+                            width: 100%;
+                            display: block;
+                            border-radius: 20px 20px 0px 0px;
+                            height: auto;
+                            margin-inline: auto;
+                            
+                        }
+                        h1{
+                            font-size: 4.6vw;
+                            font-weight: bold;
+                            margin-bottom: 0;
+                        }
+                        p{
+                            font-size:3vw;
+                        }
+                    }
+                    .InfoCard{
+                          
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        background: var(--bg);
+    
+                        @include Shadow;
+                        margin-bottom: 30px;
+                        border-radius: 20px;
+                        padding: 30px 10px;
+                        h1{
+                            font-size: 1.6vw;
+                            font-weight: bold;
+                        }
+                        span{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            div{
+    
+                                display: flex;
+                                gap: 30px;
+                                >span{
+                                    font-size: 14px;
+                                    &:nth-child(2){
+                                            color: var(--subtext);
+                                    }
+                                }
+                             
+    
+    
+                            }
+                        }
+    
+                    }
+    
+            }
+            .Right{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                    width: 100%;
+                    text-align: center;
+                    >h6{
+                        color: var(--secondary);
+                        font-weight: bold;
+                        font-size: 4.6vw;
+                    }
+                    h1{
+                        font-size: 6.5vw;
+                        font-weight: bold;
+                    }
+                    p{
+                        color: var(--subtext);
+                    }
+                    .OurDoctorSkill{
+                        background: var(--bg);
+                        @include Shadow;
+                        padding: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        border-radius: 10px;
+                            .Skills{
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                            }
+                        .Skill{
+                            display: flex;flex-direction: column;
+                            gap: 5px;
+                            justify-content: center; align-items: center;
+                            margin-inline: auto;
+                        }
+                    }
+                .Educationai{
+                    background: var(--bg);
+                    @include Shadow;
+                    padding: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    border-radius: 10px;
+                    p{
+                        font-size: 2vw;
+                    }
+                    >div{
+                        width: 80%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        >span{
+                            display: flex;
+                            flex-direction: column;
+                            h1{
+                                font-weight: bold;
+                                font-size: 4.5vw;
+                            }
+                            p{
+                                font-size: 2.5vw  ;
+                            }
+                        }
+                    }
+                }
+                .ContactForm {
+                    background: var(--white);
+                    color: var(--text);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 20px 20px;
+                    @include Shadow;
+                
+                    svg {
+                        color: var(--subtext);
+                        margin-inline: 5px;
+                    }
+                
+                    h1 {
+                        font-size: 3vw;
+                        font-weight: bold;
+                        text-wrap: nowrap;
+                
+                    }
+                
+                    button {
+                        background: var(--primary);
+                        border-radius: 10px;
+                        height: 40px;
+                        font-weight: bold;
+                    }
+                
+                }
+            }
+        }
+    
+    }
+
+}

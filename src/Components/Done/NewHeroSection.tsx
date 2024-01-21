@@ -7,21 +7,21 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
 const data = [
   {
     image: '1',
-    h1: 'Medical',
-    h2: 'Laboratory',
-    info: '1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem',
+    h1: 'Expert ',
+    h2: 'Care ',
+    info: ' Experience top-tier medical procedures in Dubai, offering personalized care and advanced treatments tailored to meet your unique health needs.',
   },
   {
     image: '2',
-    h1: 'Diagnostic',
-    h2: 'Center',
-    info: '2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem',
+    h1: 'Health ',
+    h2: 'Guidance',
+    info: ' Access immediate and professional health advice from leading experts, ensuring comprehensive care and support at your fingertips, no matter where you are.',
   },
   {
     image: '3',
-    h1: 'Computer',
-    h2: 'Diagram',
-    info: '3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem Nam, odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, odio. lorem',
+    h1: 'Zero ',
+    h2: 'Fees',
+    info: ' Enjoy the full spectrum of our health tourism services without any additional service fees, Aurora service fees will be on the Medical center no cost difference for the patient if he take the service thought our website',
   },
 ];
 

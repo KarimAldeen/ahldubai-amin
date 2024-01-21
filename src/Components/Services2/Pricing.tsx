@@ -5,23 +5,23 @@ import { FaRegCheckCircle } from 'react-icons/fa'
 const Pricing = () => {
     const Data = [
         {
-            title: "Implants",
-            subTitle: "Your Gateway to a Lasting Smile",
-            price: "2,000_",
+            title: "Dental Implants",
+            subTitle: "Permanent, Reliable Tooth Replacement Option",
+            price: "2,000",
             benefits: ["Free consultation (X-ray , 3D scans)", "10 Year guarantee", "Same day placement Don't wait 6 months", "Financing Options Available to Fit Your Budget", "Comprehensive Aftercare and Follow-Up Program"]
         }
         ,
         {
-            title: "veneers",
-            subTitle: "Your Gateway to a Hollywood Smile",
-            price: "1,285_",
+            title: " Dental Veneers",
+            subTitle: "Improves tooth color and shape.",
+            price: "1,285",
             benefits: ["Pain-Free Procedure", "Stain Resistance", "Longevity and Durability 10-15 Years", "Cover Damaged Teeth", "Natural Look and Feel"]
         }
          ,
          {
             title: "Other Dental Service",
             subTitle: "Complete Dental Excellence: All Services, One Destination",
-            price: "500_",
+            price: "500",
             benefits: ["Oral & Maxillofacial Service ", "Radiological Services", "Aesthetic - Prosthodontic Services", "Endodontic Services ", "Other Dental Services"]
         }
     ]
@@ -48,7 +48,7 @@ const Pricing = () => {
                                     {item?.subTitle}
                                 </p>
                                 <h5>
-                                    <strong>${item?.price}</strong> Starting price
+                                Starting from     <strong>${item?.price}</strong> 
                                 </h5>
             
                                 <Divider />

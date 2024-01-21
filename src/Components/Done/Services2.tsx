@@ -9,7 +9,7 @@ const Services2 = () => {
     };
   
   return (
-    <div className='Services2_Section'>
+    <div className='Services2_Section' id='Services'>
         <h1>Popular Packages</h1>
         <div className='Services2_images'>
       
