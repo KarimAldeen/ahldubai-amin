@@ -49,7 +49,7 @@ const Header = () => {
           <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
           <li> <Link to='/doctors'>{t('Doctors')}</Link> </li>
           <li> <a href='/#Services'>{t('Services')}</a> </li>
-          <li> <a href='/#Update'>{t('blog')}</a> </li>
+          <li> <a href='/blog'>{t('blog')}</a> </li>
           <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
           <li> <div  onClick={showModal}>{t('Contact Us')} <FaArrowAltCircleRight /></div> </li>
         </ul>
@@ -62,7 +62,7 @@ const Header = () => {
             <li> <a href='/#NewHeroSection'>{t('Home')}</a> </li>
           <li> <Link to='/doctors'>{t('Doctors')}</Link> </li>
           <li> <a href='/#Services'>{t('Services')}</a> </li>
-          <li> <a href='/#Update'>{t('blog')}</a> </li>
+          <li> <a href='/blog'>{t('blog')}</a> </li>
           <li> <a href='/#Reviews'>{t('Reviews')}</a> </li>
           <li> <div  onClick={showModal}>{t('Contact Us')} <FaArrowAltCircleRight /></div> </li>
             </ul>
