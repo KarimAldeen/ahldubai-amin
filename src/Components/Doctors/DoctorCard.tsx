@@ -16,7 +16,7 @@ const DoctorCard = () => {
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla
             </p>
-            <Link to={'/'}>
+            <Link to={'/doctors/1'}>
                 Read More <MdArrowOutward />
             </Link>
     </div>
