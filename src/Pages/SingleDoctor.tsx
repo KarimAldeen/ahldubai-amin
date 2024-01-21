@@ -14,7 +14,7 @@ const SingleDoctor = () => {
     aboutUs: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     title: "Find The Right Doctor Righ At Your Fingertips",
     subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, also the leap into electronic ty remaining essentially unchanged.",
-    SkillsInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+    SkillsInfo: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer and scrambled specimen book",
 
     skills: [
       { label: "Medic Success", percent: 95, color: Color1, value: 1000 },
@@ -39,10 +39,10 @@ const SingleDoctor = () => {
     <div className='Doctors'>
       <div className='Hero_Doctors'>
         <div>
-          <h1>Doctors</h1>
+          <h1>Doector Profiles</h1>
           <div>
             <h6>Home {`>`} </h6>
-            <h5> Doctors </h5>
+            <h5> Doectors Profile </h5>
             <h4>{`>`} {name}</h4>
           </div>
         </div>
@@ -67,7 +67,7 @@ const SingleDoctor = () => {
               {skills.map((skill:any, index:any) => (
                 <div key={index} className='Skill'>
                   <Progress type="circle" percent={skill.percent} size="default" strokeColor={skill.color} format={() => ` ${skill.value}`} />
-                  <span>{skill.label}</span>
+                  <span className='skillLabel'>{skill.label}</span>
                 </div>
               ))}
             </div>
