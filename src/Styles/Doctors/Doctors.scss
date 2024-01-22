@@ -1,6 +1,7 @@
 .Doctors_Page {
     font-family: "Inter", Sans-serif;
-overflow-x: hidden;
+    overflow-x: hidden;
+
     .Doctors {
 
         min-height: 500px;
@@ -87,11 +88,24 @@ overflow-x: hidden;
 
                 h1 {
                     font-size: 25px;
+                    color: var(--secondary);
+                    font-weight: bold;
                 }
 
                 h5 {
                     font-size: 13px;
+                    font-weight: bold;
+                }
 
+                p {
+                    max-height: 4.5em;
+                    /* (1.5em * 3) + 1.5em for some buffer */
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    max-width: 200px;
                 }
 
                 &:hover {
@@ -124,7 +138,8 @@ overflow-x: hidden;
             display: flex;
             justify-content: space-between;
             min-height: 50px;
-            h1{
+
+            h1 {
                 font-weight: bold;
                 font-size: 2vw;
             }
@@ -245,6 +260,7 @@ overflow-x: hidden;
                 }
             }
         }
+
         .Filter {
             margin-inline: auto;
             margin-top: 100px;
@@ -256,10 +272,11 @@ overflow-x: hidden;
             justify-content: center;
             align-items: center;
             min-height: 50px;
-            h1{
+
+            h1 {
                 font-weight: bold;
-                font-size: 4vw !important ;
-                margin-bottom: 10px ;
+                font-size: 4vw !important;
+                margin-bottom: 10px;
             }
         }
     }

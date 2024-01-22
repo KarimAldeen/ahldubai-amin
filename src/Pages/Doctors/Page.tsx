@@ -1,6 +1,7 @@
 import React from 'react'
 import DoctorCard from '../../Components/Doctors/DoctorCard'
 import { Select } from 'antd'
+import { DoctorsData } from '../../Data'
 
 const Doctors = () => {
   return (
@@ -58,9 +59,9 @@ const Doctors = () => {
             </div>
         </div>
         <div className='Docor_Cards'>
-        {  [1,2,3,,3,4,4,4,5,5,5,]?.map((item,index)=>{
+        {  DoctorsData?.map((item:any,index:any)=>{
             return(
-              <DoctorCard/>
+              <DoctorCard data={item}/>
             )
           })}
         </div>
