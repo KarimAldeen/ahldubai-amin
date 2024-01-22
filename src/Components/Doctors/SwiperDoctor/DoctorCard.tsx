@@ -1,9 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MdArrowOutward } from "react-icons/md";
 import useImageError from '../../../Hooks/useImageError';
 
 const DoctorCard = ({data}:any) => {
+  const navigate = useNavigate()
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate("/doctors/${data?.id}")
+  };
+
   return (
     <div className='DoctorCard'>
             <img src={data?.Image} onError={useImageError} alt="" />
@@ -16,7 +22,7 @@ const DoctorCard = ({data}:any) => {
             <p>
             {data?.Summary}
             </p>
-            <Link to={`/doctors/${data?.id}`}>
+            <Link  to={`/doctors/${data?.id}`}>
                 Read More <MdArrowOutward />
             </Link>
     </div>

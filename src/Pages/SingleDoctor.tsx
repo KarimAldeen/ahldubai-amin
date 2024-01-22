@@ -1,6 +1,6 @@
 import { PhoneFilled, UserOutlined } from '@ant-design/icons';
 import { Button, Input, Progress } from 'antd';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { DoctorsData } from '../Data';
 
@@ -12,7 +12,10 @@ const SingleDoctor = () => {
   const { name,Category, Image, Summary, Full_description, skills, education,skill_Info} = doctor;
 
   // ...
-  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []); 
+
 
   return (
     <div className='Doctors'>
