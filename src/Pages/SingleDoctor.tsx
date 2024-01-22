@@ -9,7 +9,7 @@ const SingleDoctor = () => {
 
   const doctor = DoctorsData.find((doc:any) => doc.id === Number(id)) as any;
 
-  const { name,Category, Image, Summary, Full_description, skills, education} = doctor;
+  const { name,Category, Image, Summary, Full_description, skills, education,skill_Info} = doctor;
 
   // ...
   
@@ -41,7 +41,7 @@ const SingleDoctor = () => {
           <p>{Full_description}</p>
           <div className='OurDoctorSkill'>
             <h2>Skills Of Doctor</h2>
-            {/* <p>{aboutUs}</p> */}
+            <p>{skill_Info}</p>
             <div className='Skills'>
               {skills.map((skill:any, index:any) => (
                 <div key={index} className='Skill'>
