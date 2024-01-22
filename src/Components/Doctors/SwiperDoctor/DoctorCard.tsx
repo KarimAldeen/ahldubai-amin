@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import useImageError from '../../../Hooks/useImageError'
 import { MdArrowOutward } from "react-icons/md";
+import useImageError from '../../../Hooks/useImageError';
 
-const DoctorCard = () => {
+const DoctorCard = ({data}:any) => {
   return (
     <div className='DoctorCard'>
-            <img src="../Doctors/Doctor1.png" onError={useImageError} alt="ss" />
+            <img src={data?.Image} onError={useImageError} alt="" />
             <h1>
-            Dr. Daisy Bins
+            {data?.name}
             </h1>
             <h5>
-            Dentist surgeon
+            {data?.Category}
             </h5>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla
+            {data?.Summary}
             </p>
-            <Link to={'/'}>
+            <Link to={`/doctors/${data?.id}`}>
                 Read More <MdArrowOutward />
             </Link>
     </div>

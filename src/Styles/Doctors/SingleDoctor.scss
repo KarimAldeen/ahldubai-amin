@@ -45,13 +45,13 @@
     }
     .SingleDoctor{
         display: flex;
-        padding-inline: 6vw;
+        padding-inline: 10vw;
         gap: 7vw;
         margin-block: 50px;
 
         .Left{
             position: relative;
-            width: 35%;
+            width: 30%;
 
           
                 .PersonalCard{
@@ -128,8 +128,14 @@
         .Right{
             display: flex;
             flex-direction: column;
-            gap: 10px;
                 width: 60%;
+                background: var(--bg);
+                @include Shadow;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                border-radius: 10px;
                 >h6{
                     color: var(--secondary);
                     font-weight: bold;
@@ -143,13 +149,12 @@
                     color: var(--subtext);
                 }
                 .OurDoctorSkill{
-                    background: var(--bg);
-                    @include Shadow;
-                    padding: 40px;
+                
                     display: flex;
                     flex-direction: column;
-                    gap: 10px;
-                    border-radius: 10px;
+                    h2{
+                        font-weight: bold;
+                    }
                         .Skills{
                             display: flex;
                             justify-content: space-between;
@@ -169,14 +174,14 @@
                 }
             .Educationai{
                 background: var(--bg);
-                @include Shadow;
-                padding: 40px;
+             
+                padding: 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 border-radius: 10px;
                 >div{
-                    width: 80%;
+                    width: 100%;
                     display: flex;
                     justify-content: space-between;
                     >span{
@@ -199,7 +204,6 @@
                 flex-direction: column;
                 gap: 20px;
                 padding: 20px 20px;
-                @include Shadow;
             
                 svg {
                     color: var(--subtext);
@@ -362,6 +366,15 @@
                 gap: 30px;
                     width: 100%;
                     text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                        background: var(--bg);
+                        @include Shadow;
+                        padding: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        border-radius: 10px;
                     >h6{
                         color: var(--secondary);
                         font-weight: bold;
@@ -376,7 +389,6 @@
                     }
                     .OurDoctorSkill{
                         background: var(--bg);
-                        @include Shadow;
                         padding: 40px;
                         display: flex;
                         flex-direction: column;
@@ -402,8 +414,6 @@
                  
                 .Educationai{
                     background: var(--bg);
-                    @include Shadow;
-                    padding: 40px;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
@@ -412,7 +422,7 @@
                         font-size: 2vw;
                     }
                     >div{
-                        width: 80%;
+                        width: 100%;
                         display: flex;
                         justify-content: space-between;
 
@@ -436,7 +446,6 @@
                     flex-direction: column;
                     gap: 20px;
                     padding: 20px 20px;
-                    @include Shadow;
                 
                     svg {
                         color: var(--subtext);
