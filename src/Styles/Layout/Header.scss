@@ -1,6 +1,6 @@
 .Doctors_Page .Header ,.Header.Scrolled,
 .Services_Page .Header
-,.Blog_Page .Header ,.SingleDoctor_Page .Header
+,.Blog_Page .Header 
 {
     background-color: var(--bg) ;
     @include Shadow;
@@ -14,12 +14,15 @@
 
     
   }
-  .Blog_Page .HeaderStart{
+  .Blog_Page .HeaderStart  {
     background-color: transparent !important;
     box-shadow:  none !important;
   
   }
-  .Services_Page .HeaderStart{
+//   .PricingDetails_Page .HeaderStart {
+//     color: var(--text);
+//   }
+  .Services_Page .HeaderStart {
     height: 70px !important;
   }
  
@@ -30,7 +33,7 @@
     align-items: center;
     background: transparent;
     color: var(--white);
-    height: 100px;
+    height: 70px;
     z-index: 1;
     font-family: 'Niramit';
     font-weight: bold;
@@ -203,6 +206,7 @@
   
 }
 @media screen and (max-width: 700px) {
+    
     .Doctors_Page .Header ,.Header.Scrolled {
         background-color:transparent !important;
         @include Shadow;
@@ -219,6 +223,8 @@
     }
 
     .Header {
+        border-bottom: none ;
+
 
         h1 {
             font-size: 6vw;

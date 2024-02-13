@@ -48,7 +48,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 width: 100%;
                 gap: 3%;
                 margin-inline: auto;
@@ -75,12 +75,20 @@
 
                             background: var(--secondary) !important;
 
-                            &:hover {
-                                color: var(--primary);
-                                background: var(--white) !important;
+
+                        }
+                        .VipBenefits{
+                            >button {
+
+                                background: var(--secondary) !important;
+    
+                                &:hover {
+                                    color: var(--primary);
+                                    background: var(--white) !important;
+                                }
+    
+    
                             }
-
-
                         }
 
                         &::after {
@@ -150,8 +158,9 @@
                                 display: flex;
                                 gap: 5px;
 
-                                svg {
+                                >svg {
                                     color: var(--secondary);
+                                    cursor: pointer;
                                 }
 
                                 h6 {
@@ -165,33 +174,47 @@
                         }
                     }
 
+                    .VipBenefits{
+                        >article{
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
 
-
-                }
-
-                button {
-                    outline: none;
-                    border: none;
-                    border-radius: 10px;
-                    background: var(--primary);
-                    color: #fff;
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 16px;
-                    text-align: center;
-                    padding: 11px 16px;
-                    width: 100%;
-                    margin-inline: auto;
-                    margin-block: 5px;
-
-                    &:hover {
-                        background: var(--secondary);
+                        }
+                        button{
+                            background: var(--primary);
+                            color: #fff;
+                        }
+                       
                     }
+                    >button {
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        background: var(--primary);
+                        color: #fff;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 16px;
+                        text-align: center;
+                        padding: 11px 16px;
+                        width: 100%;
+                        margin-inline: auto;
+                        margin-block: 5px;
+    
+                        &:hover {
+                            background: var(--secondary);
+                        }
+    
+                    }
+    
 
                 }
 
+             
             }
 
 
@@ -493,7 +516,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    align-items: center;
+                    align-items: flex-start;
                     width: 100%;
                     gap: 3%;
                     margin-inline: auto;
@@ -514,7 +537,7 @@
                             background-color: var(--primary) !important;
                             color: var(--white);
 
-                            button {
+                            >button {
 
                                 background: var(--primary) !important;
 
@@ -523,7 +546,21 @@
                                 }
 
 
+                                .VipBenefits{
+                                    >button {
+        
+                                        background: var(--secondary) !important;
+            
+                                        &:hover {
+                                            color: var(--primary);
+                                            background: var(--white) !important;
+                                        }
+            
+            
+                                    }
+                                }
                             }
+
 
                             &::after {
                                 content: "";
@@ -606,33 +643,33 @@
 
                             }
                         }
-
-
-
-                    }
-
-                    button {
-                        outline: none;
-                        border: none;
-                        border-radius: 10px;
-                        background: var(--primary);
-                        color: #fff;
-                        font-family: Inter;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 16px;
-                        text-align: center;
-                        padding: 11px 16px;
-                        width: 100%;
-                        margin-inline: auto;
-                        margin-block: 5px;
-
-                        &:hover {
-                            background: var(--secondary);
+                        >button {
+                            outline: none;
+                            border: none;
+                            border-radius: 10px;
+                            background: var(--primary);
+                            color: #fff;
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 16px;
+                            text-align: center;
+                            padding: 11px 16px;
+                            width: 100%;
+                            margin-inline: auto;
+                            margin-block: 5px;
+    
+                            &:hover {
+                                background: var(--secondary);
+                            }
+    
                         }
 
+
                     }
+
+                   
 
                 }
 

@@ -1,0 +1,523 @@
+.PricingDetails{
+    min-height: 500px;
+    --swiperhight : 26vw;
+    .ImageSwiper{
+        width: 100%;
+        height: var(--swiperhight);
+
+        
+        .swiper-slide{
+            color: white;
+            width: 100%;
+            height: var(--swiperhight);
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+              }
+
+              
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(64,64,64,.5);   
+                height: 100%;
+                
+                 }
+                .Swiper_text{
+                    position: absolute;
+                    bottom: 10%;
+                    left: 6%;
+                    color: var(--white);
+                    z-index: 999;
+                    font-size: 3.7vw;
+                }   
+        }
+    }
+    .Pricing_body {
+        display: flex;
+        padding-inline: 5vw;
+        width: 100%;
+        margin-block: 50px;
+        height: 100%;
+            gap: 10px;
+        position: relative;
+        min-height: 500px;
+      
+        .Pricing_body_Left , .Pricing_body_Right_resposive {
+            background-color: var(--bg);
+            @include Shadow;
+            width: 70%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .First {
+                >h5 {
+                    font-size: 1vw;
+                    color: var(--primary);
+                }
+
+                >h1 {
+                    font-size: 2vw;
+                    font-weight: bold;
+
+                }
+
+                >h6 {
+                    font-size: 2.2vw;
+                    margin-bottom: 40px;
+                    color: var(--secondary);
+                    font-weight: bold;
+
+                    svg {
+                        color: var(--secondary);
+                    }
+                }
+
+                >img {
+                    width: 100%;
+                    max-height: 500px;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-size: 1vw;
+                }
+            }
+
+            .Second {
+                margin-block: 10px;
+                display: flex;
+                gap: 20px;
+
+                >img {
+                    width: 40%;
+                    max-height: 400px;
+                }
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    >h1 {
+                        font-size: 1.5vw;
+                        font-weight: bold;
+                    }
+
+                    >p {
+                        font-size: 1vw;
+                    }
+
+                    .services-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+
+                        .service-item {
+                            display: flex;
+                            min-width: 40%;
+                            gap: 5px;
+
+
+                                svg {
+                                    height: 20px;
+                                    font-size: 20px;
+                                    padding: 3px;
+                                    border-radius: 50%;
+                                    color: var(--white);
+                                    background: var(--secondary);
+                                }
+
+                                h6 {
+                                    font-size: 1vw;
+                                    height: 20px;
+
+                                }
+                            
+
+                        }
+                    }
+                }
+            }
+        }
+        .Pricing_body_Right_resposive{
+            display: none;
+        }
+            .Pricing_body_Right {
+    
+                background-color: var(--bg);
+                @include Shadow;
+                width: 28%;
+                padding: 30px 30px;
+                height: fit-content;
+                position: sticky;
+                right: 10px;
+                top: 75px;
+              
+                &:has(button:hover) button:not(:hover)  {
+                    color: var(--secondary);
+                    background:transparent;
+                  }
+
+                button{
+                    border: solid 1px var(--secondary);
+                    color: var(--secondary);
+                    background:transparent;
+                    font-size: 16px;
+                    padding: 10px;
+                   margin-bottom: 15px;
+                    width: 100%;
+                    
+                    transition: .5s ease-in-out;
+                    &:hover{
+                        background-color:  var(--secondary);
+                        color: var(--white);
+                    }
+               
+                }
+                .active{
+                    background-color:  var(--secondary);
+                    color: var(--white);
+                  
+                }
+            }
+    
+        }
+.WebTabs{
+    width: 90%;
+    margin-inline: auto;
+    .First {
+        >h5 {
+            font-size: 1vw;
+            color: var(--primary);
+        }
+
+        >h1 {
+            font-size: 2vw;
+            font-weight: bold;
+
+        }
+
+        >h6 {
+            font-size: 2.2vw;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            font-weight: bold;
+
+            svg {
+                color: var(--secondary);
+            }
+        }
+
+        >img {
+            width: 100%;
+            max-height: 500px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 1vw;
+        }
+    }
+
+    .Second {
+        margin-block: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 70%;
+
+        >img {
+            width: 98%;
+            object-fit: contain;
+        }
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            >h1 {
+                font-size: 1.5vw;
+                font-weight: bold;
+            }
+
+            >p {
+                font-size: 1vw;
+            }
+
+            .services-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .service-item {
+                    display: flex;
+                    min-width: 40%;
+                    gap: 5px;
+
+
+                        svg {
+                            height: 20px;
+                            font-size: 20px;
+                            padding: 3px;
+                            border-radius: 50%;
+                            color: var(--white);
+                            background: var(--secondary);
+                        }
+
+                        h6 {
+                            font-size: 1vw;
+                            height: 20px;
+
+                        }
+                    
+
+                }
+            }
+        }
+    }
+    /* Ant tabs tab */
+
+   
+   
+}
+.ant-tabs-left .ant-tabs-nav .ant-tabs-tab-btn{
+    font-size:1.8vw !important;
+   }
+
+    
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .PricingDetails_Page{
+        .Header{
+            min-height: 100px !important;
+        }
+    }
+    .PricingDetails {
+       
+        --swiperhightresposive : 50vw;
+        padding-top: 20px;
+
+        .ImageSwiper{
+            width: 94%;
+            height: var(--swiperhightresposive);
+            border-radius: 20px;
+            
+            .swiper-slide{
+                color: white;
+                width: 100%;
+                height: var(--swiperhightresposive);
+                position: relative;
+    
+                img {
+                    width: 100%;
+                    height: var(--swiperhightresposive);
+                  }
+    
+                  
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(64,64,64,.5);   
+                    height: 100%;
+                    
+                     }
+                    .Swiper_text{
+                        position: absolute;
+                        bottom: 10%;
+                        left: 6%;
+                        color: var(--white);
+                        z-index: 999;
+                        font-size: 3.7vw;
+                    }   
+            }
+        }
+            .Pricing_body {
+                display: flex;
+                padding-inline: 2vw;
+                width: 100% !important;
+                margin-block: 0px;
+                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                .Pricing_body_Left{
+                    display: none;
+                }
+                
+                .Pricing_body_Right_resposive {
+                    background-color: var(--bg);
+                    @include Shadow;
+                    min-width: 100%;
+                    padding: 15px 30px;
+                    display: flex !important;
+                    flex-direction: column;
+
+
+
+                    .First {
+                        >h1 {
+                            font-size: 5vw;
+                            font-weight: bold;
+
+                        }
+
+                        h5{
+                            font-size: 5vw;
+                        }
+                        >h6 {
+                            font-size: 6vw;
+                            margin-bottom: 40px;
+                            color: var(--secondary);
+
+                            svg {
+                                color: var(--secondary);
+                            }
+                        }
+
+                        >img {
+                            width: 100%;
+                            height: 500px;
+                            margin-bottom: 40px;
+                        }
+
+                        p {
+                            font-size: 2vw;
+                        }
+                    }
+
+                    .Second {
+                        margin-block: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        >img {
+                            width: 100%;
+                            height: auto;
+                            
+                        }
+
+                        >div {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                            >h1 {
+                                font-size: 4.5vw;
+                                font-weight: bold;
+                            }
+
+                            >p {
+                                font-size: 2.5vw;
+                            }
+
+                            .services-list {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 30px;
+        
+                                .service-item {
+                                    display: flex;
+                                    min-width: 80%;
+                                    gap: 15px;
+                                    align-items: center;
+        
+        
+                                        svg {
+                                            height: 25px;
+                                            font-size: 25px;
+                                            padding: 3px;
+
+                                            border-radius: 50%;
+                                            color: var(--white);
+                                            background: var(--secondary);
+                                        }
+        
+                                        h6 {
+                                            font-size: 4vw;
+                                            height: 20px;
+        
+                                        }
+                                    
+        
+                                }
+                            }
+                        }
+                    }
+                    
+         
+
+                }
+
+                .Pricing_body_Right,.WebTabs {
+
+               display: none;
+
+
+                }
+                .Pricing_body_Right_resposive{
+
+                    background-color: var(--bg);
+                    @include Shadow;
+                    width: 100%;
+                    // padding: 50px 30px;
+                    height: fit-content;
+                }
+            
+
+
+        }
+    }
+
+}
+
+
+  
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .PricingDetails {
+       
+        --swiperhightresposive : 70vw;
+        padding-top: 20px;
+
+        .ImageSwiper{
+            width: 94%;
+            height: var(--swiperhightresposive);
+            border-radius: 20px;
+            
+            .swiper-slide{
+                color: white;
+                width: 100%;
+                height: var(--swiperhightresposive);
+                position: relative;
+    
+                img {
+                    width: 100%;
+                    height: var(--swiperhightresposive);
+                  }
+    
+                }}}
+}

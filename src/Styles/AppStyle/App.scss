@@ -79,3 +79,32 @@ a {
 .ant-modal-footer{
     display: none;
 }
+
+#root .PricingDetails_Page .Layout_Body .PricingDetails .swiper-backface-hidden .swiper-pagination-horizontal span{
+    background-color:var(--secondary) !important;
+   }
+   .PricingDetails .swiper-backface-hidden .swiper-button-prev{
+    color:var(--secondary);
+   }
+   
+   .PricingDetails .swiper-backface-hidden .swiper-button-next{
+    color:var(--secondary);
+   }
+   
+   .ant-tabs-nav-list .ant-tabs-tab-active .ant-tabs-tab-btn{
+   font-weight: bold;
+   }
+   
+   .ant-tabs-nav-list .ant-tabs-tab-btn{
+    font-size: 2.8vw;
+    font-weight: bold;
+   }
+   :where(.css-dev-only-do-not-override-1u0a97d).ant-tabs .ant-tabs-tab+.ant-tabs-tab{
+    margin: 0 0 0 4vw;
+   }
+   .PricingDetails .swiper-backface-hidden .swiper-button-next{
+    display: none;
+   }
+   .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    display: none;
+   }

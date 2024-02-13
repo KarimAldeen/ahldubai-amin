@@ -17,7 +17,7 @@ const Header = () => {
         const scrollPosition = window.scrollY;
         const headerHeight = window.innerHeight;
 
-        if (scrollPosition <= 50) {
+        if (scrollPosition <= 100) {
           header.classList.add('HeaderStart');
         } else {
           header.classList.remove('HeaderStart');
@@ -42,7 +42,7 @@ const Header = () => {
     };
 
   return (
-    <header className='Header'>
+    <header className='Header HeaderStart'>
       <Link to={'/'} > <img src="../Logo.png" alt="" /></Link>
       <nav>
         <ul className='Links'>
