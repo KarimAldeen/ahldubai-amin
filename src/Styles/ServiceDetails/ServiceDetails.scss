@@ -1,0 +1,751 @@
+
+
+.serviceDetails_Page{
+.Header{
+    display: none;
+}
+    .ServiceDetails{
+        max-width: 90%;
+        margin-inline: auto;
+    
+        min-height: 500px;
+        padding:20px;
+        .ServicesNavBar{
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                >div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                    }
+                    svg{
+                        width:20px;
+                        height:20px;
+                        cursor: pointer;
+                    }
+                }
+                >span{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 8px 10px;
+                    @include Shadow;
+                    border-radius: 4px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    background-color:  var(--secondary);
+                    color: var(--primary);
+                    border-radius: 10px;
+                    
+                        svg{
+                            color: var(--primary);
+                        }
+                }
+                .Links {
+                    margin-bottom: 0;
+                    @include Flex;
+                    gap: 3vw;
+        
+                    svg {
+                        height: 45px;
+                        // cursor: pointer;
+        
+                    }
+        
+                    li {
+                        all: unset;
+                        @include underLineText(var(--primary), var(--secondary));
+                        padding-bottom: 1px;
+        
+                  
+        
+                    }
+                }
+                .MenuNav {
+                    display: none;
+                }
+               
+        }
+        
+        .MainSection{
+            display: flex;
+            flex-direction: column;
+            margin-block: 10px;
+            gap: 5px;
+            padding: 50px ;
+            border-radius: 5px;
+            @include Shadow;
+            position: relative;
+            img{
+                width: 30vw;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                mix-blend-mode: multiply;
+            }
+            h1{
+                font-weight: bold;
+                font-size: 4vw;
+                color:var(--primary);
+                width: 75%;
+                margin-bottom: 20px;
+            }
+            .bulletPoints{
+                display: grid;
+                grid-template-areas: 
+                  "logo navigation"
+                  "menu navigation";
+                grid-template-rows: auto auto;
+                justify-content: flex-start;
+                gap: 5% ;
+
+                
+                .bulletPoint{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    margin-bottom: 5px;
+                    min-width: fit-content;
+                    text-wrap: nowrap;
+                    font-size: 2vw;
+                    font-weight: bold;
+                    color: var(--primary);
+                    svg{
+                        color: var(--primary);
+                        border-radius: 1px;
+                    }
+                }
+            }
+
+        }
+        .PricingCategories{
+            display: flex;
+            align-items: center;
+            gap: 5%;
+            flex-wrap: wrap;
+            padding-inline: 10px;
+
+            .PricingCategory{
+                width: 30%;
+
+            }
+        }
+ 
+        .EffectCoverflow{
+            width: 100%;
+            padding-block: 30px 10px;
+            .swiper {
+                width: 100%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+              }
+              
+              .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                width: 150px ;
+                height: 220px    ;
+                position: relative;
+               
+
+                // &::before {
+                //     content: "";
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     width: 100%;
+                //     opacity: 0.4;
+                //     height: 100%;
+                //     z-index: 1;
+                //     background-color: black;
+                   
+        
+                // }
+              }
+              
+      
+              .SwiperSlide{
+                position: relative;
+              
+              }
+              .SwiperInfo{
+                position: absolute;
+                top: 30%;
+                color: var(--white);
+                z-index: 99;
+                text-align: center;
+
+                
+            }
+        
+          }
+        
+        .Categoriesbuttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            button{
+                border: solid 1px var(--primary);
+                color: var(--primary);
+                background:transparent;
+                font-size: 2vw;
+                padding: 10px;
+               margin-block: 15px;
+                width: 30%;
+                border-radius: 8px;
+                transition: .5s ease-in-out;
+                text-wrap: nowrap;
+                font-weight: 900;
+                &:hover{
+                    background-color:  var(--primary);
+                    color: var(--white);
+                }
+           
+            }
+            .active{
+                background-color:  var(--primary);
+                color: var(--white);
+              
+            }
+            &:has(button:hover) button:not(:hover)  {
+                color: var(--primary);
+                background:transparent;
+              }
+        
+        }
+        .Categoriesbanner{
+            height: 40vw;
+            width: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .PricingCategoriesDetails{
+            margin-block: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-inline: 10px;
+            padding: 50px ;
+            @include Shadow;
+        >span{
+                display: flex;
+                gap: 2px;
+        }
+        h6{
+            font-size: 3vw;
+            font-weight: bold;
+            color: var(--text);
+        }
+            h3{
+                font-weight: bold;
+                color: var(--text);
+                font-size: 5vw;
+                margin-bottom: 10px;
+
+            }
+            button{
+                background-color:  var(--secondary);
+                color: var(--primary);
+                border: solid 1px var(--secondary);
+                border-radius: 10px;
+                font-size: 4vw;
+                font-weight: bold;
+                padding: 10px;
+               margin-bottom: 15px;
+                display: flex; align-items: center;
+                justify-content: center;
+                gap: 4px;
+                margin-inline: auto;
+                transition: .5s ease-in-out;
+                padding-inline: 10%;
+                &:hover{
+                 
+                    border: solid 1px var(--secondary);
+                    color: var(--secondary);
+                    background:transparent;
+
+                }
+           
+            }
+        }
+        .benefitsSection{
+            h3{
+                color: var(--subtext);
+            }
+        }
+        .benefits {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 40px;
+
+            .ant-divider-horizontal {
+                margin: 3px 0 !important;
+            }
+
+            .benefit {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 6vw;
+                
+                .Icon{
+                    color: var(--primary);
+                    font-size: 3vw;
+                    width: 4vw;
+                    height: 4vw;
+                    border-radius: 50%;
+                    background: hsl(235.38deg 35.14% 92.75%);
+                    display: flex;  justify-content: center; align-items: center;
+                    font-weight: bold;
+
+                }
+
+                >div {
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+
+                    >svg {
+                        color: var(--primary);
+                        cursor: pointer;
+                        font-size: 3vw;
+                    }
+
+                    h6 {
+                        // text-wrap: nowrap;
+                        font-size: 3vw;
+                        margin-bottom: 0;
+
+                    }
+                }
+
+
+            }
+        }
+
+}
+
+}
+
+
+.CategorieCard{
+    padding: 10px;
+    @include Shadow;
+    display: flex;
+    width: 150px;
+    height: 200px;
+    flex-direction: column;
+    gap: 5px;
+    img{
+        height: 60%;
+        width: 100%;
+        border-radius: 10px;
+
+    }
+    h1{
+        font-weight: bold;
+        margin-bottom: 0;
+        font-size: 12px !important;
+
+    }
+    p{
+        color: var(--subtext);
+        font-size: 10px !important;
+        margin-bottom: 0;
+
+    }
+    h4{
+        color: var(--secondary);
+        font-size: 14px !important;
+        font-weight: 900;
+
+    }
+}
+
+
+
+
+ 
+.swiper-3d .swiper-slide-shadow-right{
+    background-image: none;
+}
+ 
+.swiper-3d .swiper-slide-shadow-left{
+    background-image: none;
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .serviceDetails_Page{
+        .Header{
+            display: none;
+        }
+            .ServiceDetails{
+            
+                min-height: 500px;
+                padding:20px;
+                .ServicesNavBar{
+                        height: 50px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: relative;
+                        .MenuNav {
+                            display: inline;
+                            position: absolute;
+                            right: 5%;
+                        }
+                        >div{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img{
+                                width: 50px;
+                                height: 50px;
+                                cursor: pointer;
+                            }
+                            svg{
+                                width:20px;
+                                height:20px;
+                                cursor: pointer;
+                            }
+                        }
+                        >span{
+                            margin-right: 65px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            padding: 8px 10px;
+                            @include Shadow;
+                            border-radius: 4px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            background-color:  var(--secondary);
+                            color: var(--primary);
+                            border-radius: 10px;
+                            
+                                svg{
+                                    color: var(--primary);
+                                }
+                        }
+                       
+                }
+                .MainSection{
+                    display: flex;
+                    flex-direction: column;
+                    margin-block: 10px;
+                    gap: 5px;
+                    padding: 30px ;
+                    border-radius: 5px;
+                    @include Shadow;
+                    img{
+                        display: none;
+                    }
+                    h1{
+                        font-weight: bold;
+                        font-size: 6vw;
+                        color:var(--primary);
+                        width: 100%;
+                    }
+                    .bulletPoints{
+                     
+                        display: grid;
+                        grid-template-areas: 
+                          "logo navigation"
+                          "menu navigation";
+                        grid-template-rows: auto auto;
+                        justify-content: flex-start;
+                        gap: 5% ;
+                        width: 100%;
+                        
+                        .bulletPoint{
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            width: 50%;
+                            margin-bottom: 5px;
+                            min-width: fit-content;
+                            text-wrap: nowrap;
+                            font-size: 2.6vw;
+                            font-weight: bold;
+                            color: var(--primary);
+                            svg{
+                                color: var(--primary);
+                                border-radius: 1px;
+                            }
+                        }
+                    }
+        
+                }
+                .PricingCategories{
+                    display: flex;
+                    align-items: center;
+        
+                    gap: 5%;
+                    flex-wrap: wrap;
+                    padding-inline: 10px;
+        
+                    .PricingCategory{
+                        width: 30%;
+        
+                    }
+                }
+         
+                .EffectCoverflow{
+                    width: 100%;
+                    padding-block: 30px 10px;
+                    .swiper {
+                        width: 100%;
+                        padding-top: 50px;
+                        padding-bottom: 50px;
+                      }
+                      
+                      .swiper-slide {
+                        background-position: center;
+                        background-size: cover;
+                        width: 150px ;
+                        height: 220px    ;
+                        position: relative;
+                       
+        
+                        // &::before {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 0;
+                        //     left: 0;
+                        //     width: 100%;
+                        //     opacity: 0.4;
+                        //     height: 100%;
+                        //     z-index: 1;
+                        //     background-color: black;
+                           
+                
+                        // }
+                      }
+                      
+              
+                      .SwiperSlide{
+                        position: relative;
+                      
+                      }
+                      .SwiperInfo{
+                        position: absolute;
+                        top: 30%;
+                        color: var(--white);
+                        z-index: 99;
+                        text-align: center;
+        
+                        
+                    }
+                
+                  }
+                
+                .Categoriesbuttons{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    button{
+                        border: solid 1px var(--primary);
+                        color: var(--primary);
+                        background:transparent;
+                        font-size: 2.3vw;
+                        padding: 10px;
+                       margin-bottom: 15px;
+                        width: 32%;
+                        border-radius: 8px;
+                        transition: .5s ease-in-out;
+                        text-wrap: nowrap;
+                        font-weight: 900;
+                        &:hover{
+                            background-color:  var(--primary);
+                            color: var(--white);
+                        }
+                   
+                    }
+                    .active{
+                        background-color:  var(--primary);
+                        color: var(--white);
+                      
+                    }
+                    &:has(button:hover) button:not(:hover)  {
+                        color: var(--primary);
+                        background:transparent;
+                      }
+                
+                }
+                .Categoriesbanner{
+                    height: 180px;
+                    width: 100%;
+                    background: linear-gradient(to right, var(--primary), var(--secondary));
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+                
+                .PricingCategoriesDetails{
+                    margin-block: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding-inline: 10px;
+                    padding: 20px;
+                    @include Shadow;
+                >span{
+                        display: flex;
+                        gap: 2px;
+                }
+                h6{
+                    font-size: 3vw;
+                    font-weight: bold;
+                    color: var(--text);
+                }
+                    h3{
+                        font-weight: bold;
+                        color: var(--text);
+                        font-size: 5vw;
+                        margin-bottom: 10px;
+        
+                    }
+                    button{
+                        background-color:  var(--secondary);
+                        color: var(--primary);
+                        border: solid 1px var(--secondary);
+                        border-radius: 10px;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        padding: 10px;
+                       margin-bottom: 15px;
+                        display: flex; align-items: center;
+                        justify-content: center;
+                        gap: 4px;
+                        margin-inline: auto;
+                        transition: .5s ease-in-out;
+                        padding-inline: 10%;
+                        &:hover{
+                         
+                            border: solid 1px var(--secondary);
+                            color: var(--secondary);
+                            background:transparent;
+        
+                        }
+                   
+                    }
+                }
+                .benefitsSection{
+                    h3{
+                        color: var(--subtext);
+                    }
+                }
+                .benefits {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+        
+                    .ant-divider-horizontal {
+                        margin: 3px 0 !important;
+                    }
+        
+                    .benefit {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 30px;
+                        
+                        .Icon{
+                            color: var(--primary);
+                            font-size: 12px;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            background: hsl(235.38deg 35.14% 92.75%);
+                            display: flex;  justify-content: center; align-items: center;
+                            font-weight: bold;
+        
+                        }
+        
+                        >div {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+        
+                            >svg {
+                                color: var(--primary);
+                                cursor: pointer;
+                                font-style: 3vw;
+                            }
+        
+                            h6 {
+                                // text-wrap: nowrap;
+                                font-size: 3vw;
+                                margin-bottom: 0;
+        
+                            }
+                        }
+        
+        
+                    }
+                }
+        
+        }
+        
+        }
+        
+        
+        .CategorieCard{
+            padding: 10px;
+            @include Shadow;
+            display: flex;
+            width: 150px;
+            height: 200px;
+            flex-direction: column;
+            gap: 5px;
+            img{
+                height: 60%;
+                width: 100%;
+                border-radius: 10px;
+        
+            }
+            h1{
+                font-weight: bold;
+                margin-bottom: 0;
+                font-size: 12px !important;
+        
+            }
+            p{
+                color: var(--subtext);
+                font-size: 10px !important;
+                margin-bottom: 0;
+        
+            }
+            h4{
+                color: var(--secondary);
+                font-size: 14px !important;
+                font-weight: 900;
+        
+            }
+        }
+        
+        
+        
+        
+         
+        .swiper-3d .swiper-slide-shadow-right{
+            background-image: none;
+        }
+         
+        .swiper-3d .swiper-slide-shadow-left{
+            background-image: none;
+        }
+
+}

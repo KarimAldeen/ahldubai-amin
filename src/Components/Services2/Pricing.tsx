@@ -9,6 +9,7 @@ const Pricing = () => {
     const navigate = useNavigate()
     const [data, setData] = useState([
         {
+            image: '../PricingDetails/2.webp',
             title: "Dental Implants",
             subTitle: "Permanent, Reliable Tooth Replacement Option",
             price: "2,000",
@@ -26,6 +27,7 @@ const Pricing = () => {
             ]
         },
         {
+            image: '../PricingDetails/3.jpeg',
             title: " Dental Veneers",
             subTitle: "Improves tooth color and shape.",
             price: "1,285",
@@ -43,6 +45,7 @@ const Pricing = () => {
             ]
         },
         {
+            image: '../PricingDetails/4.webp',
             title: "Other Dental Service",
             subTitle: "Complete Dental Excellence: All Services, One Destination",
             price: "500",
