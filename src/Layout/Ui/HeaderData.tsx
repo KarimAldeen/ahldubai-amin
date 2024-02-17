@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Doctors', path: '/doctors' },
-    { name: 'Services', path: '/Services' },
+    { name: 'Services', path: '/services' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Reviews', path: '/Reviews' }
+    { name: 'Reviews', path: '/reviews' }
   ];
 
   export   const renderNavItem = (item:any, index:any) => (

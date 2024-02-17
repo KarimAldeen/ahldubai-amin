@@ -65,7 +65,7 @@ const Pricing = () => {
     ]);
 
     const handleNavigate = () => {
-        navigate("/Pricing")
+        navigate("/services/name")
     }
 
     const handleSwitchChange = (index:any) => {
