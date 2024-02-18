@@ -13,15 +13,15 @@ const ImageBanner: React.FC = () => {
   const Data = [
     {
       id: 1,
-      image: "../ServiceDetails/B1.jpg"
+      image: "../ServiceDetails/BBB.png"
     },
     {
       id: 2,
-      image: "../ServiceDetails/B2.jpg"
+      image: "../ServiceDetails/BBB.png"
     },
     {
       id: 3,
-      image: "../ServiceDetails/B3.jpg"
+      image: "../ServiceDetails/BBB.png"
     }
   ]
   return (

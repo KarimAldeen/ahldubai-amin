@@ -4,7 +4,7 @@
     }
 
     .ServiceDetails {
-        max-width: 90%;
+        max-width: 80%;
         margin-inline: auto;
         min-height: 500px;
         padding: 20px;
@@ -22,8 +22,8 @@
                 justify-content: center;
 
                 img {
-                    width: 50px;
-                    height: 50px;
+                    width: 6vw;
+                    height: 6vw;
                     cursor: pointer;
                 }
 
@@ -84,7 +84,7 @@
             flex-direction: column;
             margin-block: 10px;
             gap: 2vw;
-            padding: 50px;
+            padding: 30px;
             border-radius: 5px;
             @include Shadow;
             position: relative;
@@ -102,7 +102,7 @@
                 font-weight: bold;
                 font-size: 3.5vw;
                 color: var(--primary);
-                width: 75%;
+                width: 80%;
                 margin-bottom: 20px;
             }
 
@@ -126,7 +126,7 @@
                     margin-bottom: 5px;
                     min-width: fit-content;
                     text-wrap: nowrap;
-                    font-size: 1.6vw;
+                    font-size: 1.3vw;
                     font-weight: 550;
                     color: var(--text);
 
@@ -204,15 +204,15 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            margin-block: 40px;
+            margin-block: 10px;
             gap: 5%;
 
             button {
                 border: solid 1px var(--primary);
                 color: var(--primary);
                 background: transparent;
-                font-size: 2vw;
-                padding: 1vw 2vw;
+                font-size: 1.5vw;
+                padding: 1vw 4vw;
                 margin-block: 15px;
                 border-radius: 8px;
                 transition: .5s ease-in-out;
@@ -240,13 +240,13 @@
         }
 
         .Categoriesbanner {
-            height: 30vw;
+            height: 17vw;
             width: 100%;
             border-radius: 10px;
             margin-bottom: 40px;
 
             img {
-                height: 30vw;
+                height: 17vw;
                 width: 100%;
                 border-radius: 10px;
 
@@ -273,15 +273,15 @@
             }
 
             h6 {
-                font-size: 3vw;
-                font-weight: bold;
+                font-size: 2vw;
+                font-weight: normal;
                 color: var(--text);
             }
 
             h3 {
                 font-weight: bold;
                 color: var(--text);
-                font-size: 5vw;
+                font-size: 3.5vw;
                 margin-bottom: 10px;
 
             }
@@ -291,7 +291,7 @@
                 color: var(--primary);
                 border: solid 1px var(--secondary);
                 border-radius: 10px;
-                font-size: 4vw;
+                font-size: 1.5vw;
                 font-weight: bold;
                 padding: 10px;
                 margin-bottom: 15px;
@@ -301,7 +301,7 @@
                 gap: 4px;
                 margin-inline: auto;
                 transition: .5s ease-in-out;
-                padding-inline: 10%;
+                padding-inline: 4%;
 
                 &:hover {
 
@@ -324,7 +324,7 @@
 
             h3 {
                 color: #8F8F91;
-                font-size: 1.7vw;
+                font-size: 1.2vw;
                 font-weight: normal;
                 padding-left: 4px;
                 margin-bottom: 20px;
@@ -346,13 +346,13 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                height: 5vw;
+                height: 4vw;
 
                 .Icon {
                     color: var(--primary);
-                    font-size: 1.5vw;
-                    width: 2.5vw;
-                    height: 2.5vw;
+                    font-size: 1.2vw;
+                    width: 2vw;
+                    height: 2vw;
                     border-radius: 50%;
                     background: hsl(235.38deg 35.14% 92.75%);
                     display: flex;
@@ -365,20 +365,21 @@
                 >div {
                     display: flex;
                     align-items: center;
-                    gap: 25px;
+                    gap: 15px;
 
                     >svg {
                         background: var(--primary);
                         color: var(--white);
                         cursor: pointer;
-                        font-size: 2vw;
+                        font-size: 1.5vw;
                         border-radius: 50%;
                     }
 
                     h6 {
                         // text-wrap: nowrap;
-                        font-size: 1.5vw;
+                        font-size: 1.2vw;
                         margin-bottom: 0;
+                        font-weight: bold;
 
 
                     }
@@ -430,7 +431,7 @@
 
     }
 }
-
+ 
 
 
 
@@ -861,3 +862,14 @@
     }
 
 }
+/* Swiper button next */
+.Categoriesbanner .swiper-backface-hidden .swiper-button-next{
+    display:none;
+   }
+   
+   /* Span Tag */
+   .serviceDetails_Page .ServiceDetails .PricingCategories .PricingCategoriesDetails .Categoriesbanner .swiper-backface-hidden .swiper-pagination-horizontal span{
+    background-color:var(--white) !important;
+   }
+   
+   
