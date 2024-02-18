@@ -1,16 +1,19 @@
-import React from 'react'
-import CardSwiper from '../SwiperReview/CardSwiper'
+import React from 'react';
+import CardSwiper from '../SwiperReview/CardSwiper';
 
-const Review = () => {
+const Review = ({data}:any) => {
+
   return (
     <div className='Review' id='Reviews'>
-        <h6>- Testimonial</h6>
-        <h1>What patients are saying!</h1>
-        <CardSwiper/>
-
+      {data.map((review:any, index:any) => (
+        <div key={index}>
+          <h6>{review.title}</h6>
+          <h1>{review.info}</h1>
+          <CardSwiper data={review.cardData} />
+        </div>
+      ))}
     </div>
+  );
+};
 
-  )
-}
-
-export default Review
+export default Review;

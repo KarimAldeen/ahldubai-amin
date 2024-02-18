@@ -4,40 +4,19 @@ import ContactForm from './ContactForm';
 import { useNavigate } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
 
-const data = [
-  {
-    image: '1',
-    h1: 'Expert ',
-    h2: 'Care ',
-    info: ' Experience top-tier medical procedures in Dubai, offering personalized care and advanced treatments tailored to meet your unique health needs.',
-  },
-  {
-    image: '2',
-    h1: 'Health ',
-    h2: 'Guidance',
-    info: ' Access immediate and professional health advice from leading experts, ensuring comprehensive care and support at your fingertips, no matter where you are.',
-  },
-  {
-    image: '3',
-    h1: 'Zero ',
-    h2: 'Fees',
-    info: ' Enjoy the full spectrum of our health tourism services without any additional service fees, Aurora service fees will be on the Medical center no cost difference for the patient if he take the service thought our website',
-  },
-];
-
-const NewHeroSection = () => {
-  const [infoData, setInfoData] = useState(data[0]);
+const NewHeroSection = ({Data}:any) => {
+  const [infoData, setInfoData] = useState(Data[0]);
   const [key, setKey] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
  
-    const maxIterations = data.length;
+    const maxIterations = Data.length;
     let iteration = key;
 
     const intervalId = setInterval(() => {
-      setInfoData(data[iteration]);
+      setInfoData(Data[iteration]);
       setKey(iteration);
 
       iteration = (iteration + 1) % maxIterations;
@@ -51,7 +30,7 @@ const NewHeroSection = () => {
   };
 
   const handleImageClick = (index:number) => {
-    setInfoData(data[index]);
+    setInfoData(Data[index]);
     setKey(index);
   };
 
@@ -76,7 +55,7 @@ const NewHeroSection = () => {
       </div>
       <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <div className='Image_Controller'>
-        {data.map((item, index) => (
+        {Data.map((item:any, index:any) => (
           <div key={index} onClick={() => handleImageClick(index)} className={infoData.image === item.image ? 'active_Image' : ''}></div>
         ))}
       </div>

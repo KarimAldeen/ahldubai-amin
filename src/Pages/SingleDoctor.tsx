@@ -2,12 +2,12 @@ import { PhoneFilled, UserOutlined } from '@ant-design/icons';
 import { Button, Input, Progress } from 'antd';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { DoctorsData } from '../Data';
+import { MultyPageData } from '../Data';
 
 const SingleDoctor = () => {
   const { id } = useParams();
 
-  const doctor = DoctorsData.find((doc:any) => doc.id === Number(id)) as any;
+  const doctor = MultyPageData?.DoctorsData.find((doc:any) => doc.id === Number(id)) as any;
 
   const { name,Category, Image, Summary, Full_description, skills, education,skill_Info} = doctor;
 

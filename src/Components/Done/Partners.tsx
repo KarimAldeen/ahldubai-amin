@@ -1,25 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-const Partners = () => {
+const Partners = ({data}:any) => {
+    // Array of partner objects containing image paths and alt text
+
+
     return (
         <div className='Partners'>
             <h1>Partners</h1>
             <div>
-                   { ["2","8","9","11","13","14","15","16","18","19"]?.map((item,index)=>{
-                    return(
-                        <div key={index}>
-                <img src={`../Partners/${item}.jpg`} alt="" />
-                              
-                        </div>
-                    )
-                   })}
-
-                             <img src={`../Partners/Sheild.webp`} alt="" />
-                             <img src={`../Partners/1.png`} alt="" />
-
+                {data.map((partner:any, index:any) => (
+                    <div key={index}>
+                        <img src={`${partner.src}`} alt={partner.alt} />
+                    </div>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Partners
+export default Partners;

@@ -9,15 +9,7 @@ import Image from '../Utils/Image';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 const ImageBanner: React.FC = () => {
-  const swiperParams = {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  }
+
   const Data = [
     {
       id: 1,
@@ -35,7 +27,6 @@ const ImageBanner: React.FC = () => {
   return (
     <Swiper className='ImageSwiper'
       freeMode={true}
-
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       autoplay={{ delay: 4000 }}
       navigation
@@ -47,9 +38,6 @@ const ImageBanner: React.FC = () => {
         return (
           <SwiperSlide className='SwiperSlide' key={item?.id}>
             <Image src={item?.image} />
-            {/* <div className='Swiper_text'>
-            C- Section Delivery Package
-            </div> */}
           </SwiperSlide>
         )
       })}

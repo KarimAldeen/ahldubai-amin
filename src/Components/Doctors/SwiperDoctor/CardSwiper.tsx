@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import DoctorCard from './DoctorCard';
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-import { DoctorsData } from '../../../Data';
+import { MultyPageData } from '../../../Data';
 
 
 
@@ -51,7 +51,7 @@ const CardSwiper: React.FC= () => {
         className='Docor_Cards'
       >
         {
-          DoctorsData?.map((item:any,index:number)=>{
+          MultyPageData?.DoctorsData?.map((item:any,index:number)=>{
             return(
               <SwiperSlide key={index}>
                 <DoctorCard data={item}/>

@@ -4,16 +4,18 @@ import Update from '../../Components/Done/Update'
 import NewHeroSection from '../../Components/Done/NewHeroSection'
 import Services2 from '../../Components/Done/Services2'
 import Partners from '../../Components/Done/Partners'
+import { HomeData, MultyPageData } from '../../Data'
 
 const Page = () => {
+  
   return (
     <>
-    <NewHeroSection/>
+    <NewHeroSection Data={HomeData?.HeroSectionData}/>
     {/* <Services/> */}
-    <Services2/>
-    <Reviews/>
+    <Services2 servicesData={HomeData?.servicesData} />
+    <Reviews data={HomeData?.reviewsData}/>
     {/* <Update/> */}
-    <Partners/>
+    <Partners data={MultyPageData?.partnerImages}/>
 
     </>
   )

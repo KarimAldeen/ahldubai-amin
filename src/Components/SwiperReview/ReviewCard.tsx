@@ -1,23 +1,28 @@
+import React from 'react';
 
-const ReviewCard = ({activeIndex,index}:any) => {
-  return (
-    <div className={activeIndex === index ? 'ActiveReviewCard ReviewCard' : 'ReviewCard' } >
-           <div>
-            <div>
-              <img src="../Reviews/2.png" alt="" />
-              <span>
-                <h5>Carry Malan</h5>
-                <h6>Happy Partner</h6>
-              </span>
-            </div>
-            <img src="../Reviews/review.svg" alt="" />
-           </div>
-           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-             Harum, tempora commodi iure odio architecto maxime.
-           </p>
-    </div>
-  )
+interface Props {
+  activeIndex: number;
+  index: number;
+  data : any
+
 }
 
-export default ReviewCard
+const ReviewCard: React.FC<Props> = ({ activeIndex, index, data }) => {
+  return (
+    <div className={activeIndex === index ? 'ActiveReviewCard ReviewCard' : 'ReviewCard'}>
+      <div>
+        <div>
+          <img src={data?.image} alt="" />
+          <span>
+            <h5>{data?.name}</h5>
+            <h6>{data?.role}</h6>
+          </span>
+        </div>
+        <img src="../Reviews/review.svg" alt="" />
+      </div>
+      <p>{data?.review}</p>
+    </div>
+  );
+};
+
+export default ReviewCard;

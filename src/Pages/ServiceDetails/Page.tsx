@@ -7,6 +7,7 @@ import { Divider, Popover } from 'antd';
 import { PricinfData } from '../../Components/Services2/PricingData';
 import { FaRegSquareCheck } from 'react-icons/fa6';
 import { Currency } from '../../Layout/app/Const';
+import ImageBanner from './ImageSwiper';
 
 
 const ServiceDetails: React.FC = () => {
@@ -20,7 +21,7 @@ const ServiceDetails: React.FC = () => {
     const [data, setData] = useState<any[]>(PricinfData);
     const [Active, setActive] = useState([data[1]])
 
-    const Buttondata = ["C- Section Delivery", "Normal Delivery", "Vip Delivery"];
+    const Buttondata = ["C- Section Delivery", "Normal Delivery"];
 
     return (
         <div className='ServiceDetails'>
@@ -32,11 +33,14 @@ const ServiceDetails: React.FC = () => {
                 </h1>
                 <span className='bulletPoints'>
                     {bulletPoints.map((point, index) => (
-                        <span className='bulletPoint' key={index}><FaRegSquareCheck />{point}</span>
+                        <span className='bulletPoint' key={index}>
+                            {/* <FaRegSquareCheck />  */}
+                            <img src="../ServiceDetails/Check.svg" alt="" />
+                            {point}</span>
                     ))}
                 </span>
 
-                <img src="../ServiceDetails/1.png" alt="" />
+                <img src="../ServiceDetails/Home.png" alt="" />
 
 
             </div>
@@ -67,33 +71,63 @@ const ServiceDetails: React.FC = () => {
                             </span>
                             <article className='Categoriesbanner'>
 
+                                <ImageBanner />
+
                             </article>
-                            <div className='benefitsSection'>
+                            <div className='InfoSection'>
+                                <div className='benefitsSection'>
 
-                                <h3>benefits</h3>
-                                <div className='benefits'>
-                                    {item.benefits?.map((benefit: any, index: any) => (
-                                        <span key={index} className='benefit'>
-                                            <div>
-                                                {/* <FaRegCheckCircle />  */}
-                                                <div className='Icon'>
-                                                    {index + 1}
+                                    <h3>Benefits</h3>
+                                    <div className='benefits'>
+                                        {item.benefits?.map((benefit: any, index: any) => (
+                                            <span key={index} className='benefit'>
+                                                <div>
+                                                    {/* <FaRegCheckCircle />  */}
+                                                    <div className='Icon'>
+                                                        {index + 1}
+                                                    </div>
+                                                    <h6>{benefit.text}</h6>
+                                                    {benefit.Icon && (
+                                                        <Popover content={benefit.iconData} title="Title">
+                                                            {benefit.Icon}
+                                                        </Popover>
+                                                    )}
                                                 </div>
-                                                <h6>{benefit.text}</h6>
-                                                {benefit.Icon && (
-                                                    <Popover content={benefit.iconData} title="Title">
-                                                        {benefit.Icon}
-                                                    </Popover>
-                                                )}
-                                            </div>
-                                        </span>
-                                    ))}
-                                </div>
-                                <button>
-                                    <IoLogoWhatsapp /> Get Started Now
-                                </button>
+                                            </span>
+                                        ))}
+                                    </div>
+                                 
 
+                                </div>
+                                <div className='benefitsSection'>
+
+                                    <h3>Routine care for one baby</h3>
+                                    <div className='benefits'>
+                                        {item.benefits2?.map((benefit: any, index: any) => (
+                                            <span key={index} className='benefit'>
+                                                <div>
+                                                    {/* <FaRegCheckCircle />  */}
+                                                    <div className='Icon'>
+                                                        {index + 1}
+                                                    </div>
+                                                    <h6>{benefit.text}</h6>
+                                                    {benefit.Icon && (
+                                                        <Popover content={benefit.iconData} title="Title">
+                                                            {benefit.Icon}
+                                                        </Popover>
+                                                    )}
+                                                </div>
+                                            </span>
+                                        ))}
+                                    </div>
+                                  
+
+                                </div>
+                               
                             </div>
+                            <button>
+                                        <IoLogoWhatsapp /> Get Started Now
+                                    </button>
                         </div>
                     );
                 })}

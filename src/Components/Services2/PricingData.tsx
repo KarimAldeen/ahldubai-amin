@@ -9,7 +9,11 @@ export const PricinfData = [
         price: "2,000",
         showAdditionalBenefits: false,
         benefits: [
-            { text: "Free consultation (X-ray , 3D scans)", Icon: <TiInfoLarge />, iconData: "Labour room care, obstetrician's fee, medical consumables for delivery, routine lab tests, and admission medications" },
+            { text: "Same day placement Don't wait 6 months", },
+            { text: "Financing Options Available to Fit Your Budget", },
+            { text: "Comprehensive Aftercare and Follow-Up Program", }
+        ],
+        benefits2: [
             { text: "10 Year guarantee", },
             { text: "Same day placement Don't wait 6 months", },
             { text: "Financing Options Available to Fit Your Budget", },
@@ -30,8 +34,12 @@ export const PricinfData = [
             { text: "Pain-Free Procedure", Icon: <TiInfoLarge />, iconData: "Labour room care, obstetrician's fee, medical consumables for delivery, routine lab tests, and admission medications" },
             { text: "Stain Resistance", },
             { text: "Longevity and Durability 10-15 Years", },
-            { text: "Cover Damaged Teeth", },
-            { text: "Natural Look and Feel", }
+        ],
+        benefits2: [
+            { text: "10 Year guarantee", },
+            { text: "Same day placement Don't wait 6 months", },
+            { text: "Financing Options Available to Fit Your Budget", },
+            { text: "Comprehensive Aftercare and Follow-Up Program", }
         ],
         Vipbenefits: [
             { text: "10 Year guarantee"},
@@ -48,8 +56,12 @@ export const PricinfData = [
             { text: "Oral & Maxillofacial Service", Icon: <TiInfoLarge />, iconData: "Labour room care, obstetrician's fee, medical consumables for delivery, routine lab tests, and admission medications" },
             { text: "Radiological Services", },
             { text: "Aesthetic - Prosthodontic Services", },
-            { text: "Endodontic Services", },
-            { text: "Other Dental Services", }
+        ],
+        benefits2: [
+            { text: "10 Year guarantee", },
+            { text: "Same day placement Don't wait 6 months", },
+            { text: "Financing Options Available to Fit Your Budget", },
+            { text: "Comprehensive Aftercare and Follow-Up Program", }
         ],
         Vipbenefits: [
             { text: "10 Year guarantee"},

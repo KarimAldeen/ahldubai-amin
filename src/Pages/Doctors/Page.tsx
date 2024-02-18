@@ -1,7 +1,7 @@
 import React from 'react'
 import DoctorCard from '../../Components/Doctors/DoctorCard'
 import { Select } from 'antd'
-import { DoctorsData } from '../../Data'
+import { MultyPageData } from '../../Data'
 
 const Doctors = () => {
   return (
@@ -59,7 +59,7 @@ const Doctors = () => {
             </div>
         </div>
         <div className='Docor_Cards'>
-        {  DoctorsData?.map((item:any,index:any)=>{
+        {  MultyPageData?.DoctorsData?.map((item:any,index:any)=>{
             return(
               <DoctorCard data={item}/>
             )

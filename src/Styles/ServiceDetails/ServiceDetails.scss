@@ -1,158 +1,170 @@
+.serviceDetails_Page {
+    .Header {
+        display: none;
+    }
 
-
-.serviceDetails_Page{
-.Header{
-    display: none;
-}
-    .ServiceDetails{
+    .ServiceDetails {
         max-width: 90%;
         margin-inline: auto;
-    
         min-height: 500px;
-        padding:20px;
-        .ServicesNavBar{
-                height: 50px;
+        padding: 20px;
+
+        .ServicesNavBar {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            >div {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                >div{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    img{
-                        width: 50px;
-                        height: 50px;
-                        cursor: pointer;
-                    }
-                    svg{
-                        width:20px;
-                        height:20px;
-                        cursor: pointer;
-                    }
-                }
-                >span{
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    padding: 8px 10px;
-                    @include Shadow;
-                    border-radius: 4px;
-                    font-weight: bold;
+                justify-content: center;
+
+                img {
+                    width: 50px;
+                    height: 50px;
                     cursor: pointer;
-                    background-color:  var(--secondary);
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            >span {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 8px 10px;
+                @include Shadow;
+                border-radius: 4px;
+                font-weight: bold;
+                cursor: pointer;
+                background-color: var(--secondary);
+                color: var(--primary);
+                border-radius: 10px;
+
+                svg {
                     color: var(--primary);
-                    border-radius: 10px;
-                    
-                        svg{
-                            color: var(--primary);
-                        }
                 }
-                .Links {
-                    margin-bottom: 0;
-                    @include Flex;
-                    gap: 3vw;
-        
-                    svg {
-                        height: 45px;
-                        // cursor: pointer;
-        
-                    }
-        
-                    li {
-                        all: unset;
-                        @include underLineText(var(--primary), var(--secondary));
-                        padding-bottom: 1px;
-        
-                  
-        
-                    }
+            }
+
+            .Links {
+                margin-bottom: 0;
+                @include Flex;
+                gap: 3vw;
+
+                svg {
+                    height: 45px;
+                    // cursor: pointer;
+
                 }
-                .MenuNav {
-                    display: none;
+
+                li {
+                    all: unset;
+                    @include underLineText(var(--primary), var(--secondary));
+                    padding-bottom: 1px;
+
+
+
                 }
-               
+            }
+
+            .MenuNav {
+                display: none;
+            }
+
         }
-        
-        .MainSection{
+
+        .MainSection {
             display: flex;
             flex-direction: column;
             margin-block: 10px;
-            gap: 5px;
-            padding: 50px ;
+            gap: 2vw;
+            padding: 50px;
             border-radius: 5px;
             @include Shadow;
             position: relative;
-            img{
-                width: 30vw;
+            min-height: 25vw;
+
+            >img {
+                width: 25vw;
                 position: absolute;
-                right: 0;
-                bottom: 0;
+                right: 5%;
+                bottom: -5%;
                 mix-blend-mode: multiply;
             }
-            h1{
+
+            h1 {
                 font-weight: bold;
-                font-size: 4vw;
-                color:var(--primary);
+                font-size: 3.5vw;
+                color: var(--primary);
                 width: 75%;
                 margin-bottom: 20px;
             }
-            .bulletPoints{
+
+            .bulletPoints {
                 display: grid;
-                grid-template-areas: 
-                  "logo navigation"
-                  "menu navigation";
+                grid-template-areas:
+                    "logo navigation"
+                    "menu navigation";
                 grid-template-rows: auto auto;
                 justify-content: flex-start;
-                gap: 5% ;
+                gap: 5%;
 
-                
-                .bulletPoint{
+                img {
+                    width: 2vw;
+                }
+
+                .bulletPoint {
                     display: flex;
                     align-items: center;
-                    gap: 4px;
+                    gap: 8px;
                     margin-bottom: 5px;
                     min-width: fit-content;
                     text-wrap: nowrap;
-                    font-size: 2vw;
-                    font-weight: bold;
+                    font-size: 1.6vw;
+                    font-weight: 550;
                     color: var(--text);
-                    svg{
-                        color: var(--primary);
-                        border-radius: 1px;
-                    }
+
                 }
             }
 
         }
-        .PricingCategories{
+
+        .PricingCategories {
             display: flex;
             align-items: center;
             gap: 5%;
             flex-wrap: wrap;
             padding-inline: 10px;
 
-            .PricingCategory{
+            .PricingCategory {
                 width: 30%;
 
             }
         }
- 
-        .EffectCoverflow{
+
+        .EffectCoverflow {
             width: 100%;
             padding-block: 30px 10px;
+
             .swiper {
                 width: 100%;
                 padding-top: 50px;
                 padding-bottom: 50px;
-              }
-              
-              .swiper-slide {
+            }
+
+            .swiper-slide {
                 background-position: center;
                 background-size: cover;
-                width: 150px ;
-                height: 220px    ;
+                width: 150px;
+                height: 220px;
                 position: relative;
-               
+
 
                 // &::before {
                 //     content: "";
@@ -164,124 +176,162 @@
                 //     height: 100%;
                 //     z-index: 1;
                 //     background-color: black;
-                   
-        
+
+
                 // }
-              }
-              
-      
-              .SwiperSlide{
+            }
+
+
+            .SwiperSlide {
                 position: relative;
-              
-              }
-              .SwiperInfo{
+
+            }
+
+            .SwiperInfo {
                 position: absolute;
                 top: 30%;
                 color: var(--white);
                 z-index: 99;
                 text-align: center;
 
-                
+
             }
-        
-          }
-        
-        .Categoriesbuttons{
+
+        }
+
+        .Categoriesbuttons {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: center;
             width: 100%;
-            button{
+            margin-block: 40px;
+            gap: 5%;
+
+            button {
                 border: solid 1px var(--primary);
                 color: var(--primary);
-                background:transparent;
+                background: transparent;
                 font-size: 2vw;
-                padding: 10px;
-               margin-block: 15px;
-                width: 30%;
+                padding: 1vw 2vw;
+                margin-block: 15px;
                 border-radius: 8px;
                 transition: .5s ease-in-out;
                 text-wrap: nowrap;
                 font-weight: 900;
-                &:hover{
-                    background-color:  var(--primary);
+
+                &:hover {
+                    background-color: var(--primary);
                     color: var(--white);
                 }
-           
+
             }
-            .active{
-                background-color:  var(--primary);
+
+            .active {
+                background-color: var(--primary);
                 color: var(--white);
-              
+
             }
-            &:has(button:hover) button:not(:hover)  {
+
+            &:has(button:hover) button:not(:hover) {
                 color: var(--primary);
-                background:transparent;
-              }
-        
+                background: transparent;
+            }
+
         }
-        .Categoriesbanner{
-            height: 40vw;
+
+        .Categoriesbanner {
+            height: 30vw;
             width: 100%;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 40px;
+
+            img {
+                height: 30vw;
+                width: 100%;
+                border-radius: 10px;
+
+            }
+
+            // background: linear-gradient(to right, var(--primary), var(--secondary));
+            // border-radius: 10px;
+            // margin-bottom: 10px;
         }
-        
-        .PricingCategoriesDetails{
+
+        .PricingCategoriesDetails {
             margin-block: 10px;
             display: flex;
             flex-direction: column;
             width: 100%;
             padding-inline: 10px;
-            padding: 50px ;
+            padding: 50px;
+            border-radius: 30px;
             @include Shadow;
-        >span{
+
+            >span {
                 display: flex;
                 gap: 2px;
-        }
-        h6{
-            font-size: 3vw;
-            font-weight: bold;
-            color: var(--text);
-        }
-            h3{
+            }
+
+            h6 {
+                font-size: 3vw;
+                font-weight: bold;
+                color: var(--text);
+            }
+
+            h3 {
                 font-weight: bold;
                 color: var(--text);
                 font-size: 5vw;
                 margin-bottom: 10px;
 
             }
-            button{
-                background-color:  var(--secondary);
+
+            button {
+                background-color: var(--secondary);
                 color: var(--primary);
                 border: solid 1px var(--secondary);
                 border-radius: 10px;
                 font-size: 4vw;
                 font-weight: bold;
                 padding: 10px;
-               margin-bottom: 15px;
-                display: flex; align-items: center;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
                 justify-content: center;
                 gap: 4px;
                 margin-inline: auto;
                 transition: .5s ease-in-out;
                 padding-inline: 10%;
-                &:hover{
-                 
+
+                &:hover {
+
                     border: solid 1px var(--secondary);
                     color: var(--secondary);
-                    background:transparent;
+                    background: transparent;
 
                 }
-           
+
             }
         }
-        .benefitsSection{
-            h3{
-                color: var(--subtext);
+
+        .InfoSection {
+            display: flex;
+            width: 100%;
+        }
+
+        .benefitsSection {
+            width: 50%;
+
+            h3 {
+                color: #8F8F91;
+                font-size: 1.7vw;
+                font-weight: normal;
+                padding-left: 4px;
+                margin-bottom: 20px;
+
             }
         }
+
         .benefits {
             display: flex;
             flex-direction: column;
@@ -296,16 +346,18 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                height: 6vw;
-                
-                .Icon{
+                height: 5vw;
+
+                .Icon {
                     color: var(--primary);
-                    font-size: 3vw;
-                    width: 4vw;
-                    height: 4vw;
+                    font-size: 1.5vw;
+                    width: 2.5vw;
+                    height: 2.5vw;
                     border-radius: 50%;
                     background: hsl(235.38deg 35.14% 92.75%);
-                    display: flex;  justify-content: center; align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     font-weight: bold;
 
                 }
@@ -316,15 +368,18 @@
                     gap: 25px;
 
                     >svg {
-                        color: var(--primary);
+                        background: var(--primary);
+                        color: var(--white);
                         cursor: pointer;
-                        font-size: 3vw;
+                        font-size: 2vw;
+                        border-radius: 50%;
                     }
 
                     h6 {
                         // text-wrap: nowrap;
-                        font-size: 3vw;
+                        font-size: 1.5vw;
                         margin-bottom: 0;
+
 
                     }
                 }
@@ -333,12 +388,12 @@
             }
         }
 
-}
+    }
 
 }
 
 
-.CategorieCard{
+.CategorieCard {
     padding: 10px;
     @include Shadow;
     display: flex;
@@ -346,25 +401,29 @@
     height: 200px;
     flex-direction: column;
     gap: 5px;
-    img{
+
+    img {
         height: 60%;
         width: 100%;
         border-radius: 10px;
 
     }
-    h1{
+
+    h1 {
         font-weight: bold;
         margin-bottom: 0;
         font-size: 12px !important;
 
     }
-    p{
+
+    p {
         color: var(--subtext);
         font-size: 10px !important;
         margin-bottom: 0;
 
     }
-    h4{
+
+    h4 {
         color: var(--secondary);
         font-size: 14px !important;
         font-weight: 900;
@@ -375,377 +434,420 @@
 
 
 
- 
-.swiper-3d .swiper-slide-shadow-right{
+
+.swiper-3d .swiper-slide-shadow-right {
     background-image: none;
 }
- 
-.swiper-3d .swiper-slide-shadow-left{
+
+.swiper-3d .swiper-slide-shadow-left {
     background-image: none;
 }
 
 
 @media screen and (max-width: 700px) {
 
-    .serviceDetails_Page{
-        .Header{
+    .serviceDetails_Page {
+        .Header {
             display: none;
         }
-            .ServiceDetails{
-            
-                min-height: 500px;
-                padding:20px;
-                .ServicesNavBar{
+
+        .ServiceDetails {
+
+            min-height: 500px;
+            padding: 20px;
+
+            .ServicesNavBar {
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                .MenuNav {
+                    display: inline;
+                    position: absolute;
+                    right: 5%;
+                }
+
+                >div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 50px;
                         height: 50px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        position: relative;
-                        .MenuNav {
-                            display: inline;
-                            position: absolute;
-                            right: 5%;
-                        }
-                        >div{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            img{
-                                width: 50px;
-                                height: 50px;
-                                cursor: pointer;
-                            }
-                            svg{
-                                width:20px;
-                                height:20px;
-                                cursor: pointer;
-                            }
-                        }
-                        >span{
-                            margin-right: 65px;
-                            display: flex;
-                            align-items: center;
-                            gap: 5px;
-                            padding: 8px 10px;
-                            @include Shadow;
-                            border-radius: 4px;
-                            font-weight: bold;
-                            cursor: pointer;
-                            background-color:  var(--secondary);
-                            color: var(--primary);
-                            border-radius: 10px;
-                            
-                                svg{
-                                    color: var(--primary);
-                                }
-                        }
-                       
+                        cursor: pointer;
+                    }
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
                 }
-                .MainSection{
+
+                >span {
+                    margin-right: 65px;
                     display: flex;
-                    flex-direction: column;
-                    margin-block: 10px;
+                    align-items: center;
                     gap: 5px;
-                    padding: 30px ;
-                    border-radius: 5px;
+                    padding: 8px 10px;
                     @include Shadow;
-                    img{
-                        display: none;
-                    }
-                    h1{
-                        font-weight: bold;
-                        font-size: 6vw;
-                        color:var(--primary);
-                        width: 100%;
-                    }
-                    .bulletPoints{
-                     
-                        display: grid;
-                        grid-template-areas: 
-                          "logo navigation"
-                          "menu navigation";
-                        grid-template-rows: auto auto;
-                        justify-content: flex-start;
-                        gap: 5% ;
-                        width: 100%;
-                        
-                        .bulletPoint{
-                            display: flex;
-                            align-items: center;
-                            gap: 4px;
-                            width: 50%;
-                            margin-bottom: 5px;
-                            min-width: fit-content;
-                            text-wrap: nowrap;
-                            font-size: 2.6vw;
-                            font-weight: bold;
-                            color: var(--primary);
-                            svg{
-                                color: var(--primary);
-                                border-radius: 1px;
-                            }
-                        }
-                    }
-        
-                }
-                .PricingCategories{
-                    display: flex;
-                    align-items: center;
-        
-                    gap: 5%;
-                    flex-wrap: wrap;
-                    padding-inline: 10px;
-        
-                    .PricingCategory{
-                        width: 30%;
-        
-                    }
-                }
-         
-                .EffectCoverflow{
-                    width: 100%;
-                    padding-block: 30px 10px;
-                    .swiper {
-                        width: 100%;
-                        padding-top: 50px;
-                        padding-bottom: 50px;
-                      }
-                      
-                      .swiper-slide {
-                        background-position: center;
-                        background-size: cover;
-                        width: 150px ;
-                        height: 220px    ;
-                        position: relative;
-                       
-        
-                        // &::before {
-                        //     content: "";
-                        //     position: absolute;
-                        //     top: 0;
-                        //     left: 0;
-                        //     width: 100%;
-                        //     opacity: 0.4;
-                        //     height: 100%;
-                        //     z-index: 1;
-                        //     background-color: black;
-                           
-                
-                        // }
-                      }
-                      
-              
-                      .SwiperSlide{
-                        position: relative;
-                      
-                      }
-                      .SwiperInfo{
-                        position: absolute;
-                        top: 30%;
-                        color: var(--white);
-                        z-index: 99;
-                        text-align: center;
-        
-                        
-                    }
-                
-                  }
-                
-                .Categoriesbuttons{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-                    button{
-                        border: solid 1px var(--primary);
-                        color: var(--primary);
-                        background:transparent;
-                        font-size: 2.3vw;
-                        padding: 10px;
-                       margin-bottom: 15px;
-                        width: 32%;
-                        border-radius: 8px;
-                        transition: .5s ease-in-out;
-                        text-wrap: nowrap;
-                        font-weight: 900;
-                        &:hover{
-                            background-color:  var(--primary);
-                            color: var(--white);
-                        }
-                   
-                    }
-                    .active{
-                        background-color:  var(--primary);
-                        color: var(--white);
-                      
-                    }
-                    &:has(button:hover) button:not(:hover)  {
-                        color: var(--primary);
-                        background:transparent;
-                      }
-                
-                }
-                .Categoriesbanner{
-                    height: 180px;
-                    width: 100%;
-                    background: linear-gradient(to right, var(--primary), var(--secondary));
+                    border-radius: 4px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    background-color: var(--secondary);
+                    color: var(--primary);
                     border-radius: 10px;
-                    margin-bottom: 10px;
+
+                    svg {
+                        color: var(--primary);
+                    }
                 }
-                
-                .PricingCategoriesDetails{
-                    margin-block: 10px;
-                    display: flex;
-                    flex-direction: column;
+
+            }
+
+            .MainSection {
+                display: flex;
+                flex-direction: column;
+                margin-block: 10px;
+                gap: 5px;
+                padding: 30px;
+                border-radius: 5px;
+                @include Shadow;
+
+                >img {
+                    display: none;
+                }
+
+                h1 {
+                    font-weight: bold;
+                    font-size: 6vw;
+                    color: var(--primary);
                     width: 100%;
-                    padding-inline: 10px;
-                    padding: 20px;
-                    @include Shadow;
-                >span{
-                        display: flex;
-                        gap: 2px;
                 }
-                h6{
+
+                .bulletPoints {
+                    img {
+                        width: 2vw;
+                    }
+                    display: grid;
+                    grid-template-areas:
+                        "logo navigation"
+                        "menu navigation";
+                    grid-template-rows: auto auto;
+                    justify-content: flex-start;
+                    gap: 5%;
+                    width: 100%;
+
+                    .bulletPoint {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                        width: 50%;
+                        margin-bottom: 5px;
+                        min-width: fit-content;
+                        text-wrap: nowrap;
+                        font-size: 2.6vw;
+                        font-weight: bold;
+                        color: var(--text);
+
+                        svg {
+                            color: var(--primary);
+                            border-radius: 1px;
+                        }
+                    }
+                }
+
+            }
+
+            .PricingCategories {
+                display: flex;
+                align-items: center;
+
+                gap: 5%;
+                flex-wrap: wrap;
+                padding-inline: 10px;
+
+                .PricingCategory {
+                    width: 30%;
+
+                }
+            }
+
+            .EffectCoverflow {
+                width: 100%;
+                padding-block: 30px 10px;
+
+                .swiper {
+                    width: 100%;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+
+                .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    width: 150px;
+                    height: 220px;
+                    position: relative;
+
+
+                    // &::before {
+                    //     content: "";
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0;
+                    //     width: 100%;
+                    //     opacity: 0.4;
+                    //     height: 100%;
+                    //     z-index: 1;
+                    //     background-color: black;
+
+
+                    // }
+                }
+
+
+                .SwiperSlide {
+                    position: relative;
+
+                }
+
+                .SwiperInfo {
+                    position: absolute;
+                    top: 30%;
+                    color: var(--white);
+                    z-index: 99;
+                    text-align: center;
+
+
+                }
+
+            }
+
+            .Categoriesbuttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-block: 10px;
+                gap: 5%;
+
+                button {
+                    border: solid 1px var(--primary);
+                    color: var(--primary);
+                    background: transparent;
+                    font-size: 2.3vw;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border-radius: 8px;
+                    transition: .5s ease-in-out;
+                    text-wrap: nowrap;
+                    font-weight: 900;
+
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--white);
+                    }
+
+                }
+
+                .active {
+                    background-color: var(--primary);
+                    color: var(--white);
+
+                }
+
+                &:has(button:hover) button:not(:hover) {
+                    color: var(--primary);
+                    background: transparent;
+                }
+
+            }
+
+            .Categoriesbanner {
+                
+            }
+
+            .PricingCategoriesDetails {
+                margin-block: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding-inline: 10px;
+                padding: 20px;
+                @include Shadow;
+
+                >span {
+                    display: flex;
+                    gap: 2px;
+                }
+
+                h6 {
                     font-size: 3vw;
                     font-weight: bold;
                     color: var(--text);
                 }
-                    h3{
-                        font-weight: bold;
-                        color: var(--text);
-                        font-size: 5vw;
-                        margin-bottom: 10px;
-        
-                    }
-                    button{
-                        background-color:  var(--secondary);
-                        color: var(--primary);
+
+                h3 {
+                    font-weight: bold;
+                    color: var(--text);
+                    font-size: 5vw;
+                    margin-bottom: 10px;
+
+                }
+
+                button {
+                    background-color: var(--secondary);
+                    color: var(--primary);
+                    border: solid 1px var(--secondary);
+                    border-radius: 10px;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    margin-inline: auto;
+                    transition: .5s ease-in-out;
+                    padding-inline: 10%;
+
+                    &:hover {
+
                         border: solid 1px var(--secondary);
-                        border-radius: 10px;
-                        font-size: 4vw;
-                        font-weight: bold;
-                        padding: 10px;
-                       margin-bottom: 15px;
-                        display: flex; align-items: center;
-                        justify-content: center;
-                        gap: 4px;
-                        margin-inline: auto;
-                        transition: .5s ease-in-out;
-                        padding-inline: 10%;
-                        &:hover{
-                         
-                            border: solid 1px var(--secondary);
-                            color: var(--secondary);
-                            background:transparent;
-        
-                        }
-                   
+                        color: var(--secondary);
+                        background: transparent;
+
                     }
+
                 }
-                .benefitsSection{
-                    h3{
-                        color: var(--subtext);
-                    }
+            }
+
+            .benefitsSection {
+                width: 100%;
+
+                h3 {
+                    color: var(--subtext);
                 }
-                .benefits {
+            }
+
+            .benefits {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .ant-divider-horizontal {
+                    margin: 3px 0 !important;
+                }
+
+                .benefit {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
-        
-                    .ant-divider-horizontal {
-                        margin: 3px 0 !important;
-                    }
-        
-                    .benefit {
+                    height: auto;
+                    margin-bottom: 15px;
+
+                    .Icon {
+                        color: var(--primary);
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: hsl(235.38deg 35.14% 92.75%);
                         display: flex;
-                        flex-direction: column;
-                        width: 100%;
-                        height: 30px;
-                        
-                        .Icon{
-                            color: var(--primary);
-                            font-size: 12px;
-                            width: 20px;
-                            height: 20px;
-                            border-radius: 50%;
-                            background: hsl(235.38deg 35.14% 92.75%);
-                            display: flex;  justify-content: center; align-items: center;
-                            font-weight: bold;
-        
-                        }
-        
-                        >div {
-                            display: flex;
-                            align-items: center;
-                            gap: 5px;
-        
-                            >svg {
-                                color: var(--primary);
-                                cursor: pointer;
-                                font-style: 3vw;
-                            }
-        
-                            h6 {
-                                // text-wrap: nowrap;
-                                font-size: 3vw;
-                                margin-bottom: 0;
-        
-                            }
-                        }
-        
-        
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: bold;
+
                     }
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        >svg {
+                            color: var(--primary);
+                            cursor: pointer;
+                            font-style: 3vw;
+                        }
+
+                        h6 {
+                            // text-wrap: nowrap;
+                            font-size: 3vw;
+                            margin-bottom: 0;
+
+                        }
+                    }
+
+
                 }
-        
+            }
+
         }
-        
-        }
-        
-        
-        .CategorieCard{
-            padding: 10px;
-            @include Shadow;
+
+        .InfoSection {
             display: flex;
-            width: 150px;
-            height: 200px;
             flex-direction: column;
-            gap: 5px;
-            img{
-                height: 60%;
-                width: 100%;
-                border-radius: 10px;
-        
-            }
-            h1{
-                font-weight: bold;
-                margin-bottom: 0;
-                font-size: 12px !important;
-        
-            }
-            p{
-                color: var(--subtext);
-                font-size: 10px !important;
-                margin-bottom: 0;
-        
-            }
-            h4{
-                color: var(--secondary);
-                font-size: 14px !important;
-                font-weight: 900;
-        
-            }
+            width: 100%;
         }
-        
-        
-        
-        
-         
-        .swiper-3d .swiper-slide-shadow-right{
-            background-image: none;
+
+    }
+
+
+    .CategorieCard {
+        padding: 10px;
+        @include Shadow;
+        display: flex;
+        width: 150px;
+        height: 200px;
+        flex-direction: column;
+        gap: 5px;
+
+        img {
+            height: 60%;
+            width: 100%;
+            border-radius: 10px;
+
         }
-         
-        .swiper-3d .swiper-slide-shadow-left{
-            background-image: none;
+
+        h1 {
+            font-weight: bold;
+            margin-bottom: 0;
+            font-size: 12px !important;
+
         }
+
+        p {
+            color: var(--subtext);
+            font-size: 10px !important;
+            margin-bottom: 0;
+
+        }
+
+        h4 {
+            color: var(--secondary);
+            font-size: 14px !important;
+            font-weight: 900;
+
+        }
+    }
+
+
+
+
+
+    .swiper-3d .swiper-slide-shadow-right {
+        background-image: none;
+    }
+
+    .swiper-3d .swiper-slide-shadow-left {
+        background-image: none;
+    }
 
 }

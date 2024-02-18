@@ -10,7 +10,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const CardSwiper: React.FC = () => {
+interface CardData {
+  image: string;
+  name: string;
+  review: string;
+}
+
+interface Props {
+  data: CardData[];
+}
+
+const CardSwiper: React.FC<Props> = ({ data }:any) => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
 
   const handleSlideChange = (swiper: any) => {
@@ -33,20 +43,15 @@ const CardSwiper: React.FC = () => {
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         autoplay={{ delay: 6000 }}
-        // navigation
         pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        // onSwiper={(swiper: any) => console.log(swiper)}
         onSlideChange={handleSlideChange}
         className='Review_Cards'
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8]?.map((item: any, index: number) => {
-          return (
-            <SwiperSlide key={index}>
-              <ReviewCard activeIndex={activeIndex} index={index}  />
-            </SwiperSlide>
-          );
-        })}
+        {data.map((item: CardData, index: number) => (
+          <SwiperSlide key={index}>
+            <ReviewCard activeIndex={activeIndex} index={index} data={item} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
