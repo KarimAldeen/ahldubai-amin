@@ -523,9 +523,10 @@
 
                 h1 {
                     font-weight: bold;
-                    font-size: 6vw;
+                    font-size: 5vw;
                     color: var(--primary);
                     width: 100%;
+
                 }
 
                 .bulletPoints {
@@ -731,7 +732,9 @@
                 width: 100%;
 
                 h3 {
-                    color: var(--subtext);
+                color: #8F8F91;
+                font-size: 4vw;
+                
                 }
             }
 
@@ -771,10 +774,17 @@
                         align-items: center;
                         gap: 5px;
 
-                        >svg {
+                        .Icon {
                             color: var(--primary);
+                            font-size: 1.5vw;
+                            width: 2.5vw;
+                            height: 2.5vw;
+                         
+                        }
+                        >svg {
+                            color: var(--white);
                             cursor: pointer;
-                            font-style: 3vw;
+                            font-size: 4vw;
                         }
 
                         h6 {

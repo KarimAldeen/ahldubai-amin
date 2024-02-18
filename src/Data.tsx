@@ -136,7 +136,7 @@ export const HomeData = {
      servicesData : [
         { image: "../Services2/dentist.jpeg", name: "dentist", elementType: 'div' },
         { image: "../Services2/physician.webp", name: "physician", elementType: 'span' },
-        { image: "../Services2/physician.webp", name: "physician", elementType: 'span' },
+        { image: "../Services2/physician.webp", name: "Delivery baby", elementType: 'span' },
         { image: "../Services2/dentist.jpeg", name: "dentist", elementType: 'div' }
       ],
        reviewsData : [
