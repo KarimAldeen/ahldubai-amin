@@ -43,12 +43,12 @@
                 border-radius: 4px;
                 font-weight: bold;
                 cursor: pointer;
-                background-color: var(--secondary);
-                color: var(--primary);
+                background-color: var(--bg);
+                color: var(--text);
                 border-radius: 10px;
 
                 svg {
-                    color: var(--primary);
+                    color: green;
                 }
             }
 
@@ -288,7 +288,7 @@
 
             button {
                 background-color: var(--secondary);
-                color: var(--primary);
+                color: var(--white);
                 border: solid 1px var(--secondary);
                 border-radius: 10px;
                 font-size: 1.5vw;
@@ -498,13 +498,9 @@
                     border-radius: 4px;
                     font-weight: bold;
                     cursor: pointer;
-                    background-color: var(--secondary);
-                    color: var(--primary);
+                   
                     border-radius: 10px;
 
-                    svg {
-                        color: var(--primary);
-                    }
                 }
 
             }
@@ -702,9 +698,7 @@
                 }
 
                 button {
-                    background-color: var(--secondary);
-                    color: var(--primary);
-                    border: solid 1px var(--secondary);
+            
                     border-radius: 10px;
                     font-size: 4vw;
                     font-weight: bold;

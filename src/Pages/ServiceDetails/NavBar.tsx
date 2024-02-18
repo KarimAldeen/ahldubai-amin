@@ -21,7 +21,7 @@ const NavBar = () => {
         </ul>
        <span>
        <IoLogoWhatsapp />
-       Get Started
+       WhatsApp Us
 
        </span>
        <div className='MenuNav'>
