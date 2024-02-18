@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
-import Coverflow from './Coverflow';
-import { FaCheck, FaInfoCircle, FaRegCheckCircle } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
-import { Divider, Popover } from 'antd';
+import {  Popover } from 'antd';
 import { PricinfData } from '../../Components/Services2/PricingData';
-import { FaRegSquareCheck } from 'react-icons/fa6';
 import { Currency } from '../../Layout/app/Const';
 import ImageBanner from './ImageSwiper';
 
@@ -134,14 +131,7 @@ const ServiceDetails: React.FC = () => {
             </div>
 
         </div>
-        // <div  className='Test'>
-        //         <div className='CategorieCard'>
-        //             <img src="../PricingDetails/2.webp" alt="" />
-        //             <h1>Dental Implants</h1>
-        //             <p>Permanent, Reliable Tooth Replacement Option</p>
-        //             <h4>2000$</h4>
-        //         </div>
-        // </div>
+     
     );
 };
 
