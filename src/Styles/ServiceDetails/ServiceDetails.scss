@@ -14,7 +14,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
 
             >div {
                 display: flex;
@@ -84,26 +83,24 @@
             flex-direction: column;
             margin-block: 10px;
             gap: 2vw;
-            padding: 30px;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 15px;
             @include Shadow;
             position: relative;
-            min-height: 25vw;
 
             >img {
-                width: 25vw;
+                width: 17vw;
                 position: absolute;
                 right: 5%;
-                bottom: -5%;
-                mix-blend-mode: multiply;
+                bottom: -6%;
             }
 
             h1 {
                 font-weight: bold;
-                font-size: 3.5vw;
+                font-size: 2.5vw;
                 color: var(--primary);
                 width: 80%;
-                margin-bottom: 20px;
+                margin-bottom: 0px;
             }
 
             .bulletPoints {
@@ -131,6 +128,44 @@
                     color: var(--text);
 
                 }
+            }
+
+        }
+        .Categoriesbuttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 5%;
+
+            button {
+                border: solid 1px var(--primary);
+                color: var(--primary);
+                background: transparent;
+                font-size: 1.2vw;
+                padding: 1vw 3vw;
+                margin-block: 15px;
+                border-radius: 8px;
+                transition: .5s ease-in-out;
+                text-wrap: nowrap;
+                font-weight: 900;
+
+                &:hover {
+                    background-color: var(--primary);
+                    color: var(--white);
+                }
+
+            }
+
+            .active {
+                background-color: var(--primary);
+                color: var(--white);
+
+            }
+
+            &:has(button:hover) button:not(:hover) {
+                color: var(--primary);
+                background: transparent;
             }
 
         }
@@ -199,46 +234,7 @@
 
         }
 
-        .Categoriesbuttons {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin-block: 10px;
-            gap: 5%;
-
-            button {
-                border: solid 1px var(--primary);
-                color: var(--primary);
-                background: transparent;
-                font-size: 1.5vw;
-                padding: 1vw 4vw;
-                margin-block: 15px;
-                border-radius: 8px;
-                transition: .5s ease-in-out;
-                text-wrap: nowrap;
-                font-weight: 900;
-
-                &:hover {
-                    background-color: var(--primary);
-                    color: var(--white);
-                }
-
-            }
-
-            .active {
-                background-color: var(--primary);
-                color: var(--white);
-
-            }
-
-            &:has(button:hover) button:not(:hover) {
-                color: var(--primary);
-                background: transparent;
-            }
-
-        }
-
+       
         .Categoriesbanner {
             height: 17vw;
             width: 100%;
@@ -263,7 +259,7 @@
             flex-direction: column;
             width: 100%;
             padding-inline: 10px;
-            padding: 50px;
+            padding:  30px 50px;
             border-radius: 30px;
             @include Shadow;
 
@@ -273,7 +269,7 @@
             }
 
             h6 {
-                font-size: 2vw;
+                font-size: 1.5vw;
                 font-weight: normal;
                 color: var(--text);
             }
@@ -281,7 +277,7 @@
             h3 {
                 font-weight: bold;
                 color: var(--text);
-                font-size: 3.5vw;
+                font-size: 3vw;
                 margin-bottom: 10px;
 
             }
