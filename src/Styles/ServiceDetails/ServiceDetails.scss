@@ -4,10 +4,13 @@
     }
 
     .ServiceDetails {
-        max-width: 80%;
+        max-width: 75%;
         margin-inline: auto;
         min-height: 500px;
         padding: 20px;
+        font-family: 'Poppins';
+
+    
 
         .ServicesNavBar {
             height: 50px;
@@ -40,13 +43,16 @@
                 padding: 8px 10px;
                 @include Shadow;
                 border-radius: 4px;
-                font-weight: bold;
+                font-weight: 600;
                 cursor: pointer;
                 background-color: var(--bg);
                 color: var(--text);
                 border-radius: 10px;
+                font-size: 11px;
 
                 svg {
+                    // width: 30px;
+                    font-size: 32px;
                     color: green;
                 }
             }
@@ -57,7 +63,7 @@
                 gap: 3vw;
 
                 svg {
-                    height: 45px;
+                    // height: 155px;
                     // cursor: pointer;
 
                 }
@@ -79,28 +85,36 @@
         }
 
         .MainSection {
+            
             display: flex;
             flex-direction: column;
-            margin-block: 10px;
+            margin-block: 20px;
             gap: 2vw;
-            padding: 20px;
+            padding: 20px 30px;
+            min-height: 300px;
             border-radius: 15px;
             @include Shadow;
             position: relative;
+            
 
             >img {
-                width: 17vw;
+                width: 20vw;
                 position: absolute;
-                right: 5%;
-                bottom: -6%;
+                right: 7%;
+                bottom: 0%;
             }
 
             h1 {
-                font-weight: bold;
+                // font-weight: bold;
                 font-size: 2.5vw;
                 color: var(--primary);
-                width: 80%;
+                width: 90%;
+                margin-top: 10px;
+                // letter-spacing: 1.5px;
+                // word-spacing: 10px;
+                line-height: 55px;
                 margin-bottom: 0px;
+                font-weight: 100 !important;
             }
 
             .bulletPoints {
@@ -111,7 +125,7 @@
                 grid-template-rows: auto auto;
                 justify-content: flex-start;
                 gap: 5%;
-
+                
                 img {
                     width: 2vw;
                 }
@@ -121,10 +135,11 @@
                     align-items: center;
                     gap: 8px;
                     margin-bottom: 5px;
+                    margin-top: 10px;
                     min-width: fit-content;
                     text-wrap: nowrap;
-                    font-size: 1.3vw;
-                    font-weight: 550;
+                    font-size: 1.2vw;
+                    font-weight:600;
                     color: var(--text);
 
                 }
@@ -460,6 +475,7 @@
                 align-items: center;
                 position: relative;
 
+              
                 .MenuNav {
                     display: inline;
                     position: absolute;
@@ -469,6 +485,7 @@
                 >div {
                     display: flex;
                     align-items: center;
+
                     justify-content: center;
 
                     img {

@@ -26,7 +26,7 @@ const ServiceDetails: React.FC = () => {
             <div className='MainSection'>
                 <h1>
                     Get Professional Health Care
-                    in Dubai Today
+                    in  Dubai Today
                 </h1>
                 <span className='bulletPoints'>
                     {bulletPoints.map((point, index) => (
@@ -37,7 +37,7 @@ const ServiceDetails: React.FC = () => {
                     ))}
                 </span>
 
-                <img src="../ServiceDetails/Home.png" alt="" />
+                <img src="../ServiceDetails/Home.png" alt=""  />
 
 
             </div>
