@@ -13,6 +13,8 @@ const ServiceDetails: React.FC = () => {
         'Free Consultations',
         'Fast additional fees',
         '24/7 Clients Support',
+        'Salary + ATM card',
+        'Residency visa + EID'
 
     ];
     const [data, setData] = useState<any[]>(PricinfData);
@@ -33,11 +35,12 @@ const ServiceDetails: React.FC = () => {
                         <span className='bulletPoint' key={index}>
                             {/* <FaRegSquareCheck />  */}
                             <img src="../ServiceDetails/Check.svg" alt="" />
-                            {point}</span>
+                            {point}
+                            </span>
                     ))}
                 </span>
 
-                <img src="../ServiceDetails/Home.png" alt=""  />
+                <img src="../Doctors/two_doctor.png" alt=""  />
 
 
             </div>
