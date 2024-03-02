@@ -4,7 +4,7 @@
     }
 
     .ServiceDetails {
-        max-width: 75%;
+        max-width: 85%;
         margin-inline: auto;
         min-height: 500px;
         padding: 20px;
@@ -93,16 +93,16 @@
             margin-block: 20px;
             gap: 2vw;
             padding: 20px 30px;
-            min-height: 300px;
+            // min-height: 300px;
             border-radius: 15px;
             @include Shadow;
             position: relative;
             overflow: hidden;            
 
             >img {
-                width: 14vw;
+                width: 33vw;
                 position: absolute;
-                right: 5%;
+                right: 0%;
                 bottom: -1%;
             }
 
@@ -161,7 +161,7 @@
                 color: var(--primary);
                 background: transparent;
                 font-size: 1.2vw;
-                padding: 1vw 3vw;
+                padding: .5vw 3vw;
                 margin-block: 15px;
                 border-radius: 8px;
                 transition: .5s ease-in-out;
@@ -195,8 +195,22 @@
             align-items: center;
             gap: 5%;
             flex-wrap: wrap;
-            padding-inline: 10px;
-
+            // padding-inline: 10px;
+            border-radius: 20px !important;
+            .button-price{
+                border: solid 1px var(--primary);
+                color: var(--primary);
+                background: transparent;
+                font-size: 1.2vw;
+                padding: .5vw 3vw;
+                margin-block: 15px;
+                border-radius: 8px;
+                transition: .5s ease-in-out;
+                text-wrap: nowrap;
+                font-weight: 900;
+                font-family: 'AirB';
+                
+            }
             .PricingCategory {
                 width: 30%;
 
@@ -273,6 +287,11 @@
             // margin-bottom: 10px;
         }
 
+        .tab__content{
+            border-radius: 130px !important;
+            
+
+        }
         .PricingCategoriesDetails {
             margin-block: 10px;
             display: flex;
@@ -280,8 +299,7 @@
             width: 100%;
             padding-inline: 10px;
             padding:  30px 50px;
-            border-radius: 30px;
-            @include Shadow;
+            // @include Shadow;
 
             >span {
                 display: flex;
@@ -694,6 +712,7 @@
                 width: 100%;
                 padding-inline: 10px;
                 padding: 20px;
+                ;
                 @include Shadow;
 
                 >span {

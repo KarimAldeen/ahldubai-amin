@@ -5,6 +5,7 @@ import {  Popover } from 'antd';
 import { PricinfData } from '../../Components/Services2/PricingData';
 import { Currency } from '../../Layout/app/Const';
 import ImageBanner from './ImageSwiper';
+import ServicePriceTabs from './ServicePriceTabs';
 
 
 const ServiceDetails: React.FC = () => {
@@ -13,8 +14,8 @@ const ServiceDetails: React.FC = () => {
         'Free Consultations',
         'Fast additional fees',
         '24/7 Clients Support',
-        'Salary + ATM card',
-        'Residency visa + EID'
+        // 'Salary + ATM card',
+        // 'Residency visa + EID'
 
     ];
     const [data, setData] = useState<any[]>(PricinfData);
@@ -40,98 +41,25 @@ const ServiceDetails: React.FC = () => {
                     ))}
                 </span>
 
-                <img src="../Doctors/two_doctor.png" alt=""  />
+                <img src="../ServiceDetails/3-doctor.webp" alt=""  />
 
 
             </div>
-            <div className="Categoriesbuttons">
+                        
+             <ServicePriceTabs/>
+{/*             
+             <div className="Categoriesbuttons">
                 {Buttondata.map((item, index) => (
                     <button
+                        
                         key={index}
-                        className={Active[0] === data[index] ? 'active' : ''}
+                        className={Active[0] === data[index] ? 'active  button-price' : ''}
                         onClick={() => setActive([data[index]])}
                     >
                         {item}
                     </button>
                 ))}
-            </div>
-
-            <div className='PricingCategories'>
-                {/* <Coverflow data={data} setActive={setActive} /> */}
-                {Active?.map((item: any, index: number) => {
-                    return (
-                        <div className='PricingCategoriesDetails' key={index}>
-                            <span>
-                                <h6>
-                                    {Currency}
-                                </h6>
-                                <h3>
-                                    {item.price}
-                                </h3>
-                            </span>
-                            <article className='Categoriesbanner'>
-
-                                <ImageBanner />
-
-                            </article>
-                            <div className='InfoSection'>
-                                <div className='benefitsSection'>
-
-                                    <h3>Benefits</h3>
-                                    <div className='benefits'>
-                                        {item.benefits?.map((benefit: any, index: any) => (
-                                            <span key={index} className='benefit'>
-                                                <div>
-                                                    {/* <FaRegCheckCircle />  */}
-                                                    <div className='Icon'>
-                                                        {index + 1}
-                                                    </div>
-                                                    <h6>{benefit.text}</h6>
-                                                    {benefit.Icon && (
-                                                        <Popover content={benefit.iconData} title="Title">
-                                                            {benefit.Icon}
-                                                        </Popover>
-                                                    )}
-                                                </div>
-                                            </span>
-                                        ))}
-                                    </div>
-                                 
-
-                                </div>
-                                <div className='benefitsSection'>
-
-                                    <h3>Routine care for one baby</h3>
-                                    <div className='benefits'>
-                                        {item.benefits2?.map((benefit: any, index: any) => (
-                                            <span key={index} className='benefit'>
-                                                <div>
-                                                    {/* <FaRegCheckCircle />  */}
-                                                    <div className='Icon'>
-                                                        {index + 1}
-                                                    </div>
-                                                    <h6>{benefit.text}</h6>
-                                                    {benefit.Icon && (
-                                                        <Popover content={benefit.iconData} title="Title">
-                                                            {benefit.Icon}
-                                                        </Popover>
-                                                    )}
-                                                </div>
-                                            </span>
-                                        ))}
-                                    </div>
-                                  
-
-                                </div>
-                               
-                            </div>
-                            <button>
-                                        <IoLogoWhatsapp /> Get Started Now
-                                    </button>
-                        </div>
-                    );
-                })}
-            </div>
+            </div> */}
 
         </div>
      

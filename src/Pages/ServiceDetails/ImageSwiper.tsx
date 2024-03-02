@@ -13,16 +13,16 @@ const ImageBanner: React.FC = () => {
   const Data = [
     {
       id: 1,
-      image: "../ServiceDetails/BBB.png"
+      image: "/test.jpg"
     },
-    {
-      id: 2,
-      image: "../ServiceDetails/BBB.png"
-    },
-    {
-      id: 3,
-      image: "../ServiceDetails/BBB.png"
-    }
+    // {
+    //   id: 2,
+    //   image: "../ServiceDetails/BBB.png"
+    // },
+    // {
+    //   id: 3,
+    //   image: "../ServiceDetails/BBB.png"
+    // }
   ]
   return (
     <Swiper className='ImageSwiper'
