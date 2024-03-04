@@ -13,7 +13,7 @@ const ImageBanner: React.FC = () => {
   const Data = [
     {
       id: 1,
-      image: "/test.jpg"
+      image: "/tes.webp"
     },
     // {
     //   id: 2,

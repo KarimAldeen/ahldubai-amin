@@ -33,6 +33,9 @@
                     width: 20px;
                     height: 20px;
                     cursor: pointer;
+                    color: red;
+                    background: red;
+                    display: none !important;
                 }
             }
 
@@ -55,7 +58,9 @@
                 svg {
                     // width: 30px;
                     font-size: 25px;
-                    color: green;
+                    color: #5FD36F      ;
+                    
+
                 }
             }
 
