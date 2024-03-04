@@ -1,14 +1,17 @@
+
 import { SlChemistry } from "react-icons/sl";
 import { IoMdColorPalette } from "react-icons/io";
 import Visibale from '../../HighOrderComponent/withVisibale';
 import { FaEye,FaTruckMedical } from 'react-icons/fa6';
 import {  FaHeartbeat } from "react-icons/fa";
 import { LiaToothSolid } from "react-icons/lia";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ImArrowUpRight2 } from "react-icons/im";
 
 
 const Services = () => {
+
+    const [search] = useSearchParams()
     const Data: any = [
            { h1:"Dental Care",  title: "Hospitals are equipped with advanced medical technologies and facilities.", icon: <LiaToothSolid /> }
         , { h1:"Heart Care",  title: "Hospitals are equipped with advanced medical technologies and facilities.", icon: <FaHeartbeat />    }
@@ -50,7 +53,7 @@ const Services = () => {
                                 <p>
                                 {item?.title}
                                 </p>
-                                <Link onClick={scrollToTop} className="Link" to="/services/">
+                                <Link onClick={scrollToTop} className="Link" to={"/services/"}>
                                 <ImArrowUpRight2 />
 
 

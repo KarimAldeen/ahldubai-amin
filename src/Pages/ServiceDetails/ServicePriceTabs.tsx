@@ -6,11 +6,28 @@ import { Currency } from '../../Layout/app/Const';
 import ImageBanner from './ImageSwiper';
 import { Popover } from 'antd';
 import { IoLogoWhatsapp } from 'react-icons/io';
+import { useSearchParams } from 'react-router-dom';
+import useGetWidth from '../../Hooks/useGetWidth';
+import OurDocrtrs from '../../Components/Done/OurDocrtrs';
+import OurPartners from '../../Components/Done/OurPartners';
+import Partners from '../../Components/Done/Partners';
+import { MultyPageData } from '../../Data';
 function ServicePriceTabs() {
-    const [data, setData] = useState<any[]>(PricinfData);
-    const [Active, setActive] = useState([data[0] ,,data[1]])
+    const [search] =  useSearchParams()
+    const count = search.get('count') || 1
 
-    const Buttondata = ["C- Section Delivery", "Normal Delivery"];
+    console.log(count);
+    
+    const [data, setData] = useState<any[]>(PricinfData);
+    const [Active, setActive] = useState([data[0] ,data[1],data[0] ,data[1]])
+
+    const array  = (new Array(+count )).fill('hello')
+
+    console.log(array);
+    const  width= useGetWidth()
+     
+    const Buttondata = ["C- Section Delivery", "Normal Delivery","C- Section Delivery", "Normal Delivery"];
+
   return (
    <>
    
@@ -18,18 +35,27 @@ function ServicePriceTabs() {
   <div className="PricingCategories">
 
     <div className="tab-wrap">
-      <input
-        type="radio"
-        id="tab1"
-        name="tabGroup1"
-        className="tab"
-        defaultChecked={true}
-      />
-      <label htmlFor="tab1">{Buttondata[0]}</label>
-      <input type="radio" id="tab2" name="tabGroup1" className="tab" />
-      <label htmlFor="tab2">{Buttondata[1]}</label>
-      
+        {
+            array.map((item:any , index:number)=>{
 
+                console.log(index);
+                
+                return (
+                    <>
+                       <input
+                            type="radio"
+                            id={"tab" +index}
+                            name="tabGroup1"
+                            className="tab"
+                            defaultChecked={index ==0 ? true:false}
+                        />
+                    <label htmlFor={"tab"+index}>{Buttondata[index]}</label>
+                    </>
+                )
+            }
+            )
+        }
+   
       {/* <div className='PricingCategories'> */}
                 {Active?.map((item: any, index: number) => {
                     return (
@@ -97,7 +123,7 @@ function ServicePriceTabs() {
                                 </div>
                                
                             </div>
-                            <button>
+                            <button onClick={()=>handelOpenWhatsapp(width)} >
                                         <IoLogoWhatsapp /> Get Started Now
                                     </button>
                         </div>
@@ -105,6 +131,7 @@ function ServicePriceTabs() {
                       
                     );
                 })}
+              
             {/* </div> */}
     
    
@@ -112,8 +139,29 @@ function ServicePriceTabs() {
     
    
   </div>
+             <OurDocrtrs />
+             <Partners data={MultyPageData?.partnerImages}/>
    </>
   )
 }
 
 export default ServicePriceTabs
+
+
+export const handelOpenWhatsapp = (width:number)=>{
+
+    var whatsappLink ;
+                        
+                        
+                        if(width < 768){
+                            // the device open the browser is  mobile 
+                            whatsappLink = `whatsapp://send?phone=+963957570213&text=${encodeURIComponent(`Hello , Mr.Amin`)}&app_absent=0`;
+
+                        }else{
+                            // is laptop 
+                            whatsappLink = `https://web.whatsapp.com/send?phone=+963957570213&text=${encodeURIComponent(`Hello , Mr.Amin`)}&app_absent=0`;
+                        }
+
+
+                        window.open(whatsappLink)
+}

@@ -362,6 +362,7 @@
                 font-weight: normal;
                 padding-left: 4px;
                 margin-bottom: 20px;
+                font-family: "AirB";
 
             }
         }
@@ -371,6 +372,7 @@
             flex-direction: column;
             width: 100%;
             margin-bottom: 40px;
+            
 
             .ant-divider-horizontal {
                 margin: 3px 0 !important;
@@ -413,7 +415,8 @@
                         // text-wrap: nowrap;
                         font-size: 1.2vw;
                         margin-bottom: 0;
-                        font-weight: bold;
+                        font-weight: 200;
+                        font-family: "AirM";
 
 
                     }

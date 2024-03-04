@@ -1,7 +1,7 @@
 import { ConfigProvider, Divider, Popover, Switch } from 'antd'
 import React, { useState } from 'react'
 import { FaRegCheckCircle } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { FaInfoCircle } from "react-icons/fa";
 import { FaCrown } from "react-icons/fa6";
 
@@ -9,8 +9,9 @@ const Pricing = ({Pricingdata}:any) => {
     const navigate = useNavigate()
     const [data, setData] = useState(Pricingdata);
 
+    const [search] = useSearchParams()
     const handleNavigate = () => {
-        navigate("/services/name")
+        navigate("/services/name?count="+search.get('count'))
     }
 
     const handleSwitchChange = (index:any) => {

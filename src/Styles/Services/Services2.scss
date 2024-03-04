@@ -459,6 +459,39 @@
     }
 }
 
+.Partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding-inline: 6vw;
+    margin-bottom: 40px;
+
+    h1 {
+        font-weight: bold;
+        font-size: 2.5vw;
+        margin-bottom: 20px;
+        
+    }
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        gap: 20px;
+
+        img {
+            mix-blend-mode: multiply;
+            width: 150px;
+            height: 100px;
+            object-fit: contain;
+            min-width: calc(100% / 6);
+
+        }
+    }
+}
 
 
 
@@ -773,5 +806,142 @@
         }
     }
 
+
+}
+
+.OurDocrtrs {
+    width: 100%;
+    padding-inline: 10%;
+    // margin-block: 30px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+    >p {
+        padding-inline: 10%;
+        font-size: 1.4vw;
+    }
+
+    text-align: center;
+
+    .Docor_Cards {
+        min-height: 400px;
+        margin-inline: auto;
+        width: 100%;
+        padding-inline: 5vw;
+        padding-top: 60px;
+        margin-block: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        // @include Shadow;
+
+        .DoctorCard {
+            position: relative;
+            width: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 10px 10px 10px;
+            background: var(--bg);
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.07);
+            height: 270px;
+            border-radius: 50px;
+            text-align: center;
+            transition: .7s ease-in-out;
+            cursor: pointer;
+
+            margin-inline: auto;
+            margin-bottom: 60px;
+
+            img {
+                position: absolute;
+                top: -50px;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+
+            }
+
+            h1 {
+                font-size: 25px;
+                color: var(--secondary);
+                font-weight: bold;
+            }
+
+            h5 {
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            p {
+                max-height: 4.5em;
+                /* (1.5em * 3) + 1.5em for some buffer */
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                max-width: 200px;
+            }
+
+            &:hover {
+                background: var(--primary);
+                transition: .7s ease-in-out;
+                color: var(--white);
+                scale: 1.02;
+
+                a {
+                    color: var(--white);
+                    border-bottom: 1px solid var(--white);
+                    padding-bottom: 2px;
+                }
+            }
+
+            a {
+                color: var(--primary);
+                border-bottom: 1px solid var(--primary);
+                padding-bottom: 2px;
+            }
+        }
+    }
+    .Partners {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        padding-inline: 6vw;
+        margin-block: 60px;
+
+        h1 {
+            font-weight: bold;
+            font-size: 4.5vw;
+            margin-bottom: 20px;
+            
+        }
+
+        >div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            gap: 20px;
+
+            img {
+                mix-blend-mode: multiply;
+                width: 150px;
+                height: 100px;
+                object-fit: contain;
+                min-width: calc(100% / 6);
+
+            }
+        }
+    }
 
 }

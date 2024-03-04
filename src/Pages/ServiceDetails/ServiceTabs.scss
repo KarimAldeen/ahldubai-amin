@@ -2,7 +2,7 @@ $max-tab-count: 5;
 $tab-wrap-border-radius:26px;
 .tab-wrap {
   transition: 0.3s box-shadow ease;
-  border-radius: $tab-wrap-border-radius;
+  // border-radius: $tab-wrap-border-radius;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +58,7 @@ $tab-wrap-border-radius:26px;
   }
   + label {
     box-shadow: 0 -1px 0 #eee inset;
-    border-radius: $tab-wrap-border-radius $tab-wrap-border-radius 0 0;
+    // border-radius: $tab-wrap-border-radius $tab-wrap-border-radius 0 0;
     cursor: pointer;
     display: block;
     text-decoration: none;
