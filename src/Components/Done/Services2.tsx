@@ -6,7 +6,7 @@ const Services2 = ({ servicesData }:any) => {
 
     const scrollToTop = (index:number) => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        navigate("/services?count="+(+index+1));
+        navigate("/services/name?count="+(+index+1));
     };
 
     return (
