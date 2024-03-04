@@ -41,7 +41,8 @@ const ServiceDetails: React.FC = () => {
                     ))}
                 </span>
 
-                <img src="../ServiceDetails/3-doctor.webp" alt=""  />
+                {/* <img src="../ServiceDetails/3-doctor.webp" alt=""  /> */}
+                <img src="/banner_test.jpg" alt=""  />
 
 
             </div>
