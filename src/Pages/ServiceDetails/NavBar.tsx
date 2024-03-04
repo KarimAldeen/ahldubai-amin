@@ -6,8 +6,11 @@ import WithDrawer from '../../HighOrderComponent/WithDrawer'
 import { Button } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { FaArrowAltCircleRight } from 'react-icons/fa'
+import { handelOpenWhatsapp } from './ServicePriceTabs'
+import useGetWidth from '../../Hooks/useGetWidth'
 
 const NavBar = () => {
+  const width = useGetWidth()
     const navigate= useNavigate()
   return (
     <div className='ServicesNavBar'>
@@ -19,7 +22,7 @@ const NavBar = () => {
        <ul className='Links'>
           {navItems.map(renderNavItem)}
         </ul>
-       <span>
+       <span onClick={()=>handelOpenWhatsapp(width)}>
        <IoLogoWhatsapp />
        WhatsApp Us
 
