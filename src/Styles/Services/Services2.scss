@@ -819,7 +819,11 @@
 
 
 @media screen and (max-width: 940px) {
+    .OurDocrtrs {
+        width: 100%;
+        padding-inline: 0 !important;
 
+    }
     .Docor_Cards {
         min-height: 400px;
         width: 100%;
