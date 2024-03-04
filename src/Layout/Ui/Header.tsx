@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className='Header HeaderStart'>
       <Link to='/'>
-        <img src="../Logo.png" alt="Logo" />
+        <img src="../Layout/Logo.svg" alt="Logo" />
       </Link>
       <nav>
         <ul className='Links'>
