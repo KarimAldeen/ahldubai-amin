@@ -28,11 +28,11 @@ const CardSwiper: React.FC= () => {
             spaceBetween: 20,
           },
           650: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           900: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 40,
           },
           1200: {
@@ -40,7 +40,7 @@ const CardSwiper: React.FC= () => {
             spaceBetween: 50,
           },
           1500: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 50,
           },
         }}

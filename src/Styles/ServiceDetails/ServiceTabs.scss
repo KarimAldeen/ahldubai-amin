@@ -8,12 +8,11 @@ $tab-wrap-border-radius:26px;
   flex-wrap: wrap;
   position: relative;
   list-style: none;
-  background-color: #fff;
+  background-color: var(--bg);
   // margin: 40px 0;
   // box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  &:hover {
-    box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
-  }
+    @include Shadow;
+  
 }
 
 .tab {
@@ -41,8 +40,8 @@ $tab-wrap-border-radius:26px;
     border-bottom-left-radius: 0;
   }
   &:checked + label {
-    // background-color: #fff;
-    box-shadow: 0 -1px 0 #fff inset;
+    // background-color: var(--bg);
+    box-shadow: 0 -1px 0 var(--bg) inset;
     background: linear-gradient(45deg , var(--primary) , var(--secondary));
     font-weight: bold;
     font-size: 1.5vw;
@@ -52,8 +51,8 @@ $tab-wrap-border-radius:26px;
     color: white;
     cursor: default;
     &:hover {
-      box-shadow: 0 -1px 0 #fff inset;
-      background-color: #fff;
+      box-shadow: 0 -1px 0 var(--bg) inset;
+      background-color: var(--bg);
     }
   }
   + label {
@@ -90,4 +89,13 @@ $tab-wrap-border-radius:26px;
   }
 }
 
+
+
+
+
+@media screen and (max-width: 700px) {
+  .tab-wrap{
+    flex-direction : column;
+  }
+}
 

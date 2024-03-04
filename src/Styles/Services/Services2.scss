@@ -319,7 +319,79 @@
         flex-direction: column;
         align-items: flex-start;
 
-        .OurDocrtrs {
+      
+
+    }
+    .Partners {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        padding-inline: 6vw;
+        margin-bottom: 40px;
+
+        h1 {
+            font-weight: bold;
+            font-size: 2.5vw;
+            margin-bottom: 20px;
+            
+        }
+
+        >div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            gap: 20px;
+
+            img {
+                mix-blend-mode: multiply;
+                width: 150px;
+                height: 100px;
+                object-fit: contain;
+                min-width: calc(100% / 6);
+
+            }
+        }
+    }
+
+}
+
+.Partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding-inline: 6vw;
+    margin-bottom: 40px;
+
+    h1 {
+        font-weight: bold;
+        font-size: 2.5vw;
+        margin-bottom: 20px;
+        
+    }
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        gap: 20px;
+
+        img {
+            mix-blend-mode: multiply;
+            width: 150px;
+            height: 100px;
+            object-fit: contain;
+            min-width: calc(100% / 6);
+
+        }
+    }
+}
+  .OurDocrtrs {
             width: 100%;
             padding-inline: 10%;
             // margin-block: 30px;
@@ -423,78 +495,9 @@
 
         }
 
-    }
-    .Partners {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        align-items: center;
-        padding-inline: 6vw;
-        margin-bottom: 40px;
-
-        h1 {
-            font-weight: bold;
-            font-size: 2.5vw;
-            margin-bottom: 20px;
-            
-        }
-
-        >div {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            
-            gap: 20px;
-
-            img {
-                mix-blend-mode: multiply;
-                width: 150px;
-                height: 100px;
-                object-fit: contain;
-                min-width: calc(100% / 6);
-
-            }
-        }
-    }
+.OurDocrtrs {
+    margin-block: 30px;
 }
-
-.Partners {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    padding-inline: 6vw;
-    margin-bottom: 40px;
-
-    h1 {
-        font-weight: bold;
-        font-size: 2.5vw;
-        margin-bottom: 20px;
-        
-    }
-
-    >div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-        gap: 20px;
-
-        img {
-            mix-blend-mode: multiply;
-            width: 150px;
-            height: 100px;
-            object-fit: contain;
-            min-width: calc(100% / 6);
-
-        }
-    }
-}
-
-
-
 @media screen and (max-width: 940px) {
     .Services_Page {
         font-family: "Inter", Sans-serif;
@@ -804,41 +807,27 @@
                 }
             }
         }
+        .Services2_body{
+          
+        }
+      
     }
 
 
 }
 
-.OurDocrtrs {
-    width: 100%;
-    padding-inline: 10%;
-    // margin-block: 30px;
-    display: flex;
-    flex-direction: column;
 
-    h1 {
-        font-weight: bold;
-        font-size: 4vw;
-    }
 
-    >p {
-        padding-inline: 10%;
-        font-size: 1.4vw;
-    }
-
-    text-align: center;
+@media screen and (max-width: 940px) {
 
     .Docor_Cards {
         min-height: 400px;
-        margin-inline: auto;
         width: 100%;
         padding-inline: 5vw;
-        padding-top: 60px;
-        margin-block: 20px;
+        margin-block: 170px;
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        // @include Shadow;
+        row-gap: 30px;
 
         .DoctorCard {
             position: relative;
@@ -870,24 +859,11 @@
 
             h1 {
                 font-size: 25px;
-                color: var(--secondary);
-                font-weight: bold;
             }
 
             h5 {
                 font-size: 13px;
-                font-weight: bold;
-            }
 
-            p {
-                max-height: 4.5em;
-                /* (1.5em * 3) + 1.5em for some buffer */
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                max-width: 200px;
             }
 
             &:hover {
@@ -910,38 +886,4 @@
             }
         }
     }
-    .Partners {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-        align-items: center;
-        padding-inline: 6vw;
-        margin-block: 60px;
-
-        h1 {
-            font-weight: bold;
-            font-size: 4.5vw;
-            margin-bottom: 20px;
-            
-        }
-
-        >div {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            
-            gap: 20px;
-
-            img {
-                mix-blend-mode: multiply;
-                width: 150px;
-                height: 100px;
-                object-fit: contain;
-                min-width: calc(100% / 6);
-
-            }
-        }
-    }
-
 }

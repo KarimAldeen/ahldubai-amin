@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-import './ServiceTabs.scss'
 import { PricinfData } from '../../Components/Services2/PricingData';
 import { Currency } from '../../Layout/app/Const';
 import ImageBanner from './ImageSwiper';

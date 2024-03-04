@@ -11,7 +11,7 @@ const Pricing = ({Pricingdata}:any) => {
 
     const [search] = useSearchParams()
     const handleNavigate = () => {
-        navigate("/services/name?count="+search.get('count'))
+        navigate("/services/name?count="+(search.get('count') || 1))
     }
 
     const handleSwitchChange = (index:any) => {
