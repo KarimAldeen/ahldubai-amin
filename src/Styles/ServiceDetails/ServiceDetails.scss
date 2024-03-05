@@ -668,6 +668,9 @@
 
                 .SwiperSlide {
                     position: relative;
+                    svg{
+                        display: none !important;
+                    }
 
                 }
 
@@ -725,6 +728,9 @@
             }
 
             .Categoriesbanner {
+                img{
+                    height: 24vw;   
+                }
                 
             }
 
