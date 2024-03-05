@@ -18,7 +18,7 @@ const NavBar = () => {
        <div>
         {/* <IoIosArrowBack  onClick={()=> navigate(-1)} /> */}
      
-       <img src="../Logo.png" alt="" />
+        <img src="../Layout/Logo.svg" alt="Logo" />
        </div>
        <ul className='Links'>
           {navItems.map(renderNavItem)}
