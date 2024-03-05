@@ -8,6 +8,7 @@ import { MenuOutlined } from '@ant-design/icons'
 import { FaArrowAltCircleRight } from 'react-icons/fa'
 import { handelOpenWhatsapp } from './ServicePriceTabs'
 import useGetWidth from '../../Hooks/useGetWidth'
+import { IoMenu } from 'react-icons/io5'
 
 const NavBar = () => {
   const width = useGetWidth()
@@ -17,9 +18,7 @@ const NavBar = () => {
        <div>
         {/* <IoIosArrowBack  onClick={()=> navigate(-1)} /> */}
      
-        <img src="../Layout/Logo.svg" alt="Logo" />
-        {/* <img src="../Layout/LogoBlack.svg" alt="Logo" /> */}
-
+       <img src="../Logo.png" alt="" />
        </div>
        <ul className='Links'>
           {navItems.map(renderNavItem)}
@@ -32,7 +31,7 @@ const NavBar = () => {
        <div className='MenuNav'>
           <WithDrawer
             title='Nav Links'
-            button={<Button icon={<MenuOutlined />} type='primary' />}
+            button={<Button icon={<IoMenu />} type='primary' />}
           >
             <ul className='DrawerLinks'>
               {navItems.map(renderNavItem)}
