@@ -42,6 +42,9 @@ $tab-wrap-border-radius:26px;
     border-bottom-left-radius: 0;
   }
   &:checked + label {
+    transform: scale(1.08) !important;
+    transition: .5s ease-in-out ;
+
     // background-color: var(--bg);
     box-shadow: 0 -1px 0 var(--bg) inset;
     background: linear-gradient(45deg , var(--primary) , var(--secondary));
