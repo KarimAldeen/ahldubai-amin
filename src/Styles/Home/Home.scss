@@ -1378,9 +1378,12 @@
 
 
                 }
-
+                h1 , h2{
+                    font-size: 4vw;
+                    display: inline;
+                }
                 p {
-                    font-size: 2vw;
+                    font-size: 3vw;
                     width: 90%;
                     opacity: .8;
                 }
@@ -1393,8 +1396,8 @@
                     color: var(--white);
                     padding: 15px 30px;
                     line-height: 1.4em;
-                    min-width: 150px;
-                    font-size: 9px;
+                    min-width: 160px;
+                    font-size: 10px;
                     border-radius: 30px;
                     @include Flex;
                     gap: 5px;

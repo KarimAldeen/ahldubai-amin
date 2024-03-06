@@ -38,6 +38,7 @@
 
                     h6,
                     h4 {
+
                         font-size: 1.5vw;
 
                     }
@@ -329,7 +330,7 @@
 
                         h6,
                         h4 {
-                            font-size: 1.5vw;
+                            font-size: 2vw;
 
                         }
 
@@ -412,7 +413,7 @@
                             }
 
                             >p {
-                                font-size: 1.5vw;
+                                font-size: 2.5vw;
                             }
 
                             >div {
@@ -439,7 +440,7 @@
                                         }
 
                                         h6 {
-                                            font-size: 1.5vw;
+                                            font-size: 2vw;
                                             height: 20px;
 
                                         }
@@ -466,7 +467,7 @@
                         }
                     }
                     p{
-                        font-size: 1.6vw;
+                        font-size: 2.2vw;
 
                     }
                     
@@ -489,11 +490,13 @@
                     display: flex;
                     align-items: center;
                     gap: 35px;
+                    
                     >div{
                         display: flex;
                         flex-wrap: wrap;
-                        gap: 10px;
+                        gap: 6px;
                         
+                      
                         >span{
                             display: inline-block !important;
                             transition: all ease 500ms;
@@ -506,6 +509,7 @@
                             padding: 10px 20px;
                             border-radius: 10px;
                             -webkit-border-radius: 10px;
+                            
                         }
                     }
 

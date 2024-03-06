@@ -7,7 +7,7 @@ const Fith = () => {
         <div className='Fith'>
             <Divider />
             <span>
-                <span>Tags : </span>
+                <span className='fifth_tag'>Tags: </span>
                 <div>
                     <span>Care</span>
                     <span>Face</span>

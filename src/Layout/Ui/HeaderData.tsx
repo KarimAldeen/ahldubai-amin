@@ -5,7 +5,7 @@ export const navItems = [
     { name: 'Doctors', path: '/doctors' },
     { name: 'Services', path: '/services/name?count=1' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Reviews', path: '/reviews' }
+    // { name: 'Reviews', path: '/reviews' }
   ];
 
   export   const renderNavItem = (item:any, index:any) => (
