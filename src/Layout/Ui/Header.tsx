@@ -8,12 +8,15 @@ import { FaArrowAltCircleRight } from 'react-icons/fa';
 import ContactForm from '../../Components/Done/ContactForm';
 import useHeader from './useHeader';
 import { navItems, renderNavItem } from './HeaderData';
+import { useChangeLanguage } from '../../Hooks/useChangeLanguage';
 
 const Header = () => {
   const [t] = useTranslation();
   useHeader();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => setIsModalOpen(true);
+  const { currentLanguage, changeLanguage } = useChangeLanguage();
+
 
   return (
     <header className='Header HeaderStart'>
@@ -25,7 +28,7 @@ const Header = () => {
           {navItems.map(renderNavItem)}
           <li>
             <div onClick={showModal}>
-              {t('Contact Us')} <FaArrowAltCircleRight />
+              {t('Contact_Us')} <FaArrowAltCircleRight />
             </div>
           </li>
         </ul>
@@ -38,7 +41,7 @@ const Header = () => {
               {navItems.map(renderNavItem)}
               <li>
                 <div onClick={showModal}>
-                  {t('Contact Us')} <FaArrowAltCircleRight />
+                  {t('Contact_Us')} <FaArrowAltCircleRight />
                 </div>
               </li>
             </ul>

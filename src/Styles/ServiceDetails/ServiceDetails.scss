@@ -105,7 +105,7 @@
             @include Shadow;
             position: relative;
             overflow: hidden;            
-
+            
             >img {
                 width: 24vw;
                 position: absolute;
@@ -437,6 +437,25 @@
 
 }
 
+.ar{
+    .serviceDetails_Page {
+  
+    
+        .ServiceDetails {
+
+    
+            .MainSection {
+                     
+                
+                >img {
+                    right: auto !important;
+                    left: 7% !important;
+                }
+            }
+        }
+    }
+
+}
 
 .CategorieCard {
     padding: 10px;
