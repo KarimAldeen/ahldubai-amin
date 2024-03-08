@@ -2,69 +2,72 @@ import React from 'react'
 import DoctorCard from '../../Components/Doctors/DoctorCard'
 import { Select } from 'antd'
 import { MultyPageData } from '../../Data'
+import { useTranslation } from 'react-i18next'
 
 const Doctors = () => {
+  const [t] = useTranslation()
+  const SelectOptions = [
+    {
+      value: '1',
+      label: 'Not Identified',
+    },
+    {
+      value: '2',
+      label: 'Closed',
+    },
+    {
+      value: '3',
+      label: 'Communicated',
+    },
+    {
+      value: '4',
+      label: 'Identified',
+    },
+    {
+      value: '5',
+      label: 'Resolved',
+    },
+    {
+      value: '6',
+      label: 'Cancelled',
+    },
+  ]
   return (
     <div className='Doctors'>
-        <div className='Hero_Doctors'>
-         <div>
-         <h1>Doctors</h1>
+      <div className='Hero_Doctors'>
+        <div>
+          <h1>{t("Doctors")}</h1>
           <div>
-            <h6>Home {`>`} </h6>
-            <h5>Doctors</h5>
+            <h6>{t("Home")} {`>`} </h6>
+            <h5>{t("Doctors")}</h5>
           </div>
-         </div>
         </div>
-        <div className='Filter'>
-            <h1>
-              Our Doctors
-            </h1>
-            <div>
-            <Select
-    showSearch
-    style={{ width: 250 }}
-    placeholder="Search For Your Best Doctor"
-    optionFilterProp="children"
-    filterOption={(input:any, option:any) => (option?.label ?? '').includes(input)}
-    filterSort={(optionA:any, optionB:any) =>
-      (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
-    }
-    options={[
-      {
-        value: '1',
-        label: 'Not Identified',
-      },
-      {
-        value: '2',
-        label: 'Closed',
-      },
-      {
-        value: '3',
-        label: 'Communicated',
-      },
-      {
-        value: '4',
-        label: 'Identified',
-      },
-      {
-        value: '5',
-        label: 'Resolved',
-      },
-      {
-        value: '6',
-        label: 'Cancelled',
-      },
-    ]}
-  />
-            </div>
+      </div>
+      <div className='Filter'>
+        <h1>
+          {t("Our Doctors")}
+        </h1>
+        <div>
+          <Select
+            showSearch
+            style={{ width: 250 }}
+            placeholder={t(`Search For Your Best Doctor`)}
+            optionFilterProp="children"
+            filterOption={(input: any, option: any) => (option?.label ?? '').includes(input)}
+            filterSort={(optionA: any, optionB: any) =>
+              (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
+            }
+            options={SelectOptions}
+          />
         </div>
-        <div className='Docor_Cards'>
-        {  MultyPageData?.DoctorsData?.map((item:any,index:any)=>{
-            return(
-              <DoctorCard data={item}/>
-            )
-          })}
-        </div>
+      </div>
+      <div className='Docor_Cards'>
+        {MultyPageData?.DoctorsData?.map((item: any, index: any) => {
+          return (
+            <DoctorCard data={item} />
+          )
+        })}
+      </div>
     </div>
 
   )

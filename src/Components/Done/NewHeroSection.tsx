@@ -4,6 +4,8 @@ import ContactForm from './ContactForm';
 import { useNavigate } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
+import useGetWidth from '../../Hooks/useGetWidth';
+import { handelOpenWhatsapp } from '../../Pages/ServiceDetails/ServicePriceTabs';
 
 const NewHeroSection = ({Data}:any) => {
   const [infoData, setInfoData] = useState(Data[0]);
@@ -36,6 +38,7 @@ const NewHeroSection = ({Data}:any) => {
     setKey(index);
   };
 
+  const width = useGetWidth()
 
   return (
     <>
@@ -46,8 +49,9 @@ const NewHeroSection = ({Data}:any) => {
           </div>
           <p> {infoData?.info} </p>
           <div>
-            <button className='Button1' onClick={showModal}>
-              {t("Find_diagnostics")} <FaArrowAltCircleRight />
+
+            <button className='Button1' onClick={()=>handelOpenWhatsapp(width)}>
+              {t("WhatsApp Us")} <FaArrowAltCircleRight />
             </button>
             <button className='Button2' onClick={() => navigate("/doctors")}>
               <FaUser /> {t("See_Our_Doctors")}
@@ -55,7 +59,7 @@ const NewHeroSection = ({Data}:any) => {
           </div>
         </div>
       </div>
-      <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      {/* <ContactForm isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
       <div className='Image_Controller'>
         {Data.map((item:any, index:any) => (
           <div key={index} onClick={() => handleImageClick(index)} className={infoData.image === item.image ? 'active_Image' : ''}></div>

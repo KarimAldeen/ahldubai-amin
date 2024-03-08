@@ -58,10 +58,11 @@
             height: 100%;
                 gap: 10px;
             position: relative;
-
+            background-color: var(--bg);
+            @include Shadow;
             .Blog_body_Left {
                 background-color: var(--bg);
-                @include Shadow;
+                // @include Shadow;
                 width: 70%;
                 padding: 30px;
                 display: flex;

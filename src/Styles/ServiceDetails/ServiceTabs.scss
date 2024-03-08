@@ -42,7 +42,7 @@ $tab-wrap-border-radius:26px;
     border-bottom-left-radius: 0;
   }
   &:checked + label {
-    transform: scale(1.08) !important;
+    // transform: scale(1.08) !important;
     transition: .5s ease-in-out ;
 
     // background-color: var(--bg);

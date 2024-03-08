@@ -1,48 +1,91 @@
-import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useEffect } from 'react';
+import { initReactI18next, useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 import translationEN from '../translate/en.json';
 import translationAR from '../translate/ar.json';
-import { initReactI18next } from 'react-i18next';
-import i18n from 'i18next'; // Make sure this import is correct
-// ... (your imports)
+import translationDE from '../translate/de.json';
+import translationTR from '../translate/tr.json';
+import translationRU from '../translate/ru.json';
+
+
+let language = localStorage.getItem('language') ?? 'en';
 
 i18n.use(initReactI18next).init({
-  resources: {
-    en: {
-      translation: translationEN
+    resources: {
+      en: {
+        translation: translationEN
+      },
+      ar: {
+        translation: translationAR
+      },
+      de: {
+        translation: translationDE
+      },
+      tr: {
+        translation: translationTR
+      },
+      ru: {
+        translation: translationRU // Add Russian translation
+    }
     },
-    ar: {
-      translation: translationAR
+    lng: language ?? "en", 
+    interpolation: {
+      escapeValue: false
     }
-  },
-  lng: localStorage.getItem('language') || 'ar', 
-  interpolation: {
-    escapeValue: false
-  }
-});
+  });
 
-export const useChangeLanguage = () => {
-  const [currentLanguage, setCurrentLanguage] = useState(localStorage.getItem('language') || 'ar');
+//   console.log(navigator.language,"navigator.language");
 
-  useLayoutEffect(() => {
-    if (currentLanguage === 'ar') {
-      i18n.changeLanguage('ar');
-      document.body.setAttribute('dir', 'rtl');
-      document.body.classList.add('ar');
-
-    } else if(currentLanguage === 'en'){
-      i18n.changeLanguage('en');
-      document.body.setAttribute('dir', 'ltr');
-      document.body.classList.remove('ar');
-    }
-
-    localStorage.setItem('language', currentLanguage);
-  }, [currentLanguage]);
-
-  const changeLanguage = useCallback((newLanguage:any) => {
-    setCurrentLanguage(newLanguage);
+export function useLanguage() {
+  useEffect(() => {
+    changeLanguage(language);
   }, []);
 
-  return { currentLanguage, changeLanguage };
-};
+  const changeLanguage = (newLanguage:any) => {
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage);
+    applyLanguageStyles(newLanguage);
+  };
 
-  
+  return { changeLanguage };
+}
+
+function applyLanguageStyles(language:any) {
+  if (language === 'ar') {
+    document.body.setAttribute('dir', 'rtl');
+    document.body.classList.remove('de');
+    document.body.classList.add('ar');
+  } else if (language === 'en') {
+    document.body.setAttribute('dir', 'ltr');
+    document.body.classList.remove('ar', 'de');
+    document.body.classList.add('en');
+  } else if (language === 'de') {
+    document.body.setAttribute('dir', 'ltr');
+    document.body.classList.remove('ar');
+    document.body.classList.add('de');
+  }
+  else if (language === 'tr') {
+    document.body.setAttribute('dir', 'ltr');
+    document.body.classList.remove('ar');
+    document.body.classList.add('tr');
+  }
+  else if (language === 'ru') {
+    document.body.setAttribute('dir', 'ltr');
+    document.body.classList.remove('ar');
+    document.body.classList.add('ru');
+  }
+}
+
+export function useLanguageMenu() {
+  const { t } = useTranslation();
+
+  const languageOptions = [
+    { code: 'ar', icon: '/Layout/Ar.svg', label: t('Arabic') },
+    { code: 'en', icon: '/Layout/En.svg', label: t('English') },
+    { code: 'de', icon: '/Layout/De.svg', label: t('German') },
+    { code: 'tr', icon: '/Layout/Tr.svg', label: t('Turkish') },
+    { code: 'ru', icon: '/Layout/Ru.svg', label: t('Russian') } 
+  ];
+
+  return { languageOptions };
+}

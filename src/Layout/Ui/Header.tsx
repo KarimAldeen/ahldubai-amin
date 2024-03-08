@@ -7,16 +7,19 @@ import { useTranslation } from 'react-i18next';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import ContactForm from '../../Components/Done/ContactForm';
 import useHeader from './useHeader';
-import { navItems, renderNavItem } from './HeaderData';
-import { useChangeLanguage } from '../../Hooks/useChangeLanguage';
+import { NavItems } from './HeaderData';
+import { IoLogoWhatsapp } from 'react-icons/io';
+import { handelOpenWhatsapp } from '../../Pages/ServiceDetails/ServicePriceTabs';
+import useGetWidth from '../../Hooks/useGetWidth';
+import Translate from './Translate';
 
 const Header = () => {
   const [t] = useTranslation();
   useHeader();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => setIsModalOpen(true);
-  const { currentLanguage, changeLanguage } = useChangeLanguage();
 
+  const width = useGetWidth()
 
   return (
     <header className='Header HeaderStart'>
@@ -25,12 +28,17 @@ const Header = () => {
       </Link>
       <nav>
         <ul className='Links'>
-          {navItems.map(renderNavItem)}
+          <NavItems/>
+          <Translate/>
+
           <li>
-            <div onClick={showModal}>
-              {t('Contact_Us')} <FaArrowAltCircleRight />
-            </div>
+            <span onClick={() => handelOpenWhatsapp(width)}>
+              <IoLogoWhatsapp />
+              {t("WhatsApp Us")}
+
+            </span>
           </li>
+
         </ul>
         <div className='MenuNav'>
           <WithDrawer
@@ -38,11 +46,13 @@ const Header = () => {
             button={<Button icon={<MenuOutlined />} type='primary' />}
           >
             <ul className='DrawerLinks'>
-              {navItems.map(renderNavItem)}
+              <NavItems/>
               <li>
-                <div onClick={showModal}>
-                  {t('Contact_Us')} <FaArrowAltCircleRight />
-                </div>
+              <span onClick={() => handelOpenWhatsapp(width)}>
+              <IoLogoWhatsapp />
+              {t("WhatsApp Us")}
+
+            </span>
               </li>
             </ul>
           </WithDrawer>
