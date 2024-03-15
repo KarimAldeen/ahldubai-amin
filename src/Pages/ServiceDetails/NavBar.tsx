@@ -6,10 +6,10 @@ import WithDrawer from '../../HighOrderComponent/WithDrawer'
 import { Button } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
 import { FaArrowAltCircleRight } from 'react-icons/fa'
-import { handelOpenWhatsapp } from './ServicePriceTabs'
 import useGetWidth from '../../Hooks/useGetWidth'
 import { IoMenu } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next'
+import { handelOpenWhatsapp } from './handelOpenWhatsapp'
 
 const NavBar = () => {
   const width = useGetWidth()

@@ -9,9 +9,9 @@ import ContactForm from '../../Components/Done/ContactForm';
 import useHeader from './useHeader';
 import { NavItems } from './HeaderData';
 import { IoLogoWhatsapp } from 'react-icons/io';
-import { handelOpenWhatsapp } from '../../Pages/ServiceDetails/ServicePriceTabs';
 import useGetWidth from '../../Hooks/useGetWidth';
 import Translate from './Translate';
+import { handelOpenWhatsapp } from '../../Pages/ServiceDetails/handelOpenWhatsapp';
 
 const Header = () => {
   const [t] = useTranslation();
@@ -19,7 +19,7 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => setIsModalOpen(true);
 
-  const width = useGetWidth()
+  const width = useGetWidth();
 
   return (
     <header className='Header HeaderStart'>

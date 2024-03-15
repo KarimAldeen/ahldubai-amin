@@ -11,7 +11,8 @@ import OurDocrtrs from '../../Components/Done/OurDocrtrs';
 import OurPartners from '../../Components/Done/OurPartners';
 import Partners from '../../Components/Done/Partners';
 import { MultyPageData } from '../../Data';
-function ServicePriceTabs() {
+import { handelOpenWhatsapp } from './handelOpenWhatsapp';
+function ServicePriceTabs({sub_service}:any) {
     const [search] =  useSearchParams()
     const count = search.get('count') || 1
 
@@ -147,20 +148,3 @@ function ServicePriceTabs() {
 export default ServicePriceTabs
 
 
-export const handelOpenWhatsapp = (width:number)=>{
-
-    var whatsappLink ;
-                        
-                        
-                        if(width < 768){
-                            // the device open the browser is  mobile 
-                            whatsappLink = `whatsapp://send?phone=+963957570213&text=${encodeURIComponent(`Hello , Mr.Amin`)}&app_absent=0`;
-
-                        }else{
-                            // is laptop 
-                            whatsappLink = `https://web.whatsapp.com/send?phone=+963957570213&text=${encodeURIComponent(`Hello , Mr.Amin`)}&app_absent=0`;
-                        }
-
-
-                        window.open(whatsappLink)
-}

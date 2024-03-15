@@ -3,6 +3,7 @@ import DoctorCard from '../../Components/Doctors/DoctorCard'
 import { Select } from 'antd'
 import { MultyPageData } from '../../Data'
 import { useTranslation } from 'react-i18next'
+import { useGetDoctors } from '../../api/Doctors'
 
 const Doctors = () => {
   const [t] = useTranslation()
@@ -32,6 +33,7 @@ const Doctors = () => {
       label: 'Cancelled',
     },
   ]
+  const {data} = useGetDoctors()
   return (
     <div className='Doctors'>
       <div className='Hero_Doctors'>
@@ -62,7 +64,7 @@ const Doctors = () => {
         </div>
       </div>
       <div className='Docor_Cards'>
-        {MultyPageData?.DoctorsData?.map((item: any, index: any) => {
+        {data?.map((item: any, index: any) => {
           return (
             <DoctorCard data={item} />
           )

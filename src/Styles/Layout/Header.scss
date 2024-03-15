@@ -1,4 +1,5 @@
 .Doctors_Page .Header,
+.SingleDoctor_Page .Header,
 .Header.Scrolled,
 .Services_Page .Header,
 .Blog_Page .Header,
@@ -325,6 +326,7 @@
     .Header.Scrolled,
     .Services_Page .Header,
     .Blog_Page .Header,
+    .SingleDoctor_Page .Header,
     .serviceDetails_Page .Header {
 
         transform: translateX(0%);

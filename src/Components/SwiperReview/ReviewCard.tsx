@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from '../Utils/Image';
+import { ImageBaseURL } from '../../api/config';
 
 interface Props {
   activeIndex: number;
@@ -12,13 +14,13 @@ const ReviewCard: React.FC<Props> = ({ activeIndex, index, data }) => {
     <div className={activeIndex === index ? 'ActiveReviewCard ReviewCard' : 'ReviewCard'}>
       <div>
         <div>
-          <img src={data?.image} alt="" />
+          <Image src={ImageBaseURL+data?.image}  />
           <span>
             <h5>{data?.name}</h5>
-            <h6>{data?.role}</h6>
+            <h6>{data?.type}</h6>
           </span>
         </div>
-        <img src="../Reviews/review.svg" alt="" />
+        <Image src="../Reviews/review.svg"  />
       </div>
       <p>{data?.review}</p>
     </div>

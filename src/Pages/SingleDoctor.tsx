@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button, Input, Progress } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useGetDoctor } from '../api/Doctors';
+import Image from '../Components/Utils/Image';
+import { ImageBaseURL } from '../api/config';
 
 const SingleDoctor = () => {
   const { t } = useTranslation();
@@ -30,13 +33,12 @@ const SingleDoctor = () => {
     }
   ];
 
-  const Data = {
-    id: 1,
-    name: t("Dr Costa"),
-    Category: t("Dental"),
-    Image: "../Doctors/costa.jpg",
-    Summary: t("Dr. Costa, top dental graduate in 1984 from University of Witwatersrand, specializes in Maxillo-Facial & Oral Surgery, with over 35,000 dental implants placed."),
-  };
+
+
+ 
+  const {id} = useParams()
+  const {data} = useGetDoctor({doctor_id:id})
+
 
   const { skill_Info, education_Info, skills, education } = StaticData[0];
 
@@ -56,15 +58,15 @@ const SingleDoctor = () => {
       <div className='SingleDoctor'>
         <div className='Left'>
           <div className='PersonalCard'>
-            <img src={Data.Image} alt={Data.name} />
-            <h1>{Data.name}</h1>
-            <p>{Data.Category}</p>
+            <Image src={ImageBaseURL+data?.image} alt={data?.name} />
+            <h1>{data?.name}</h1>
+            <p>{data?.type}</p>
           </div>
         </div>
         <div className='Right'>
           <h6>#{t("About Us")}</h6>
           <h1>{t("Find The Right Doctor Right At Your Fingertips")}</h1>
-          <p>{Data.Summary}</p>
+          <p>{data?.description}</p>
           <div className='OurDoctorSkill'>
             <h2>{t("Skills Of Doctor")}</h2>
             <p>{skill_Info}</p>

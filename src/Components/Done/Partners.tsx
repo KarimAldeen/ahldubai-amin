@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { ImageBaseURL } from '../../api/config';
+import Image from '../Utils/Image';
 
 const Partners = ({data}:any) => {
     // Array of partner objects containing image paths and alt text
@@ -11,7 +13,7 @@ const Partners = ({data}:any) => {
             <div>
                 {data.map((partner:any, index:any) => (
                     <div key={index}>
-                        <img src={`${partner.src}`} alt={partner.alt} />
+                        <Image src={`${ImageBaseURL}${partner.image}`} />
                     </div>
                 ))}
             </div>

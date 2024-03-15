@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import Image from '../../Components/Utils/Image';
 
-const ImageBanner: React.FC = () => {
+const ImageBanner = ({data}:any) => {
 
   const Data = [
     {

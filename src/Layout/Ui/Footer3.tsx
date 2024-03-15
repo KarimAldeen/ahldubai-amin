@@ -5,6 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaTimes } from 'react-icons/fa';
 import { IoChatbubble } from "react-icons/io5";
 import { useTranslation } from 'react-i18next';
+import { useGetFooter } from '../../api/footer';
 
 const Footer3 = () => {
   const aboutUsData = {
@@ -41,6 +42,7 @@ const Footer3 = () => {
       title: 'How can women protect themselves from breast cancer',
     },
   ];
+  const {data} = useGetFooter()
 
   const footerText = 'Like-themes 2023 © All Rights reserved Aurora Health';
   const [t] = useTranslation()

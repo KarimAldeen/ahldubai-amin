@@ -19,11 +19,11 @@ const App = () => {
       <Route path="*" element={<Suspense fallback={<Loading />}> <Page404 /></Suspense>} />
       <Route path="/" element={<Suspense fallback={<Loading />}><Layout className='Home_Page'>  <Page /> </Layout> </Suspense>} />
       <Route path="/doctors" element={<Suspense fallback={<Loading />}><Layout className='Doctors_Page'>  <Doctors /> </Layout> </Suspense>} />
-      <Route path="/services" element={<Suspense fallback={<Loading />}><Layout className='Services_Page'>  <Services /> </Layout> </Suspense>} />
+      {/* <Route path="/services" element={<Suspense fallback={<Loading />}><Layout className='Services_Page'>  <Services /> </Layout> </Suspense>} /> */}
       <Route path="/blog" element={<Suspense fallback={<Loading />}><Layout className='Blog_Page'>  <Blog /> </Layout> </Suspense>} />
       <Route path="/doctors/:id" element={<Suspense fallback={<Loading />}><Layout className='SingleDoctor_Page'>  <SingleDoctor /> </Layout> </Suspense>} />
-    <Route path="/Pricing" element={<Suspense fallback={<Loading />}><Layout className='PricingDetails_Page'>  <PricingDetails /> </Layout> </Suspense>} />
-    <Route path="/services/:name" element={<Suspense fallback={<Loading />}><Layout className='serviceDetails_Page'>  <ServiceDetails /> </Layout> </Suspense>} />
+    {/* <Route path="/Pricing" element={<Suspense fallback={<Loading />}><Layout className='PricingDetails_Page'>  <PricingDetails /> </Layout> </Suspense>} /> */}
+    <Route path="/services/:id" element={<Suspense fallback={<Loading />}><Layout className='serviceDetails_Page'>  <ServiceDetails /> </Layout> </Suspense>} />
 
     </Routes>
 

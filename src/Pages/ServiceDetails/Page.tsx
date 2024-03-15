@@ -1,41 +1,37 @@
 import React from 'react';
 import NavBar from './NavBar';
-
 import ServicePriceTabs from './ServicePriceTabs';
-
+import { useGetSingleService } from '../../api/singleservice';
+import { useParams } from 'react-router-dom';
+import Image from '../../Components/Utils/Image';
+import { ImageBaseURL } from '../../api/config';
+import { Spin } from 'antd';
 
 const ServiceDetails: React.FC = () => {
-    const bulletPoints = [
-        'Hustler-Free',
-        'Free Consultations',
-        'Fast additional fees',
-        '24/7 Clients Support',
-    ];
+    const { id } = useParams();
+    const { data,isLoading } = useGetSingleService({ service_id: id });
 
-
+    if(isLoading){
+        return <Spin/>
+    }
+    const service_data = data?.service
     return (
         <div className='ServiceDetails'>
             <NavBar />
             <div className='MainSection'>
-                <h1>
-                    Get Professional Health Care
-                    in  Dubai Today
-                </h1>
+                <h1>{service_data?.sub_title}</h1>
                 <span className='bulletPoints'>
-                    {bulletPoints.map((point, index) => (
+                    {service_data?.benefits?.map((point:any, index:any) => (
                         <span className='bulletPoint' key={index}>
                             <img src="../ServiceDetails/Check.svg" alt="" />
-                            {point}
-                            </span>
+                            {point?.name}
+                        </span>
                     ))}
                 </span>
-
-                <img src="/3-doctor.png" alt=""  />
+                <Image src={ImageBaseURL+service_data?.sub_image} alt="" />
             </div>
-                        
-             <ServicePriceTabs/>
+            <ServicePriceTabs sub_service={data?.sub_service} />
         </div>
-     
     );
 };
 
