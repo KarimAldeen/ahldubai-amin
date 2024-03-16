@@ -2,7 +2,7 @@ import { useQuery } from 'react-query';
 import useAxios from './useAxios';
 import { useNavigate } from 'react-router-dom';
 
-function useGetQuery(key: string, url: string , params:any={},options:any={}) {
+function  useGetQuery(key: string, url: string , params:any={},options:any={}) {
   const axios = useAxios();
   const navigate = useNavigate()
   const language = localStorage.getItem("language") ?? "en"
