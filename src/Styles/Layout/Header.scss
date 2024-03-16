@@ -30,6 +30,9 @@
     height: 70px !important;
 }
 
+.ant-dropdown{
+    z-index: 99999;
+}
 .Header {
     position: fixed;
     display: flex;
@@ -41,7 +44,7 @@
     z-index: 1;
     font-family: 'Niramit';
     font-weight: bold;
-    z-index: 11;
+    z-index: 9999;
     // margin-inline: auto;
     // background: var(--bg);
     border-bottom: .6px rgba(255, 255, 255, 0.2) dashed;

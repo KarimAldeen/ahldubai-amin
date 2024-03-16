@@ -6,6 +6,8 @@ import { FaTimes } from 'react-icons/fa';
 import { IoChatbubble } from "react-icons/io5";
 import { useTranslation } from 'react-i18next';
 import { useGetFooter } from '../../api/footer';
+//@ts-ignore
+import { HashLink } from 'react-router-hash-link';
 
 const Footer3 = () => {
   const aboutUsData = {
@@ -21,10 +23,10 @@ const Footer3 = () => {
   const exploreData = {
     title: 'Explore',
     links: [
-      { icon: <IoIosArrowForward />, text: 'Home', to: '/' },
-      { icon: <IoIosArrowForward />, text: 'Doctors', to: '/doctors' },
-      { icon: <IoIosArrowForward />, text: 'Services', to: '/services/name?count=1' },
-      { icon: <IoIosArrowForward />, text: 'Blog', to: '/blog' },
+      { icon: <IoIosArrowForward />, name: 'Home', href: '/#home' },
+      { icon: <IoIosArrowForward />, name: 'Doctors', to: '/doctors' },
+      { icon: <IoIosArrowForward />, name: 'Services', href: '/#Services' },
+      { icon: <IoIosArrowForward />, name: 'Blog', to: '/blog' },
     ],
   };
 
@@ -74,7 +76,13 @@ const Footer3 = () => {
           <h1>{t(`${exploreData.title}`)}</h1>
           <ul className='Links'>
             {exploreData.links.map((link, index) => (
-              <li key={index}> {link.icon} <Link to={link.to}>{t(`${link.text}`)}</Link>  </li>
+             <li key={index}>
+             {link.to ? (
+               <Link to={link.to}>{link.name}</Link>
+             ) : (
+               <HashLink to={link.href}>{link.name}</HashLink>
+             )}
+           </li>
             ))}
           </ul>
         </span>
