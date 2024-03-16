@@ -78,9 +78,13 @@ const NewHeroSection = ({ Data }: any) => {
     return words.slice(0, -1).join(" "); // Join all words except the last one
   };
 
+  const socialMedia = message?.socialMedia;
+
+  console.log(message);
+
   return (
     <>
-      <div className='NewHeroSection' id='NewHeroSection' style={{ backgroundImage: `url(${ImageBaseURL}${infoData?.image})` }} key={key}>
+      <div className='NewHeroSection' id='home' style={{ backgroundImage: `url(${ImageBaseURL}${infoData?.image})` }} key={key}>
         <div className='imNewHeroSection' key={key}>
           <div>
             <h1>{getTitleWithoutLastWord(infoData?.title)}</h1>
@@ -104,12 +108,37 @@ const NewHeroSection = ({ Data }: any) => {
           <div key={index} onClick={() => handleImageClick(index)} className={infoData.image === item.image ? 'active_Image' : ''}></div>
         ))}
       </div>
-      <div className='Social_Controller'>
-        <div><FaFacebook /></div>
-        <div><FaInstagram /></div>
-        <div><FaTwitter /></div>
+      {/* <div className='Social_Controller'>
+        <a href=''><FaFacebook /></a>
+        <a href=""><FaInstagram /></a>
+        <a href=""><FaTwitter /></a>
 
-      </div>
+      </div> */}
+      <div className='Social_Controller'>
+      {socialMedia && socialMedia?.map((item:any, index:any) => {
+        let icon = null;
+        let href = '';
+
+        // Determine which icon to render based on the social media link
+        if (item.social_media_link.includes('facebook')) {
+          icon = <FaFacebook />;
+        } else if (item.social_media_link.includes('instagram')) {
+          icon = <FaInstagram />;
+        } else if (item.social_media_link.includes('twitter')) {
+          icon = <FaTwitter />;
+        }
+
+        // Set the href to the social_media_link
+        href = item.social_media_link;
+
+        // Render the icon with the determined href
+        return (
+          <a key={index} target="_blank"  href={href}>
+            {icon}
+          </a>
+        );
+      })}
+    </div>
     </>
   );
 };
