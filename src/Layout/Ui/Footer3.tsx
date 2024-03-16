@@ -44,6 +44,15 @@ const Footer3 = () => {
   ];
   const  {data} = useGetFooter()
 
+  const GetData =(Key:string)=>{
+    return data?.info?.find((item: any) => item.key === Key)?.value;
+
+  }
+  const about_us = GetData("about_us")
+  const copy_right = GetData("copy_right")
+
+
+
   const footerText = 'Like-themes 2023 © All Rights reserved Aurora Health';
   const [t] = useTranslation()
   return (
@@ -51,7 +60,7 @@ const Footer3 = () => {
       <span>
         <div>
           <h1>{t(`${aboutUsData.title}`)}</h1>
-          <p>{t(`${aboutUsData.description}`)}</p>
+          <p>{about_us}</p>
           <span>
             {aboutUsData.contactInfo.map((info, index) => (
               <div key={index}>
@@ -89,7 +98,7 @@ const Footer3 = () => {
       </span>
 
       <div>
-        <span>{t(`${footerText}`)}</span>
+        <span>{copy_right}</span>
       </div>
     </div>
   );
