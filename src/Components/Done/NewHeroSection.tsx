@@ -47,15 +47,21 @@ const NewHeroSection = ({ Data }: any) => {
   const message_whatsapp = messagesWithDefaultMessage?.map((item: any) => item.value)?.join(' ');
 
 
-  const Whatsapp = useWhatsapp();
-
-  const { mutate } = useAddClick_whatsapp()
 
 
-  function handelWhatsapp(width: any, whatsapp_view: any) {
-    handelOpenWhatsapp(width, whatsapp_view)
-    mutate({ uuid: Whatsapp })
-  }
+
+  const WhatsappPhone = message?.info?.find((item: any) => item.key === 'whatsapp_phone')?.value;
+
+  
+   const Whatsapp = useWhatsapp();
+
+  const {mutate} = useAddClick_whatsapp() 
+
+
+      function handelWhatsapp(width:any , whatsapp_view:any){
+          handelOpenWhatsapp(width , WhatsappPhone ,whatsapp_view)
+          mutate({uuid:Whatsapp})
+      }
 
   const width = useGetWidth();
 
