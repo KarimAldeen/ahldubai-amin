@@ -1,9 +1,9 @@
 {
-    "Ar": "Ar",
-    "En": "En",
-    "De": "De",
-    "Tr": "Tr",
-    "Ru": "Ru",
+  "ar": "Arabic",
+  "en": "English",
+  "de": "German",
+  "tr": "Turkish",
+  "ru": "Russian",
     "Arabic": "Arabic",
     "Turkish": "Turkish",
     "Russian": "Russian",
@@ -48,6 +48,8 @@
   "Oral Health": "Oral Health",
   "Shed light on prevalent heart conditions": "Shed light on prevalent heart conditions",
   "December 2, | 2023 Aurora Health": "December 2, | 2023 Aurora Health",
-  "Comprehensive Eye Exams": "Comprehensive Eye Exams"
+  "Comprehensive Eye Exams": "Comprehensive Eye Exams",
+  "Explore": "Explore"
+
 
 }

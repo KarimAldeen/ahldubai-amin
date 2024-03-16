@@ -1,4 +1,10 @@
 {
+
+  "ar": "Arapça",
+  "en": "İngilizce",
+  "de": "Almanca",
+  "tr": "Türkçe",
+  "ru": "Rusça",
     "Arabic": "Arapça",
     "Turkish": "Türkçe",
     "Russian": "Rusça",
@@ -43,5 +49,6 @@
   "Oral Health": "Ağız Sağlığı",
   "Shed light on prevalent heart conditions": "Yaygın kalp koşullarını aydınlatın",
   "December 2, | 2023 Aurora Health": "2 Aralık | 2023 Aurora Sağlık",
-  "Comprehensive Eye Exams": "Kapsamlı Göz Muayeneleri"
+  "Comprehensive Eye Exams": "Kapsamlı Göz Muayeneleri",
+  "Explore": "Keşfedin"
 }

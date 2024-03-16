@@ -1,4 +1,9 @@
 {
+    "ar": "عربي",
+    "en": "إنجليزي",
+    "de": "ألماني",
+    "tr": "تركي",
+    "ru": "روسي",
     "Arabic": "العربية",
     "Turkish": "التركية",
     "Russian": "الروسية",
@@ -43,5 +48,6 @@
     "Oral Health": "الصحة الفموية",
     "Shed light on prevalent heart conditions": "تسليط الضوء على الحالات القلبية الشائعة",
     "December 2, | 2023 Aurora Health": "2 ديسمبر | 2023 Aurora Health",
-    "Comprehensive Eye Exams": "فحوصات العيون الشاملة"
+    "Comprehensive Eye Exams": "فحوصات العيون الشاملة",
+    "Explore": "استكشف"
 }

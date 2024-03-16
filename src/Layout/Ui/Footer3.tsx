@@ -42,7 +42,7 @@ const Footer3 = () => {
       title: 'How can women protect themselves from breast cancer',
     },
   ];
-  const {data} = useGetFooter()
+  const  {data} = useGetFooter()
 
   const footerText = 'Like-themes 2023 © All Rights reserved Aurora Health';
   const [t] = useTranslation()
