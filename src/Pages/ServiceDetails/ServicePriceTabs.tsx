@@ -16,20 +16,23 @@ import { Spin } from 'antd';
 import useFingerprint from '../../api/helper/generateFingerprint';
 import { useAddClick_whatsapp } from '../../api/uuid';
 import useWhatsapp from '../../api/helper/OnClickgenerateWhatsapp';
+import { useGetFooter } from '../../api/footer';
 function ServicePriceTabs({sub_service}:any) {
  
     const  width= useGetWidth()
      const {data:doctors} = useGetDoctors()
      const {data:data,isLoading} = useGetHome()
 
-   
+  
+     const { data: message } = useGetFooter();
+     const WhatsappPhone = message?.info?.find((item: any) => item.key === 'whatsapp_phone')?.value;   
     const Whatsapp = useWhatsapp();
 
     const {mutate} = useAddClick_whatsapp() 
  
 
         function handelWhatsapp(width:any , whatsapp_view:any){
-            handelOpenWhatsapp(width , whatsapp_view)
+            handelOpenWhatsapp(width ,WhatsappPhone , whatsapp_view)
             mutate({uuid:Whatsapp})
         }
 

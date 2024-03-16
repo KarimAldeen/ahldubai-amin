@@ -15,7 +15,6 @@ const Page404 = lazy(() => import("./Layout/Ui/NotFoundPage"))
 
 const App = () => {
   const fingerprint = useFingerprint();
-  console.log(fingerprint,"fingerprint");
   const {mutate} = useAddJoin_website() 
   React.useEffect(() => {
     if(fingerprint){

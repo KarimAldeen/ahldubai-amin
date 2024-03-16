@@ -24,10 +24,11 @@ const Header = () => {
 
   
   const { data: message } = useGetFooter();
+  const WhatsappPhone = message?.info?.find((item: any) => item.key === 'whatsapp_phone')?.value;
   const messagesWithDefaultMessage = message?.info?.filter((item: any) => item.key === 'defaulte_whatsapp_message');
+
   const message_whatsapp = messagesWithDefaultMessage?.map((item: any) => item.value)?.join(' ');
   
-  console.log(message_whatsapp); // This will log the concatenated string
   
    const Whatsapp = useWhatsapp();
 
@@ -35,7 +36,7 @@ const Header = () => {
 
 
       function handelWhatsapp(width:any , whatsapp_view:any){
-          handelOpenWhatsapp(width , whatsapp_view)
+          handelOpenWhatsapp(width ,WhatsappPhone,  whatsapp_view)
           mutate({uuid:Whatsapp})
       }
   const width = useGetWidth();
