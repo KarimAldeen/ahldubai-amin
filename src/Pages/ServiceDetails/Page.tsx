@@ -10,6 +10,14 @@ import { Spin } from 'antd';
 const ServiceDetails: React.FC = () => {
     const { id } = useParams();
     const { data,isLoading } = useGetSingleService({ service_id: id });
+    const bulletPoints = [
+        'Hustler-Free',
+        'Free Consultations',
+        'Fast additional fees',
+        '24/7 Clients Support',
+        
+    ];
+
 
     if(isLoading){
         return <Spin/>

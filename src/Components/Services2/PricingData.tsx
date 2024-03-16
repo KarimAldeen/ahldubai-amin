@@ -7,7 +7,7 @@ export const PricinfData = [
         title: "Dental Implants",
         subTitle: "Permanent, Reliable Tooth Replacement Option",
         price: "2,000",
-        showAdditionalBenefits: false,
+        // showAdditionalBenefits: false,
         benefits: [
             { text: "Same day placement Don't wait 6 months", },
             { text: "Financing Options Available to Fit Your Budget", },
