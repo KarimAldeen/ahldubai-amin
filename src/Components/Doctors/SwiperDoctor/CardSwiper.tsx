@@ -10,7 +10,7 @@ import { MultyPageData } from '../../../Data';
 
 
 
-const CardSwiper: React.FC= () => {
+const CardSwiper= ({data}:any) => {
   return (
     <div >
       <Swiper
@@ -51,7 +51,7 @@ const CardSwiper: React.FC= () => {
         className='Docor_Cards'
       >
         {
-          MultyPageData?.DoctorsData?.map((item:any,index:number)=>{
+          data?.map((item:any,index:number)=>{
             return(
               <SwiperSlide key={index}>
                 <DoctorCard data={item}/>

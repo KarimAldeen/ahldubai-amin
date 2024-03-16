@@ -46,6 +46,13 @@ export const HomeData = {
      
     
 };
+// cardData: [
+//     { image: '../Reviews/2.png', name: 'John Doe', role: 'Customer', review: 'Excellent service! I was amazed by the professionalism and friendliness of the staff.' },
+//     { image: '../Reviews/2.png', name: 'Alice Smith', role: 'Client', review: 'Highly recommend! The team went above and beyond to meet my needs.' },
+//     { image: '../Reviews/2.png', name: 'Michael Johnson', role: 'Partner', review: 'Working with them was a pleasure. They delivered outstanding results.' },
+//     // Add more real data as needed
+// ]
+
 
 
 

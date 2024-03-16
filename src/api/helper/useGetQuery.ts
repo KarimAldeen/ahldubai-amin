@@ -20,7 +20,8 @@ function useGetQuery(key: string, url: string , params:any={},options:any={}) {
     },
     refetchOnWindowFocus: false,
     
-    ...options
+    ...options,
+
 
   }
   );

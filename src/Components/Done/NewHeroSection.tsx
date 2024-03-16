@@ -8,6 +8,9 @@ import useGetWidth from '../../Hooks/useGetWidth';
 import { ImageBaseURL } from '../../api/config';
 import { Spin } from 'antd';
 import { handelOpenWhatsapp } from '../../Pages/ServiceDetails/handelOpenWhatsapp';
+import useWhatsapp from '../../api/helper/OnClickgenerateWhatsapp';
+import { useAddClick_whatsapp } from '../../api/uuid';
+import { useGetFooter } from '../../api/footer';
 
 const NewHeroSection = ({Data}:any) => {
   const [infoData, setInfoData] = useState(Data && Data.length > 0 ? Data[0] : null);
@@ -31,12 +34,29 @@ const NewHeroSection = ({Data}:any) => {
     }
   }, [Data, key]);
 
+  
 
 
   const handleImageClick = (index: number) => {
     setInfoData(Data[index]);
     setKey(index);
   };
+
+  const { data: message } = useGetFooter();
+  const messagesWithDefaultMessage = message?.info?.filter((item: any) => item.key === 'defaulte_whatsapp_message');
+  const message_whatsapp = messagesWithDefaultMessage?.map((item: any) => item.value)?.join(' ');
+  
+  console.log(message_whatsapp); // This will log the concatenated string
+  
+   const Whatsapp = useWhatsapp();
+
+  const {mutate} = useAddClick_whatsapp() 
+
+
+      function handelWhatsapp(width:any , whatsapp_view:any){
+          handelOpenWhatsapp(width , whatsapp_view)
+          mutate(Whatsapp)
+      }
 
   const width = useGetWidth();
 
@@ -55,7 +75,7 @@ const NewHeroSection = ({Data}:any) => {
           <p> {infoData?.description} </p>
           <div>
 
-            <button className='Button1' onClick={()=>handelOpenWhatsapp(width)}>
+            <button className='Button1' onClick={()=>handelWhatsapp(width,message_whatsapp)}>
               {t("WhatsApp Us")} <FaArrowAltCircleRight />
             </button>
             <button className='Button2' onClick={() => navigate("/doctors")}>

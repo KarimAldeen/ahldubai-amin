@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Loading from './Components/Utils/Loading/Loading';
 import Page from './Pages/Home/Page';
@@ -9,10 +9,19 @@ import Blog from './Pages/Blog/Page';
 import SingleDoctor from './Pages/SingleDoctor';
 import PricingDetails from './Pages/Pricing/Page';
 import ServiceDetails from './Pages/ServiceDetails/Page';
+import useFingerprint from './api/helper/generateFingerprint';
+import { useAddJoin_website } from './api/uuid';
 const Page404 = lazy(() => import("./Layout/Ui/NotFoundPage"))
 
 const App = () => {
-
+  const fingerprint = useFingerprint();
+  console.log(fingerprint,"fingerprint");
+  const {mutate} = useAddJoin_website() 
+  React.useEffect(() => {
+    if (typeof fingerprint === 'string') {
+        mutate({uuid:fingerprint});
+    }
+}, [fingerprint, mutate]);
 
   return (
     <Routes>

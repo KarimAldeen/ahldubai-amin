@@ -12,6 +12,9 @@ import { IoLogoWhatsapp } from 'react-icons/io';
 import useGetWidth from '../../Hooks/useGetWidth';
 import Translate from './Translate';
 import { handelOpenWhatsapp } from '../../Pages/ServiceDetails/handelOpenWhatsapp';
+import { useGetFooter } from '../../api/footer';
+import useWhatsapp from '../../api/helper/OnClickgenerateWhatsapp';
+import { useAddClick_whatsapp } from '../../api/uuid';
 
 const Header = () => {
   const [t] = useTranslation();
@@ -19,6 +22,22 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => setIsModalOpen(true);
 
+  
+  const { data: message } = useGetFooter();
+  const messagesWithDefaultMessage = message?.info?.filter((item: any) => item.key === 'defaulte_whatsapp_message');
+  const message_whatsapp = messagesWithDefaultMessage?.map((item: any) => item.value)?.join(' ');
+  
+  console.log(message_whatsapp); // This will log the concatenated string
+  
+   const Whatsapp = useWhatsapp();
+
+  const {mutate} = useAddClick_whatsapp() 
+
+
+      function handelWhatsapp(width:any , whatsapp_view:any){
+          handelOpenWhatsapp(width , whatsapp_view)
+          mutate(Whatsapp)
+      }
   const width = useGetWidth();
 
   return (
@@ -32,7 +51,7 @@ const Header = () => {
           <Translate/>
 
           <li>
-            <span onClick={() => handelOpenWhatsapp(width)}>
+            <span onClick={() => handelWhatsapp(width,message_whatsapp)}>
               <IoLogoWhatsapp />
               {t("WhatsApp Us")}
 
@@ -48,7 +67,7 @@ const Header = () => {
             <ul className='DrawerLinks'>
               <NavItems/>
               <li>
-              <span onClick={() => handelOpenWhatsapp(width)}>
+              <span onClick={() => handelWhatsapp(width,message_whatsapp)}>
               <IoLogoWhatsapp />
               {t("WhatsApp Us")}
 

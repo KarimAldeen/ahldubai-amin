@@ -1,3 +1,4 @@
+
 // Assuming this function is defined in a separate file, such as utilities.js
 export const handelOpenWhatsapp = (width:number , text = "Dear") => {
     
@@ -12,4 +13,7 @@ export const handelOpenWhatsapp = (width:number , text = "Dear") => {
     }
 
     window.open(whatsappLink);
+    
+
+   
 }

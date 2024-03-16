@@ -9,10 +9,33 @@ import OurDocrtrs from '../../Components/Done/OurDocrtrs';
 import Partners from '../../Components/Done/Partners';
 import { MultyPageData } from '../../Data';
 import { handelOpenWhatsapp } from './handelOpenWhatsapp';
+import { useGetPartners } from '../../api/Partners';
+import { useGetDoctors } from '../../api/Doctors';
+import { useGetHome } from '../../api/Home';
+import { Spin } from 'antd';
+import useFingerprint from '../../api/helper/generateFingerprint';
+import { useAddClick_whatsapp } from '../../api/uuid';
+import useWhatsapp from '../../api/helper/OnClickgenerateWhatsapp';
 function ServicePriceTabs({sub_service}:any) {
  
     const  width= useGetWidth()
-     
+     const {data:doctors} = useGetDoctors()
+     const {data:data,isLoading} = useGetHome()
+
+   
+    const Whatsapp = useWhatsapp();
+
+    const {mutate} = useAddClick_whatsapp() 
+ 
+
+        function handelWhatsapp(width:any , whatsapp_view:any){
+            handelOpenWhatsapp(width , whatsapp_view)
+            mutate(Whatsapp)
+        }
+
+        if(isLoading){
+            return <Spin/>
+        }
   return (
    <>
    
@@ -77,11 +100,11 @@ function ServicePriceTabs({sub_service}:any) {
                                           
         
                                         </div>
-                                        )
+                                        )   
                                     })
                                 }
                             </div>
-                            <button onClick={()=>handelOpenWhatsapp(width , item?.whatsapp_view)} >
+                            <button onClick={()=> handelWhatsapp(width , item?.whatsapp_view)} >
                                         <IoLogoWhatsapp /> Get Started Now
                                     </button>
                         </div>
@@ -97,8 +120,8 @@ function ServicePriceTabs({sub_service}:any) {
     
    
   </div>
-             <OurDocrtrs />
-             <Partners data={MultyPageData?.partnerImages}/>
+             <OurDocrtrs data={doctors} />
+             <Partners data={data?.Partner}/>
    </>
   )
 }
