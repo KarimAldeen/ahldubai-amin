@@ -32,7 +32,7 @@ const NavBar = () => {
   
         function handelWhatsapp(width:any , whatsapp_view:any){
             handelOpenWhatsapp(width , whatsapp_view)
-            mutate(Whatsapp)
+            mutate({uuid:Whatsapp})
         }
   return (
     <div className='ServicesNavBar'>

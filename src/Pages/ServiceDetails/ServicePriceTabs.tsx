@@ -30,7 +30,7 @@ function ServicePriceTabs({sub_service}:any) {
 
         function handelWhatsapp(width:any , whatsapp_view:any){
             handelOpenWhatsapp(width , whatsapp_view)
-            mutate(Whatsapp)
+            mutate({uuid:Whatsapp})
         }
 
         if(isLoading){

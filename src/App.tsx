@@ -18,10 +18,12 @@ const App = () => {
   console.log(fingerprint,"fingerprint");
   const {mutate} = useAddJoin_website() 
   React.useEffect(() => {
-    if (typeof fingerprint === 'string') {
-        mutate({uuid:fingerprint});
+    if(fingerprint){
+      mutate({uuid:fingerprint});
+
     }
-}, [fingerprint, mutate]);
+   
+}, [fingerprint]);
 
   return (
     <Routes>

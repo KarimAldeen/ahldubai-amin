@@ -17,26 +17,18 @@ export const generateFingerprint = async () => {
 };
 
 const useFingerprint = () => {
-    const [fingerprint, setFingerprint] = useState<string | boolean>(false);
-    const { mutate } = useAddClick_whatsapp();
+    const [fingerprint, setFingerprint] = useState<string | null>(null);
 
     useEffect(() => {
         // Check if the fingerprint is already stored in local storage
-        const storedFingerprint = localStorage.getItem('fingerprint');
-
-        if (storedFingerprint) {
-            // If fingerprint is already stored, use it
-            setFingerprint(false);
-        } else {
             // If fingerprint is not stored, generate it and store it in local storage
             generateFingerprint().then((result) => {
-                localStorage.setItem('fingerprint', result);
                 setFingerprint(result);
-                // Call the mutation with the generated fingerprint
-                mutate(result);
             });
-        }
-    }, [mutate]);
+        
+
+        return  
+    }, []);
 
     return fingerprint;
 };

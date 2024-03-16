@@ -36,7 +36,7 @@ const Header = () => {
 
       function handelWhatsapp(width:any , whatsapp_view:any){
           handelOpenWhatsapp(width , whatsapp_view)
-          mutate(Whatsapp)
+          mutate({uuid:Whatsapp})
       }
   const width = useGetWidth();
 

@@ -6,22 +6,22 @@ export const NavItems = () => {
   const { t } = useTranslation();
 
   const navItems = [
-    { name: t('Home'), path: '/' },
-    { name: t('Doctors'), path: '/doctors' },
-    { name: t('Services'), path: '/services/name?count=1' },
-    { name: t('Blog'), path: '/blog' },
-    // { name: 'Reviews', path: '/reviews' }
+    { name: t('Home'), to: '/' },
+    { name: t('Doctors'), to: '/doctors' },
+    { name: t('Services'), href: '#Services' }, // corrected 'href' typo
+    { name: t('Blog'), to: '/blog' },
+    // { name: 'Reviews', to: '/reviews' }
   ];
 
   const renderNavItem = (item:any, index:any) => (
     <li key={index}>
-      <Link to={item.path}>{item.name}</Link>
+      {item.to ? (
+        <Link to={item.to}>{item.name}</Link>
+      ) : (
+        <a href={item.href}>{item.name}</a>
+      )}
     </li>
   );
 
-  return (
-    <>
-      {navItems.map((item, index) => renderNavItem(item, index))}
-    </>
-  );
+  return <>{navItems.map((item, index) => renderNavItem(item, index))}</>;
 };
