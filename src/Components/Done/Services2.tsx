@@ -40,7 +40,7 @@ const Services2 = ({ servicesData }: any) => {
                     return (
                         <ElementType onClick={() => scrollToTop(service?.id)} key={index}>
                             <Image src={ImageBaseURL + service.image} alt={service.title} />
-                            <h1>{service.name}</h1>
+                            <h1>{service.title}</h1>
                         </ElementType>
                     );
                 })}

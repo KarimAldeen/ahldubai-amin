@@ -107,7 +107,7 @@
             overflow: hidden;            
             
             >img {
-                width: 24vw;
+                width: 18vw;
                 position: absolute;
                 right: 7%;
                 bottom: -1%;
@@ -358,6 +358,7 @@
         .InfoSection {
             display: flex;
             width: 100%;
+            flex-wrap: wrap;
         }
 
         .benefitsSection {
@@ -882,6 +883,7 @@
         .InfoSection {
             display: flex;
             flex-direction: column;
+            
             width: 100%;
         }
 

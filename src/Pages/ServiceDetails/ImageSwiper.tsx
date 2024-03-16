@@ -7,27 +7,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import Image from '../../Components/Utils/Image';
+import { ImageBaseURL } from '../../api/config';
 
 const ImageBanner = ({data}:any) => {
 
-  const Data = [
-    {
-      id: 1,
-      image: "/boy.jpeg"
-    },
-    {
-      id: 2,
-      image: "/girl.jpeg"
-    },
-    // {
-    //   id: 2,
-    //   image: "../ServiceDetails/BBB.png"
-    // },
-    // {
-    //   id: 3,
-    //   image: "../ServiceDetails/BBB.png"
-    // }
-  ]
   return (
     <Swiper className='ImageSwiper'
       freeMode={true}
@@ -38,10 +21,10 @@ const ImageBanner = ({data}:any) => {
 
     >
 
-      {Data?.map((item: any) => {
+      {data?.map((item: any) => {
         return (
           <SwiperSlide className='SwiperSlide' key={item?.id}>
-            <Image src={item?.image} />
+            <Image src={ImageBaseURL+ item?.image} />
           </SwiperSlide>
         )
       })}

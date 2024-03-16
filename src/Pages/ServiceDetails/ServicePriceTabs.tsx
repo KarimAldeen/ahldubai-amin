@@ -1,33 +1,18 @@
 import React, { useState } from 'react'
 
-import { PricinfData } from '../../Components/Services2/PricingData';
-import { Currency } from '../../Layout/app/Const';
+
 import ImageBanner from './ImageSwiper';
-import { Popover } from 'antd';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { useSearchParams } from 'react-router-dom';
 import useGetWidth from '../../Hooks/useGetWidth';
 import OurDocrtrs from '../../Components/Done/OurDocrtrs';
-import OurPartners from '../../Components/Done/OurPartners';
 import Partners from '../../Components/Done/Partners';
 import { MultyPageData } from '../../Data';
 import { handelOpenWhatsapp } from './handelOpenWhatsapp';
 function ServicePriceTabs({sub_service}:any) {
-    const [search] =  useSearchParams()
-    const count = search.get('count') || 1
-
-    console.log(count);
-    
-    const [data, setData] = useState<any[]>(PricinfData);
-    const [Active, setActive] = useState([data[0] ,data[1],data[0] ,data[1]])
-
-    const array  = (new Array(+count )).fill('hello')
-
-    console.log(array);
+ 
     const  width= useGetWidth()
      
-    const Buttondata = ["C- Section Delivery", "Normal Delivery","C- Section Delivery", "Normal Delivery"];
-
   return (
    <>
    
@@ -36,10 +21,7 @@ function ServicePriceTabs({sub_service}:any) {
 
     <div className="tab-wrap">
         {
-            array.map((item:any , index:number)=>{
-
-                console.log(index);
-                
+            sub_service.map((item:any , index:number)=>{                
                 return (
                     <>
                        <input
@@ -49,7 +31,7 @@ function ServicePriceTabs({sub_service}:any) {
                             className="tab"
                             defaultChecked={index ==0 ? true:false}
                         />
-                    <label htmlFor={"tab"+index}>{Buttondata[index]}</label>
+                    <label htmlFor={"tab"+index}>{item?.name}</label>
                     </>
                 )
             }
@@ -57,73 +39,49 @@ function ServicePriceTabs({sub_service}:any) {
         }
    
       {/* <div className='PricingCategories'> */}
-                {Active?.map((item: any, index: number) => {
+                {sub_service?.map((item: any, index: number) => {
                     return (
                         <div className="tab__content">
                               <div className='PricingCategoriesDetails' key={index}>
                             <span>
-                                <h6>
-                                    {Currency}
-                                </h6>
+               
                                 <h3>
                                     {item.price}
                                 </h3>
                             </span>
                             <article className='Categoriesbanner'>
 
-                                <ImageBanner />
+                                <ImageBanner data={item?.banners}/>
 
                             </article>
                             <div className='InfoSection'>
-                                <div className='benefitsSection'>
+                                {
+                                    item?.benefits?.map((benefit:any)=>{
+                                        return (
+                                            <div className='benefitsSection'>
 
-                                    <h3>Benefits</h3>
-                                    <div className='benefits'>
-                                        {item.benefits?.map((benefit: any, index: any) => (
-                                            <span key={index} className='benefit'>
-                                                <div>
-                                                    <div className='Icon'>
-                                                        {index + 1}
-                                                    </div>
-                                                    <h6>{benefit.text}</h6>
-                                                    {benefit.Icon && (
-                                                        <Popover content={benefit.iconData} title="Title">
-                                                            {benefit.Icon}
-                                                        </Popover>
-                                                    )}
-                                                </div>
-                                            </span>
-                                        ))}
-                                    </div>
-                                 
-
-                                </div>
-                                <div className='benefitsSection'>
-
-                                    <h3>Routine care for one baby</h3>
-                                    <div className='benefits'>
-                                        {item.benefits2?.map((benefit: any, index: any) => (
-                                            <span key={index} className='benefit'>
-                                                <div>
-                                                    <div className='Icon'>
-                                                        {index + 1}
-                                                    </div>
-                                                    <h6>{benefit.text}</h6>
-                                                    {benefit.Icon && (
-                                                        <Popover content={benefit.iconData} title="Title">
-                                                            {benefit.Icon}
-                                                        </Popover>
-                                                    )}
-                                                </div>
-                                            </span>
-                                        ))}
-                                    </div>
-                                  
-
-                                </div>
-                               
+                                            <h3>{benefit?.name}</h3>
+                                            <div className='benefits'>
+                                                {benefit?.sub?.map((sub: any, index: any) => (
+                                                    <span key={index} className='benefit'>
+                                                        <div>
+                                                            <div className='Icon'>
+                                                                {index + 1}
+                                                            </div>
+                                                            <h6>{sub.name}</h6>
+                                                         
+                                                        </div>
+                                                    </span>
+                                                ))}
+                                            </div>
+                                          
+        
+                                        </div>
+                                        )
+                                    })
+                                }
                             </div>
-                            <button onClick={()=>handelOpenWhatsapp(width)} >
+                            <button onClick={()=>handelOpenWhatsapp(width , item?.whatsapp_view)} >
                                         <IoLogoWhatsapp /> Get Started Now
                                     </button>
                         </div>

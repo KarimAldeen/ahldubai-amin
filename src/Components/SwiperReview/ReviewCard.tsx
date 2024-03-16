@@ -22,7 +22,7 @@ const ReviewCard: React.FC<Props> = ({ activeIndex, index, data }) => {
         </div>
         <Image src="../Reviews/review.svg"  />
       </div>
-      <p>{data?.review}</p>
+      <p>{data?.description}</p>
     </div>
   );
 };

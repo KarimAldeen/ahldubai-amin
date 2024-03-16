@@ -18,6 +18,8 @@ const ServiceDetails: React.FC = () => {
         
     ];
 
+    console.log(data);
+    
 
     if(isLoading){
         return <Spin/>
@@ -38,7 +40,7 @@ const ServiceDetails: React.FC = () => {
                 </span>
                 <Image src={ImageBaseURL+service_data?.sub_image} alt="" />
             </div>
-            <ServicePriceTabs sub_service={data?.sub_service} />
+            <ServicePriceTabs sub_service={data?.sub_service}  />
         </div>
     );
 };
