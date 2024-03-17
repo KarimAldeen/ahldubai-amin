@@ -13,7 +13,10 @@ const Page = () => {
   const { data, isLoading } = useGetHome()
 
   if (isLoading) {
-    return <Spin />
+    
+    return <div style={{display:"flex" , justifyContent:"center" , alignItems:"center" , height:"100vh" }}>
+      <Spin/>
+    </div>
   }
   return (
     <Layout className='Home_Page'>

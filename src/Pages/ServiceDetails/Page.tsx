@@ -23,7 +23,9 @@ const ServiceDetails: React.FC = () => {
 
 
     if (isLoading) {
-        return <Spin />
+        return<div style={{display:"flex" , justifyContent:"center" , alignItems:"center" , height:"100vh" }}>
+        <Spin/>
+      </div>
     }
     const service_data = data?.service
     return (

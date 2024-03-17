@@ -1,6 +1,6 @@
 import React from 'react'
 import DoctorCard from '../../Components/Doctors/DoctorCard'
-import { Select } from 'antd'
+import { Select, Spin } from 'antd'
 import { MultyPageData } from '../../Data'
 import { useTranslation } from 'react-i18next'
 import { useGetDoctors } from '../../api/Doctors'
@@ -33,7 +33,13 @@ const Doctors = () => {
       label: 'Cancelled',
     },
   ]
-  const {data} = useGetDoctors()
+  const {data, isLoading} = useGetDoctors()
+
+  if(isLoading){
+    return <div style={{display:"flex" , justifyContent:"center" , alignItems:"center" , height:"100vh" }}>
+    <Spin/>
+  </div>
+  }
   return (
     <div className='Doctors'>
       <div className='Hero_Doctors'>
