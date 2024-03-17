@@ -100,14 +100,14 @@
             margin-block: 20px;
             gap: 2vw;
             padding: 20px 30px;
-            // min-height: 300px;
+            min-height: 200px;
             border-radius: 15px;
             @include Shadow;
             position: relative;
             overflow: hidden;            
             
             >img {
-                width: 18vw;
+                width: 22vw;
                 position: absolute;
                 right: 7%;
                 bottom: -1%;

@@ -34,7 +34,7 @@ const App = () => {
       <Route path="/blog" element={<Suspense fallback={<Loading />}><Layout className='Blog_Page'>  <Blog /> </Layout> </Suspense>} />
       <Route path="/doctors/:id" element={<Suspense fallback={<Loading />}><Layout className='SingleDoctor_Page'>  <SingleDoctor /> </Layout> </Suspense>} />
     {/* <Route path="/Pricing" element={<Suspense fallback={<Loading />}><Layout className='PricingDetails_Page'>  <PricingDetails /> </Layout> </Suspense>} /> */}
-    <Route path="/services/:id" element={<Suspense fallback={<Loading />}><Layout className='serviceDetails_Page'>  <ServiceDetails /> </Layout> </Suspense>} />
+    <Route path="/services/:id" element={<Suspense fallback={<Loading />}> <ServiceDetails /> </Suspense>} />
 
     </Routes>
 
