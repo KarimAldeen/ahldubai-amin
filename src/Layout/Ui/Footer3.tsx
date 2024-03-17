@@ -10,15 +10,7 @@ import { useGetFooter } from '../../api/footer';
 import { HashLink } from 'react-router-hash-link';
 
 const Footer3 = () => {
-  const aboutUsData = {
-    title: 'About us',
-    description: 'provides services to the organization of international, medical tourism in leading hospitals and medical centers in the UAE Dubai..',
- contactInfo: [
-      { icon: <FaPhone />, title: 'HotLine', content: '+971 58 518 75 77' },
-      { icon: <FaLocationDot />, title: 'Address', content: 'Dubai Science Park - Al Barsha South Bella Rose Tower' },
-      { icon: <FaClock />, title: 'Mon-Sat', content: '8:00AM - 7:00PM' },
-    ],
-  };
+
 
   const exploreData = {
     title: 'Explore',
@@ -52,8 +44,19 @@ const Footer3 = () => {
   }
   const about_us = GetData("about_us")
   const copy_right = GetData("copy_right")
+  const time_open = GetData("time_open")
+  const address = GetData("address")
+  const phone = GetData("phone")
 
-
+  const aboutUsData = {
+    title: 'About us',
+    description: 'provides services to the organization of international, medical tourism in leading hospitals and medical centers in the UAE Dubai..',
+ contactInfo: [
+      { icon: <FaPhone />, title: 'HotLine', content: phone },
+      { icon: <FaLocationDot />, title: 'Address', content: address },
+      { icon: <FaClock />, title: 'Mon-Sat', content: time_open },
+    ],
+  };
 
   const footerText = 'Like-themes 2023 © All Rights reserved Aurora Health';
   const [t] = useTranslation()

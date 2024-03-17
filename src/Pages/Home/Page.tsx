@@ -7,23 +7,25 @@ import Partners from '../../Components/Done/Partners'
 import { HomeData, MultyPageData } from '../../Data'
 import { useGetHome } from '../../api/Home'
 import { Spin } from 'antd'
+import Layout from '../../Layout/Ui/Layout'
 
 const Page = () => {
-  const {data,isLoading}  = useGetHome()
+  const { data, isLoading } = useGetHome()
 
-    if(isLoading){
-      return <Spin/>
-    }
+  if (isLoading) {
+    return <Spin />
+  }
   return (
-    <>
-    <NewHeroSection Data={data?.heroSection}/>
-    {/* <Services/> */}
-    <Services2 servicesData={data?.service} />
-    <Reviews data={data?.patientSay}/>
-    {/* <Update/> */}
-    <Partners data={data?.Partner}/>
+    <Layout className='Home_Page'>
+      <NewHeroSection Data={data?.heroSection} />
+      {/* <Services/> */}
+      <Services2 servicesData={data?.service} />
+      <Reviews data={data?.patientSay} />
+      {/* <Update/> */}
+      <Partners data={data?.Partner} />
 
-    </>
+    </Layout>
+
   )
 }
 

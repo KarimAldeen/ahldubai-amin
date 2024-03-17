@@ -4,7 +4,6 @@ import Footer3 from './Footer3'
 
 
 const Layout = ({ children ,className=""}: { children: React.ReactNode ,className?: string }) => {
-
   return (
  <div className={`${className} Layout`}>
      <Header/>

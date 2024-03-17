@@ -27,13 +27,13 @@ const Services2 = ({ servicesData }: any) => {
                     // Check the value of service.elementType and assign the appropriate element type
                     switch (service.elemnt_type) {
                         case 'big':
-                            ElementType = 'div';
-                            break;
-                        case 'small':
                             ElementType = 'span';
                             break;
+                        case 'small':
+                            ElementType = 'div';
+                            break;
                         default:
-                            ElementType = 'div'; // or any other default element type
+                            ElementType = 'span'; // or any other default element type
                     }
 
                     // Render the element with the appropriate type
