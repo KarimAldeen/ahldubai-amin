@@ -21,7 +21,7 @@ function ServicePriceTabs({sub_service}:any) {
  
     const  width= useGetWidth()
      const {data:doctors} = useGetDoctors()
-     const {data:data,isLoading} = useGetHome()
+     const {data:data} = useGetHome()
 
   
      const { data: message } = useGetFooter();
@@ -36,9 +36,7 @@ function ServicePriceTabs({sub_service}:any) {
             mutate({uuid:Whatsapp})
         }
 
-        if(isLoading){
-            return <Spin/>
-        }
+      
   return (
    <>
    
@@ -47,9 +45,9 @@ function ServicePriceTabs({sub_service}:any) {
 
     <div className="tab-wrap">
         {
-            sub_service.map((item:any , index:number)=>{                
+            sub_service?.map((item:any , index:number)=>{                
                 return (
-                    <>
+                    <React.Fragment key={index}>
                        <input
                             type="radio"
                             id={"tab" +index}
@@ -58,7 +56,7 @@ function ServicePriceTabs({sub_service}:any) {
                             defaultChecked={index ==0 ? true:false}
                         />
                     <label htmlFor={"tab"+index}>{item?.name}</label>
-                    </>
+                    </React.Fragment>
                 )
             }
             )
@@ -67,7 +65,7 @@ function ServicePriceTabs({sub_service}:any) {
       {/* <div className='PricingCategories'> */}
                 {sub_service?.map((item: any, index: number) => {
                     return (
-                        <div className="tab__content">
+                        <div className="tab__content" key={index}>
                               <div className='PricingCategoriesDetails' key={index}>
                             <span>
                
