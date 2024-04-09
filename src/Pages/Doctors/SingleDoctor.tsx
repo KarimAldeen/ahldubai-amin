@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Button, Input, Progress } from 'antd';
+import {  Progress } from 'antd';
 import { useTranslation } from 'react-i18next';
-import { useGetDoctor } from '../api/Doctors';
-import Image from '../Components/Utils/Image';
-import { ImageBaseURL } from '../api/config';
+import { useGetDoctor } from '../../api/Doctors';
+import Image from '../../Components/Utils/Image';
+import { ImageBaseURL } from '../../api/config';
 
 const SingleDoctor = () => {
   const { t } = useTranslation();

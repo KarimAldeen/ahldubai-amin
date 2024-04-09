@@ -1,0 +1,290 @@
+.NewSingleDoctor_Page{
+    .NewSingleDoctor{
+        padding: 5vw 10vw ;
+        display: flex;
+        flex-direction: column;
+    
+        .TopSection{
+            display: flex;
+            margin-inline: auto;
+            background: var(--bg);
+            // @include Shadow;
+            gap: 4vw;
+            padding: 0 8vw;
+
+        }
+        .Left{
+            .PersonalCard{
+                border-radius: 50%;
+                @include Shadow;
+                width: 300px;
+                height: 300px;
+                min-width: 20vw;
+                min-height: 20vw;
+
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: contain;
+
+            }
+        }
+        .Right{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 40px;
+            h1{
+                font-weight: bold;
+                font-size: 3vw;
+                color: var(--primary);
+
+            }
+            >span{
+                font-weight: 600;
+                color: #fd9948 !important;
+                .ant-rate {
+                    color: #fd9948 !important;
+                }
+            }
+            h3{
+                font-weight: bold;
+                font-size: 2vw;
+                color: var(--primary);
+                margin-bottom: 0;
+
+            }
+            p{
+                font-weight: bold;
+                font-size: 1.4vw;
+                color: var(--text);
+  
+            }
+            h3 >span ,p >span{
+                color: var(--primary);
+            }
+        }
+        .ButtomSection{
+            >header{
+                display: flex;
+                justify-content: space-between;
+                margin-block: 3vw;
+                h4{
+                    font-weight: bold;
+                    font-size: 2vw;
+                }
+                button {
+                    background: var(--primary);
+                    color: var(--white);
+                    border: none;
+                    padding: 10px 20px;
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: 600;
+                    width: 120px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transform: skew(-21deg);
+                  }
+                  
+                  span {
+                    display: inline-block;
+                    transform: skew(21deg);
+                  }
+                  
+                  button::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 100%;
+                    left: 0;
+                    background: rgb(20, 20, 20);
+                    opacity: 0;
+                    z-index: -1;
+                    transition: all 0.5s;
+                  }
+                  
+                  button:hover {
+                    color: #fff;
+                  }
+                  
+                  button:hover::before {
+                    left: 0;
+                    right: 0;
+                    opacity: 1;
+                  }
+
+            }
+               
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 940px) {
+.NewSingleDoctor_Page{
+    .NewSingleDoctor{
+        padding: 5vw 10vw ;
+        display: flex;
+        flex-direction: column;
+    
+        .TopSection{
+            display: flex;
+            margin-inline: auto;
+            align-items: center;
+            background: var(--bg);
+            // @include Shadow;
+            gap: 4vw;
+            padding: 0 3vw;
+            margin-top: 60px;
+
+        }
+        .Left{
+            .PersonalCard{
+                border-radius: 50%;
+                @include Shadow;
+                width: 200px;
+                height: 200px;
+                min-width: 20vw;
+                min-height: 20vw;
+
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: contain;
+
+            }
+        }
+        .Right{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 0px !important;
+            h1{
+                font-weight: bold;
+                font-size: 3vw;
+                color: var(--primary);
+
+            }
+            >span{
+                font-weight: 600;
+                color: #fd9948 !important;
+                .ant-rate {
+                    color: #fd9948 !important;
+                }
+            }
+            h3{
+                font-weight: bold;
+                font-size: 2vw;
+                color: var(--primary);
+                margin-bottom: 0;
+
+            }
+            p{
+                font-weight: bold;
+                font-size: 1.4vw;
+                color: var(--text);
+  
+            }
+            h3 >span ,p >span{
+                color: var(--primary);
+            }
+        }
+        
+    }
+}
+    
+
+    
+}
+
+
+@media screen and (max-width: 640px) {
+    .NewSingleDoctor_Page{
+        .NewSingleDoctor{
+            padding: 5vw 10vw ;
+            display: flex;
+            flex-direction: column;
+        
+            .TopSection{
+                display: flex;
+                margin-inline: auto;
+                align-items: center;
+                flex-wrap: wrap;
+                background: var(--bg);
+                // @include Shadow;
+                gap: 4vw;
+                padding: 0 3vw;
+                margin-top: 60px;
+    
+            }
+            .Left{
+                .PersonalCard{
+                    border-radius: 50%;
+                    @include Shadow;
+                    width: 200px;
+                    height: 200px;
+                    min-width: 20vw;
+                    min-height: 20vw;
+    
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: contain;
+    
+                }
+            }
+            .Right{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-top: 0px !important;
+                h1{
+                    font-weight: bold;
+                    font-size: 5vw;
+                    color: var(--primary);
+    
+                }
+                >span{
+                    font-weight: 600;
+                    color: #fd9948 !important;
+                    .ant-rate {
+                        color: #fd9948 !important;
+                    }
+                }
+                h3{
+                    font-weight: bold;
+                    font-size: 5vw;
+                    color: var(--primary);
+                    margin-bottom: 0;
+    
+                }
+                p{
+                    font-weight: bold;
+                    font-size: 3vw;
+                    color: var(--text);
+      
+                }
+                h3 >span ,p >span{
+                    color: var(--primary);
+                }
+            }
+            
+        }
+    }
+        
+    
+       
+    }
+
+
+
+  

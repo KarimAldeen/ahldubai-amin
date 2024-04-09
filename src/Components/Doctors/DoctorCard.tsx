@@ -1,14 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import useImageError from '../../Hooks/useImageError'
-import { MdArrowOutward } from "react-icons/md";
-import { ImageBaseURL } from '../../api/config';
+import {  useNavigate } from 'react-router-dom'
 import Image from '../Utils/Image';
+import { ImageBaseURL } from '../../api/config';
+import { FaEye } from 'react-icons/fa';
 
 const DoctorCard = ({data}:any) => {
+  const navigate = useNavigate()
+
   return (
     <div className='DoctorCard'>
-            <Image src={ImageBaseURL+data?.image} />
+            <Image src={ImageBaseURL+data?.image}  />
             <h1>
             {data?.name}
             </h1>
@@ -18,10 +19,11 @@ const DoctorCard = ({data}:any) => {
             <p>
             {data?.description}
             </p>
-            <Link to={`/doctors/${data?.id}`}>
-                Read More <MdArrowOutward />
-            </Link>
-    </div>
+            <span className='Navigate_icon'>
+            <FaEye onClick={()=> navigate(`/doctors/${data?.id}`)}  />
+
+            </span>
+      </div>
   )
 }
 

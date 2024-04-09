@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import DoctorCard from './DoctorCard';
+import DoctorCard from '../DoctorCard';
 
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { MultyPageData } from '../../../Data';
@@ -14,34 +14,27 @@ const CardSwiper= ({data}:any) => {
   return (
     <div >
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
         freeMode={true}
-      
         breakpoints={{
           300: {
             slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          500: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          650: {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           900: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 0,
           },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 50,
+          1100: {
+            slidesPerView: 2,
+            spaceBetween: 0,
           },
           1500: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          2000: {
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 0,
           },
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay ]}

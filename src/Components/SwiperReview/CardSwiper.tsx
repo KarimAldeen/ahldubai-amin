@@ -29,7 +29,7 @@ const CardSwiper: React.FC<Props> = ({ data }:any) => {
 
   return (
     <div>
-      <Swiper
+      {/* <Swiper
         slidesPerView={3}
         spaceBetween={0}
         freeMode={true}
@@ -52,7 +52,7 @@ const CardSwiper: React.FC<Props> = ({ data }:any) => {
             <ReviewCard activeIndex={activeIndex} index={index} data={item} />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 };

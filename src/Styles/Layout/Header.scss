@@ -3,7 +3,9 @@
 .Header.Scrolled,
 .Services_Page .Header,
 .Blog_Page .Header,
-.serviceDetails_Page .Header {
+.serviceDetails_Page .Header ,
+.NewSingleDoctor_Page .Header
+{
     background-color: var(--bg);
     @include Shadow;
     color: var(--text);
