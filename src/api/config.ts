@@ -7,10 +7,10 @@
 
 //export const BaseURL = `http://192.168.1.10:8000/api/`;
 
-export const ImageBaseURL = `http://ahlapi.kammun.com/`;
+export const ImageBaseURL = `https://ahlapi.kammun.com/`;
 
 
-export const BaseURL = `http://ahlapi.kammun.com/api/`;
+export const BaseURL = `https://ahlapi.kammun.com/api/`;
 const PROJECT_NAME = "Hijab"
 
 export const TOKEN_KEY = PROJECT_NAME +  "_TOKEN"
