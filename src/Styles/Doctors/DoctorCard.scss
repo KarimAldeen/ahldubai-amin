@@ -1,3 +1,11 @@
+.ar{
+  .Docor_Cards{
+    .DoctorCard{
+        direction: rtl;
+    }
+  }  
+}
+
 .Docor_Cards {
     min-height: 400px;
     margin-inline: auto;
@@ -27,7 +35,8 @@
         padding-bottom: 20px;
         margin-inline: auto;
         margin-bottom: 60px;
-        .Navigate_icon{
+        border: 1px solid var(--secondary);
+                .Navigate_icon{
             position: absolute;
             top: 20px;
             right: 20px;

@@ -39,9 +39,9 @@ const CardSwiper= ({data}:any) => {
         }}
         modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay ]}
         autoplay={{ delay: 4000 }}
-      navigation
-      onSwiper={(swiper:any) => console.log(swiper)}
+        navigation
         className='Docor_Cards'
+        dir='ltr'
       >
         {
           data?.map((item:any,index:number)=>{

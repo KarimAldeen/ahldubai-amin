@@ -1,9 +1,8 @@
 .NewSingleDoctor_Page{
     .NewSingleDoctor{
-        padding: 5vw 10vw ;
+        padding: max(5vw,80px) 10vw ;
         display: flex;
         flex-direction: column;
-    
         .TopSection{
             display: flex;
             margin-inline: auto;
@@ -14,6 +13,7 @@
 
         }
         .Left{
+
             .PersonalCard{
                 border-radius: 50%;
                 @include Shadow;
@@ -28,6 +28,7 @@
                 height: 100%;
                 border-radius: 50%;
                 object-fit: contain;
+                border: 1px solid var(--secondary);
 
             }
         }

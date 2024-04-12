@@ -20,7 +20,7 @@ const DoctorCard = ({data}:any) => {
             {data?.description}
             </p>
             <span className='Navigate_icon'>
-            <FaEye onClick={()=> navigate(`/doctors/${data?.id}`)}  />
+            <FaEye onClick={()=> navigate(`/doctors/${data?.doctor_id}`)}  />
 
             </span>
       </div>
