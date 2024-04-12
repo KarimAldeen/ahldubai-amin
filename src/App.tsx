@@ -1,12 +1,10 @@
-import React, { lazy, Suspense, useEffect } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Loading from './Components/Utils/Loading/Loading';
 import Page from './Pages/Home/Page';
 import Layout from './Layout/Ui/Layout';
 import Doctors from './Pages/Doctors/Page';
-import Services from './Pages/Services/Page2';
 import Blog from './Pages/Blog/Page';
-import PricingDetails from './Pages/Pricing/Page';
 import ServiceDetails from './Pages/ServiceDetails/Page';
 import useFingerprint from './api/helper/generateFingerprint';
 import { useAddJoin_website } from './api/uuid';
@@ -23,7 +21,7 @@ const App = () => {
 
     }
    
-}, [fingerprint]);
+}, [fingerprint,mutate]);
 
 
   return (
